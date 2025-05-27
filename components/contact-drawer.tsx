@@ -1,6 +1,7 @@
 "use client";
 
 //TODO add message to seriously contact before the site goes down!
+//TODO finish discord copy functionality
 
 import {
   Drawer,
@@ -23,21 +24,48 @@ import {
   ArrowSquareOut,
   CaretUp,
 } from "phosphor-react";
+import { toast } from "sonner";
+import { Toaster } from "./ui/sonner";
 
 const links = [
-  { icon: DiscordLogo, name: "nickveles", href: "/", copy: true },
-  { icon: InstagramLogo, name: "@nick.veles", href: "https://www.instagram.com/nick.veles/" },
+  {
+    icon: InstagramLogo,
+    name: "@nick.veles",
+    href: "https://www.instagram.com/nick.veles/",
+  },
   { icon: TwitterLogo, name: "NickVeles", href: "https://x.com/NickVeles" },
-  { icon: LinkedinLogo, name: "in/nickveles", href: "https://www.linkedin.com/in/nickveles/" },
-  { icon: GithubLogo, name: "NickVeles", href: "https://github.com/NickVeles/" },
-  { icon: GoogleLogo, name: "forms.gle", href: "https://forms.gle/4YNLofEUcJ6YVA3a9" },
+  {
+    icon: LinkedinLogo,
+    name: "in/nickveles",
+    href: "https://www.linkedin.com/in/nickveles/",
+  },
+  {
+    icon: GithubLogo,
+    name: "NickVeles",
+    href: "https://github.com/NickVeles/",
+  },
+  {
+    icon: GoogleLogo,
+    name: "forms.gle",
+    href: "https://forms.gle/4YNLofEUcJ6YVA3a9",
+  },
 ];
 
 export default function ContactDrawer() {
+  const handleDiscordCopy = async (username: string) => {
+    try {
+      await navigator.clipboard.writeText(username);
+      toast("Nickname coppied successfully!");
+    } catch (err) {
+      toast("Event has been created", {
+        description: JSON.stringify(err),
+      });
+    }
+  };
+
   return (
     <>
-      {/* Spacer to prevent content from being hidden behind the trigger */}
-      <div />
+      <Toaster />
       <Drawer>
         <DrawerTrigger asChild>
           <div className="fixed flex gap-2 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background">
@@ -52,6 +80,21 @@ export default function ContactDrawer() {
             </DrawerTitle>
           </DrawerHeader>
           <ul className="flex-1 flex flex-col gap-2 p-4 w-full items-stretch">
+            <li className="w-full rounded hover:bg-accent transition-colors">
+              <button
+                type="button"
+                onClick={() => handleDiscordCopy("nickveles")}
+                className="flex items-center justify-center hover:cursor-pointer p-2 gap-[2rem] w-full"
+              >
+                <DiscordLogo className="w-[6vh] h-[6vh]" />
+                <span className="text-[3vh] w-full max-w-[16vh] text-left">
+                  nickveles
+                </span>
+                <div className="flex items-center justify-center w-[6vh] h-[6vh]">
+                  <CopySimple className="w-[3vh] h-[3vh] text-muted-foreground" />
+                </div>
+              </button>
+            </li>
             {links.map((link) => (
               <li
                 key={link.href}
@@ -72,11 +115,7 @@ export default function ContactDrawer() {
                   </span>
 
                   <div className="flex items-center justify-center w-[6vh] h-[6vh]">
-                    {link.copy ? (
-                      <CopySimple className="w-[3vh] h-[3vh] text-muted-foreground" />
-                    ) : (
-                      <ArrowSquareOut className="w-[3vh] h-[3vh] text-muted-foreground" />
-                    )}
+                    <ArrowSquareOut className="w-[3vh] h-[3vh] text-muted-foreground" />
                   </div>
                 </a>
               </li>
