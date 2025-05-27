@@ -50,9 +50,9 @@ export function Header() {
                       className="flex items-center gap-2 p-2 rounded hover:bg-accent transition-colors"
                     >
                       {page.icon ? (
-                        <page.icon className="w-[1.2rem] h-[1.2rem]" />
+                        <page.icon className="w-[1.5rem] h-[1.5rem]" />
                       ) : (
-                        <div className="w-[1.2rem] h-[1.2rem]" />
+                        <div className="w-[1.5rem] h-[1.5rem]" />
                       )}
                       {page.name}
                     </a>
