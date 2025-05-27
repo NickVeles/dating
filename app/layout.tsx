@@ -9,6 +9,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ContactDrawer from "@/components/contact-drawer";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
             {children}
             </div>
             <Footer />
+            <ContactDrawer />
           </div>
         </ThemeProvider>
       </body>
