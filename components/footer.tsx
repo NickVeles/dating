@@ -10,7 +10,7 @@ export function Footer() {
         <a
           href="https://github.com/NickVeles/dating"
           target="_blank"
-          className="text-pink-600 dark:text-blue-400 hover:underline"
+          className="text-pink-600 dark:text-pink-400 hover:underline"
         >
           Github
         </a>
