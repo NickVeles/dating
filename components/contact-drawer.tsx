@@ -75,12 +75,12 @@ export default function ContactDrawer() {
             <CaretUp className="size-8" />
           </div>
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent className="dyslexic:font-[family-name:var(--font-dyslexic)]">
           <DrawerHeader className="p-4">
             <DrawerTitle className="flex items-center justify-center gap-4 text-2xl">
-                <Heart className="size-8 text-pink-600" />
-                Contact Me
-                <Heart className="size-8 text-pink-600" />
+              <Heart className="size-8 text-pink-600" />
+              Contact Me
+              <Heart className="size-8 text-pink-600" />
             </DrawerTitle>
           </DrawerHeader>
           <ul className="flex-1 flex flex-col gap-2 p-4 w-full items-stretch">
@@ -91,7 +91,7 @@ export default function ContactDrawer() {
                 className="flex items-center justify-center hover:cursor-pointer p-2 gap-[2rem] w-full"
               >
                 <DiscordLogo className="w-[6vh] h-[6vh]" />
-                <span className="text-[3vh] w-full max-w-[16vh] text-left">
+                <span className="text-[3vh] w-full max-w-[8vw] dyslexic:max-w-[12vw] text-left">
                   nickveles
                 </span>
                 <div className="flex items-center justify-center w-[6vh] h-[6vh]">
@@ -114,7 +114,7 @@ export default function ContactDrawer() {
                   ) : (
                     <div className="w-[6vh] h-[6vh]" />
                   )}
-                  <span className="text-[3vh] w-full max-w-[16vh] text-left">
+                  <span className="text-[3vh] w-full max-w-[8vw] dyslexic:max-w-[12vw] text-left">
                     {link.name}
                   </span>
 
