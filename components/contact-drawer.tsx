@@ -56,9 +56,9 @@ export default function ContactDrawer() {
   const handleDiscordCopy = async (username: string) => {
     try {
       await navigator.clipboard.writeText(username);
-      toast("Nickname coppied successfully!");
+      toast("Nickname copied successfully!");
     } catch (err) {
-      toast("Event has been created", {
+      toast("Oops!", {
         description: JSON.stringify(err),
       });
     }
