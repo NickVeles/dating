@@ -2,20 +2,20 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { List } from "phosphor-react";
+import { List, House } from "phosphor-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { FontToggle } from "@/components/font-toggle";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+  SheetHeader,
+} from "@/components/ui/sheet";
 
 const pages = [
-  { name: "Home", href: "/" },
+  { icon: House, name: "Home", href: "/" },
   //TODO add more pages
 ];
 
@@ -23,23 +23,47 @@ export function Header() {
   return (
     <header className="flex items-center justify-between w-full p-2 border-b bg-background">
       {/* Left: Burger menu */}
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Open navigation menu">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            aria-label="Open navigation menu"
+            className="hover:cursor-pointer"
+          >
             <List className="size-6" />
           </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent side="bottom" align="start">
-          {pages.map((page, idx) => (
-            <React.Fragment key={page.href}>
-              <DropdownMenuItem asChild>
-                <a href={page.href}>{page.name}</a>
-              </DropdownMenuItem>
-              {idx < pages.length - 1 && <DropdownMenuSeparator />}
-            </React.Fragment>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
+        </SheetTrigger>
+        <SheetContent
+          side="left"
+          className="p-0 w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md"
+        >
+          <nav className="flex flex-col h-full">
+            <SheetHeader className="flex px-4 py-3 border-b">
+              <span className="font-bold text-lg">Menu</span>
+            </SheetHeader>
+            <ul className="flex-1 flex flex-col gap-1 p-4">
+              {pages.map((page) => (
+                <li key={page.href}>
+                  <SheetClose asChild>
+                    <a
+                      href={page.href}
+                      className="flex items-center gap-2 p-2 rounded hover:bg-accent transition-colors"
+                    >
+                      {page.icon ? (
+                        <page.icon className="w-[1.2rem] h-[1.2rem]" />
+                      ) : (
+                        <div className="w-[1.2rem] h-[1.2rem]" />
+                      )}
+                      {page.name}
+                    </a>
+                  </SheetClose>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </SheetContent>
+      </Sheet>
 
       {/* Center: Logo */}
       <div className="flex-1 flex justify-center">
