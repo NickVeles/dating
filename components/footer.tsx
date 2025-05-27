@@ -1,7 +1,5 @@
 "use client";
 
-import { Heart } from "phosphor-react";
-
 export function Footer() {
   return (
     <footer className="flex items-center justify-center w-full px-2 py-4 border-t bg-background">
