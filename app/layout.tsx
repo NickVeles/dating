@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/header";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -49,7 +50,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="flex flex-col items-center min-h-screen min-w-screen gap-16 font-[family-name:var(--font-sans)] dyslexic:font-[family-name:var(--font-dyslexic)]">
+            <Header />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
