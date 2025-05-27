@@ -47,7 +47,7 @@ export function Header() {
           </SheetTrigger>
           <SheetContent
             side="left"
-            className="p-0 w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md"
+            className="p-0 w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md dyslexic:font-[family-name:var(--font-dyslexic)]"
           >
             <nav className="flex flex-col h-full">
               <SheetHeader className="flex px-4 py-3 border-b">
