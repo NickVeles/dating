@@ -20,7 +20,7 @@ const pages = [
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between w-full p-2 border-b bg-background">
+    <header className="flex items-center justify-between w-full py-2 px-4 border-b bg-background">
       {/* Left: Burger menu */}
       <Sheet>
         <SheetTrigger asChild>
@@ -30,7 +30,7 @@ export function Header() {
             aria-label="Open navigation menu"
             className="hover:cursor-pointer"
           >
-            <List className="size-6" />
+            <List className="size-7" />
           </Button>
         </SheetTrigger>
         <SheetContent
