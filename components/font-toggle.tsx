@@ -8,11 +8,19 @@ export function FontToggle() {
   const [isDyslexic, setIsDyslexic] = useState(false);
 
   useEffect(() => {
+    const stored = localStorage.getItem("isDyslexic");
+    if (stored !== null) {
+      setIsDyslexic(stored === "true");
+    }
+  }, []);
+
+  useEffect(() => {
     if (isDyslexic) {
       document.body.classList.add("dyslexic");
     } else {
       document.body.classList.remove("dyslexic");
     }
+    localStorage.setItem("isDyslexic", JSON.stringify(isDyslexic));
   }, [isDyslexic]);
 
   return (
