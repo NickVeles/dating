@@ -22,6 +22,7 @@ import {
   GoogleLogo,
   CopySimple,
   ArrowSquareOut,
+  Heart,
   CaretUp,
 } from "phosphor-react";
 import { toast } from "sonner";
@@ -68,15 +69,18 @@ export default function ContactDrawer() {
       <Toaster />
       <Drawer>
         <DrawerTrigger asChild>
-          <div className="fixed flex gap-2 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background">
+          <div className="fixed flex gap-4 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background">
+            <Heart className="size-8 text-pink-600" />
             Contact Me
-            <CaretUp className="w-[2rem] h-[2rem]" />
+            <CaretUp className="size-8" />
           </div>
         </DrawerTrigger>
         <DrawerContent>
           <DrawerHeader className="p-4">
-            <DrawerTitle className="text-center text-2xl">
-              Contact Me
+            <DrawerTitle className="flex items-center justify-center gap-4 text-2xl">
+                <Heart className="size-8 text-pink-600" />
+                Contact Me
+                <Heart className="size-8 text-pink-600" />
             </DrawerTitle>
           </DrawerHeader>
           <ul className="flex-1 flex flex-col gap-2 p-4 w-full items-stretch">
