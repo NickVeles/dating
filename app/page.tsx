@@ -34,7 +34,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src="/vercel.svg"
+              src="/bread.svg"
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -80,7 +80,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src="/vercel.svg"
+              src="/bread.svg"
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -126,7 +126,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src="/vercel.svg"
+              src="/bread.svg"
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -172,7 +172,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src="/vercel.svg"
+              src="/bread.svg"
               alt="Vercel logomark"
               width={20}
               height={20}
