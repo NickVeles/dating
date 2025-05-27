@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
 import { List, House } from "phosphor-react";
 import { ThemeToggle } from "@/components/theme-toggle";
