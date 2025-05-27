@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -52,7 +53,10 @@ export default function RootLayout({
         >
           <div className="flex flex-col items-center min-h-screen min-w-screen gap-16 font-[family-name:var(--font-sans)] dyslexic:font-[family-name:var(--font-dyslexic)]">
             <Header />
+            <div className="flex-1 ">
             {children}
+            </div>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
