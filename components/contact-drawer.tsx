@@ -108,7 +108,7 @@ export default function ContactDrawer() {
               <button
                 type="button"
                 onClick={() => handleDiscordCopy("nickveles")}
-                className="flex p-2 gap-4 text-4xl hover:cursor-pointer"
+                className="flex p-2 gap-4 text-4xl dyslexic:text-2xl hover:cursor-pointer"
               >
                 <div className="flex items-center justify-center gap-4 w-75">
                   <DiscordLogo className="text-6xl" />
@@ -128,7 +128,7 @@ export default function ContactDrawer() {
                 <a
                   href={link.href}
                   target="_blank"
-                  className="flex p-2 gap-4 text-4xl"
+                  className="flex p-2 gap-4 text-4xl dyslexic:text-2xl"
                 >
                   <div className="flex items-center justify-center gap-4 w-75">
                     <link.icon className="text-6xl" />
