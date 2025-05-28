@@ -103,43 +103,40 @@ export default function ContactDrawer() {
               <Heart className="size-8 text-pink-600" />
             </DrawerTitle>
           </DrawerHeader>
-          <ul className="flex-1 flex flex-col gap-2 p-4 w-full items-stretch">
-            <li className="w-full rounded hover:bg-accent transition-colors">
+          <ul className="flex flex-col gap-2 p-4 items-center">
+            <li className="rounded hover:bg-accent transition-colors">
               <button
                 type="button"
                 onClick={() => handleDiscordCopy("nickveles")}
-                className="flex items-center justify-center hover:cursor-pointer p-2 gap-[2rem] w-full"
+                className="flex p-2 gap-4 text-4xl hover:cursor-pointer"
               >
-                <DiscordLogo className="w-[6vh] h-[6vh]" />
-                <span className="text-[3vh] w-full max-w-[8vw] dyslexic:max-w-[12vw] text-left">
-                  nickveles
-                </span>
-                <div className="flex items-center justify-center w-[6vh] h-[6vh]">
-                  <CopySimple className="w-[3vh] h-[3vh] text-muted-foreground" />
+                <div className="flex items-center justify-center gap-4 w-75">
+                  <DiscordLogo className="text-6xl" />
+
+                  <div className="flex flex-1 p-2 truncate">
+                    nickveles
+                    <CopySimple className="text-muted-foreground text-xl" />
+                  </div>
                 </div>
               </button>
             </li>
             {links.map((link) => (
               <li
                 key={link.href}
-                className="w-full rounded hover:bg-accent transition-colors"
+                className="rounded hover:bg-accent transition-colors"
               >
                 <a
                   href={link.href}
                   target="_blank"
-                  className="flex items-center justify-center p-2 gap-[2rem]"
+                  className="flex p-2 gap-4 text-4xl"
                 >
-                  {link.icon ? (
-                    <link.icon className="w-[6vh] h-[6vh]" />
-                  ) : (
-                    <div className="w-[6vh] h-[6vh]" />
-                  )}
-                  <span className="text-[3vh] w-full max-w-[8vw] dyslexic:max-w-[12vw] text-left">
-                    {link.name}
-                  </span>
+                  <div className="flex items-center justify-center gap-4 w-75">
+                    <link.icon className="text-6xl" />
 
-                  <div className="flex items-center justify-center w-[6vh] h-[6vh]">
-                    <ArrowSquareOut className="w-[3vh] h-[3vh] text-muted-foreground" />
+                    <div className="flex flex-1 p-2 text-left truncate">
+                      {link.name}
+                      <ArrowSquareOut className="text-muted-foreground text-xl" />
+                    </div>
                   </div>
                 </a>
               </li>
