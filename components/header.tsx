@@ -82,7 +82,7 @@ export function Header() {
         <div className="flex-1 flex justify-center">
           <a href="/" className="flex items-center">
             <Image
-              src={theme == "dark" ? "" : "/light-logo.svg"}
+              src={theme == "dark" ? "/dark-logo.svg" : "/light-logo.svg"}
               alt="Logo"
               width={120}
               height={32}
