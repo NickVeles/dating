@@ -27,6 +27,8 @@ import {
 } from "phosphor-react";
 import { toast } from "sonner";
 import { Toaster } from "./ui/sonner";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const links = [
   {
@@ -53,6 +55,7 @@ const links = [
 ];
 
 export default function ContactDrawer() {
+  const [showButton, setShowButton] = useState(false);
   const handleDiscordCopy = async (username: string) => {
     try {
       await navigator.clipboard.writeText(username);
@@ -64,12 +67,29 @@ export default function ContactDrawer() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 0);
+    };
+
+    // Listen to scroll
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check on mount
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <Toaster />
       <Drawer>
         <DrawerTrigger asChild>
-          <div className="fixed flex gap-4 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background">
+          <div
+            className={cn(
+              "fixed flex gap-4 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background transition-transform duration-300 shadow",
+              showButton ? "translate-y-0" : "translate-y-full"
+            )}
+          >
             <Heart className="size-8 text-pink-600" />
             Contact Me
             <CaretUp className="size-8" />
