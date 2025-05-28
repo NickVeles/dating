@@ -1,5 +1,7 @@
 "use client";
 
+import { ArrowSquareOut } from "phosphor-react";
+
 export function Footer() {
   return (
     <footer className="flex items-center justify-center w-full px-2 py-4 border-t bg-background">
@@ -11,6 +13,7 @@ export function Footer() {
           className="text-pink-600 dark:text-pink-400 hover:underline"
         >
           Github
+          <ArrowSquareOut className="inline align-text-top size-4" />
         </a>
       </span>
     </footer>
