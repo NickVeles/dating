@@ -86,13 +86,15 @@ export default function ContactDrawer() {
         <DrawerTrigger asChild>
           <div
             className={cn(
-              "fixed flex gap-4 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background transition-transform duration-300 shadow",
+              "fixed flex-col gap-4 justify-center intems-center w-full bottom-0 p-4 text-2xl hover:cursor-pointer border-t bg-background transition-transform duration-300 shadow",
               showButton ? "translate-y-0" : "translate-y-full"
             )}
           >
-            <Heart className="size-8 text-pink-600" />
-            Contact Me
-            <CaretUp className="size-8" />
+            <div className="flex items-center justify-center gap-4">
+              <Heart className="size-8 text-pink-600" />
+              Contact Me
+              <CaretUp className="size-8" />
+            </div>
           </div>
         </DrawerTrigger>
         <DrawerContent className="dyslexic:font-[family-name:var(--font-dyslexic)]">
@@ -102,6 +104,11 @@ export default function ContactDrawer() {
               Contact Me
               <Heart className="size-8 text-pink-600" />
             </DrawerTitle>
+            <DrawerDescription className="flex items-center justify-center">
+              <span className="text-sm font-bold py-0.5 px-2 m-1 text-white text-center bg-pink-700 rounded font-[family-name:var(--font-roboto-mono)] dyslexic:font-[family-name:var(--font-dyslexic-mono)]">
+                ONCE I FIND SOMEONE, THIS SITE WILL GO DOWN! MESSAGE NOW!
+              </span>
+            </DrawerDescription>
           </DrawerHeader>
           <ul className="flex flex-col gap-2 p-4 items-center">
             <li className="rounded hover:bg-accent transition-colors">
