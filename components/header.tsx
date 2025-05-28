@@ -11,6 +11,7 @@ import {
   SheetContent,
   SheetClose,
   SheetHeader,
+  SheetTitle,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { useScrollDirection } from "@/lib/use-scroll-direction";
@@ -55,7 +56,9 @@ export function Header() {
           >
             <nav className="flex flex-col h-full">
               <SheetHeader className="flex px-4 py-3 border-b">
-                <span className="font-bold text-lg">Menu</span>
+                <SheetTitle>
+                  <span className="font-bold text-lg">Menu</span>
+                </SheetTitle>
               </SheetHeader>
               <ul className="flex-1 flex flex-col gap-1 p-4">
                 {pages.map((page) => (
