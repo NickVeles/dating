@@ -54,9 +54,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col items-center min-h-screen min-w-screen gap-16 font-[family-name:var(--font-sans)] dyslexic:font-[family-name:var(--font-dyslexic)]">
             <Header />
-            <div className="flex-1 ">
-            {children}
-            </div>
+            <div className="flex-1 ">{children}</div>
             <Footer />
             <ContactDrawer />
           </div>
