@@ -1,12 +1,14 @@
 import Image from "next/image";
 
+//Night Sky by Paul Volkmer on Unsplash
+
 export default function Home() {
   return (
     <div>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
-          src="/logo-full.svg"
+          src="/light-logo-full.svg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -52,7 +54,7 @@ export default function Home() {
         </div>
         <Image
           className="dark:invert"
-          src="/logo-full.svg"
+          src="/light-logo-full.svg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -98,7 +100,7 @@ export default function Home() {
         </div>
         <Image
           className="dark:invert"
-          src="/logo-full.svg"
+          src="/light-logo-full.svg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -144,7 +146,7 @@ export default function Home() {
         </div>
         <Image
           className="dark:invert"
-          src="/logo-full.svg"
+          src="/light-logo-full.svg"
           alt="Next.js logo"
           width={180}
           height={38}

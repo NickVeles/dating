@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { useScrollDirection } from "@/lib/use-scroll-direction";
+import { useTheme } from "next-themes";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
@@ -21,6 +22,7 @@ const pages = [
 ];
 
 export function Header() {
+  const { theme } = useTheme();
   const scrollDirection = useScrollDirection();
 
   return (
@@ -80,12 +82,12 @@ export function Header() {
         <div className="flex-1 flex justify-center">
           <a href="/" className="flex items-center">
             <Image
-              src="/logo.svg"
+              src={theme == "dark" ? "" : "/light-logo.svg"}
               alt="Logo"
               width={120}
               height={32}
               priority
-              className="h-8 w-auto dark:invert"
+              className="h-8 w-auto"
             />
           </a>
         </div>
