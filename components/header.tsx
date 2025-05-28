@@ -37,50 +37,52 @@ export function Header() {
       )}
     >
       {/* Left: Burger menu */}
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button
-            variant="ghost"
-            size="icon"
-            aria-label="Open navigation menu"
-            className="hover:cursor-pointer"
+      <div className="flex flex-1 justify-start">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Open navigation menu"
+              className="hover:cursor-pointer"
+            >
+              <List className="size-7" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent
+            side="left"
+            className="p-0 w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md dyslexic:font-[family-name:var(--font-dyslexic)]"
           >
-            <List className="size-7" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent
-          side="left"
-          className="p-0 w-full max-w-xs sm:max-w-md md:max-w-sm lg:max-w-md dyslexic:font-[family-name:var(--font-dyslexic)]"
-        >
-          <nav className="flex flex-col h-full">
-            <SheetHeader className="flex px-4 py-3 border-b">
-              <span className="font-bold text-lg">Menu</span>
-            </SheetHeader>
-            <ul className="flex-1 flex flex-col gap-1 p-4">
-              {pages.map((page) => (
-                <li key={page.href}>
-                  <SheetClose asChild>
-                    <a
-                      href={page.href}
-                      className="flex items-center gap-2 p-2 rounded hover:bg-accent transition-colors"
-                    >
-                      {page.icon ? (
-                        <page.icon className="w-[1.6rem] h-[1.6rem]" />
-                      ) : (
-                        <div className="w-[1.6rem] h-[1.6rem]" />
-                      )}
-                      {page.name}
-                    </a>
-                  </SheetClose>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </SheetContent>
-      </Sheet>
+            <nav className="flex flex-col h-full">
+              <SheetHeader className="flex px-4 py-3 border-b">
+                <span className="font-bold text-lg">Menu</span>
+              </SheetHeader>
+              <ul className="flex-1 flex flex-col gap-1 p-4">
+                {pages.map((page) => (
+                  <li key={page.href}>
+                    <SheetClose asChild>
+                      <a
+                        href={page.href}
+                        className="flex items-center gap-2 p-2 rounded hover:bg-accent transition-colors"
+                      >
+                        {page.icon ? (
+                          <page.icon className="w-[1.6rem] h-[1.6rem]" />
+                        ) : (
+                          <div className="w-[1.6rem] h-[1.6rem]" />
+                        )}
+                        {page.name}
+                      </a>
+                    </SheetClose>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
 
       {/* Center: Logo */}
-      <div className="flex-1 flex justify-center">
+      <div className="flex flex-1 justify-center">
         <a href="/" className="flex items-center">
           <Image
             src={theme == "dark" ? "/dark-logo.svg" : "/light-logo.svg"}
@@ -94,7 +96,7 @@ export function Header() {
       </div>
 
       {/* Right: Accessibility toggles */}
-      <div className="flex items-center gap-2">
+      <div className="flex flex-1 justify-end place-items-end gap-2">
         <ThemeToggle />
         <FontToggle />
       </div>
