@@ -4,7 +4,7 @@ import { ArrowSquareOut } from "phosphor-react";
 
 export function Footer() {
   return (
-    <footer className="flex items-center justify-center w-full px-2 py-4 border-t bg-background">
+    <footer className="flex items-center justify-center text-center w-full px-2 py-4 border-t bg-background">
       <span>
         Made with ❤️ by Nick. You can find this project on&nbsp;
         <a
