@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useScrollDirection } from "@/lib/use-scroll-direction";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
@@ -24,6 +25,9 @@ const pages = [
 export function Header() {
   const { theme } = useTheme();
   const scrollDirection = useScrollDirection();
+  
+  // Ensure theme is loaded before rendering
+  if (typeof theme === "undefined") return null;
 
   return (
     <>
