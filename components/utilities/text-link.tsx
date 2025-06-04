@@ -4,15 +4,21 @@ interface TextLinkProps {
   href: string;
   children: string;
   blank?: boolean;
+  className?: string;
 }
 
-export function TextLink({ href, children, blank = false }: TextLinkProps) {
+export function TextLink({
+  href,
+  children,
+  blank = false,
+  className = "text-pink-600 dark:text-pink-400 hover:underline",
+}: TextLinkProps) {
   return (
     <a
       href={href}
       target={blank ? "_blank" : undefined}
       rel={blank ? "noopener noreferrer" : undefined}
-      className="text-pink-600 dark:text-pink-400 hover:underline"
+      className={className}
     >
       {children}
       {blank && <ArrowSquareOut className="inline align-text-top size-4" />}
