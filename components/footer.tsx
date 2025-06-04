@@ -1,20 +1,15 @@
 "use client";
 
-import { ArrowSquareOut } from "phosphor-react";
+import TextLink from "./utilities/text-link";
 
 export function Footer() {
   return (
     <footer className="flex items-center justify-center text-center w-full px-2 py-4 border-t bg-background">
       <span>
         Made with ❤️ by Nick. You can find this project on&nbsp;
-        <a
-          href="https://github.com/NickVeles/dating"
-          target="_blank"
-          className="text-pink-600 dark:text-pink-400 hover:underline"
-        >
+        <TextLink href="https://github.com/NickVeles/dating" blank={true}>
           Github
-          <ArrowSquareOut className="inline align-text-top size-4" />
-        </a>
+        </TextLink>
       </span>
     </footer>
   );
