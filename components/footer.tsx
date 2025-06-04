@@ -57,20 +57,19 @@ export function Footer() {
         <h4 className="mb-2 text-lg font-semibold tracking-wide text-primary">
           Contact
         </h4>
-        <Toaster />
         <ul className="flex flex-wrap flex-col sm:flex-row gap-2 sm:gap-8 items-center justify-center text-sm dyslexic:text-xs">
           <li key="discord">
             <span
               onClick={() => handleDiscordCopy("nickveles")}
               className="flex items-center gap-2 hover:cursor-pointer hover:underline"
             >
-                <Image
-                  src="discord-logo.svg"
-                  alt="Discord logo"
-                  width={0}
-                  height={0}
-                  className="size-6 align-middle dark:invert"
-                />
+              <Image
+                src="discord-logo.svg"
+                alt="Discord logo"
+                width={0}
+                height={0}
+                className="size-6 align-middle dark:invert"
+              />
               <span className="flex flex-1 truncate">
                 discord <CopySimple className="inline align-top size-4" />
               </span>
@@ -106,6 +105,7 @@ export function Footer() {
           Github
         </TextLink>
       </span>
+      <Toaster />
     </footer>
   );
 }
