@@ -16,7 +16,6 @@ import {
 import { cn } from "@/lib/utils";
 import { useScrollDirection } from "@/lib/use-scroll-direction";
 import { useTheme } from "next-themes";
-import { useEffect } from "react";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
