@@ -60,7 +60,7 @@ export function Footer() {
         <Toaster />
         <ul className="flex flex-wrap flex-col sm:flex-row gap-2 sm:gap-8 items-center justify-center text-sm dyslexic:text-xs">
           <li key="discord">
-            <button
+            <span
               onClick={() => handleDiscordCopy("nickveles")}
               className="flex items-center gap-2 hover:cursor-pointer hover:underline"
             >
@@ -74,7 +74,7 @@ export function Footer() {
               <span className="flex flex-1 truncate">
                 discord <CopySimple className="inline align-top size-4" />
               </span>
-            </button>
+            </span>
           </li>
           {links.map((link) => (
             <li key={link.common}>
