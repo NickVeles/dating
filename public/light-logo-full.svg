@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="logo-full.svg"
+   sodipodi:docname="light-logo-full.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="true"
-     inkscape:zoom="8"
-     inkscape:cx="37.0625"
-     inkscape:cy="-7.5625"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="29.610096"
+     inkscape:cy="15.998291"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -58,25 +58,23 @@
        sodipodi:nodetypes="cccscccccscccsccccccccccsscssccsccscccccccccscccscccscccscccccscccccccscsscccscccccssccscccccccccccccccscsccccccccccssccccscccscccccscssccccscccscccscsccccsccccscsccscccccccccccscscscccccsccssccccscccscccccccscccscscccccscccccccccccsccccsccsscsccccccscsccsccsccssccccscccscccccccscscccccccccccccccscscsccccccccscccscscccscsscccccccccccscscccccsssccccccccscscccccsscccscscscsccs" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.64583px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Medium';text-align:center;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787;stroke-miterlimit:4.5;paint-order:markers stroke fill"
-       x="69.443237"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.38125px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Medium';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+       x="64.901833"
        y="104.58092"
        id="text3"><tspan
          sodipodi:role="line"
          id="tspan3"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.64583px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Light';text-align:end;letter-spacing:0.264583px;text-anchor:end;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787"
-         x="69.443237"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.38125px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Light';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787"
+         x="64.901833"
          y="104.58092"
-         dy="1.14">mad<tspan
-   style="font-size:2.64583px;letter-spacing:0px;fill:#be185d;fill-opacity:1"
-   id="tspan2">e</tspan></tspan><tspan
+         dy="0.5">made</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.64583px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Light';text-align:end;letter-spacing:0.264583px;text-anchor:end;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787"
-         x="69.707817"
-         y="107.88821"
-         id="tspan4">simple</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:2.38125px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Light';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787"
+         x="64.901833"
+         y="107.55748"
+         id="tspan4">simple by</tspan></text>
     <path
-       style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+       style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill;fill:#000000;fill-opacity:1"
        d="m 80.425781,96.394531 c -0.488956,0.0062 -0.820636,0.223729 -1.009765,0.513672 -0.149853,0.22973 -0.168453,0.418315 -0.177849,0.66766 -0.127914,-0.259147 -0.277347,-0.440693 -0.515511,-0.593441 -0.295319,-0.189405 -0.65955,-0.262323 -1.015625,-0.123047 -0.368239,0.144034 -0.590541,0.571116 -0.550781,1.044922 0.03976,0.473806 0.402472,0.963535 1.079362,1.324235 l 0.03035,-0.08609 c -0.634427,-0.338073 -0.883888,-0.848706 -0.878133,-1.261388 0.0068,-0.489825 0.263696,-0.659823 0.449434,-0.727234 0.20118,-0.07302 0.572229,-0.0286 0.760452,0.06278 0.276266,0.13412 0.565112,0.389863 0.667272,0.689078 l 0.0793,-0.01324 c -0.02049,-0.262723 0.139211,-0.740422 0.30555,-0.893301 0.166338,-0.152879 0.463942,-0.30243 0.827586,-0.26124 0.482734,-0.0061 1.102661,0.498406 1.095999,1.403726 -0.0098,1.186227 -0.743293,2.520325 -2.05585,3.545865 -0.03788,0.0301 -0.04401,0.0853 -0.01367,0.12305 0.02942,0.0373 0.0832,0.0442 0.121094,0.0156 1.341973,-1.04852 2.19662,-2.405408 2.207031,-3.669919 0.01022,-1.245269 -0.818031,-1.769186 -1.40625,-1.761719 z"
        id="path1"
        sodipodi:nodetypes="cscsssccssscczcccccccc" />
