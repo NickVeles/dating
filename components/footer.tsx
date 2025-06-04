@@ -10,31 +10,26 @@ const links = [
   {
     icon: "instagram-logo.svg",
     common: "Instagram",
-    name: "@nick.veles",
     href: "https://www.instagram.com/nick.veles/",
   },
   {
     icon: "x-logo.svg",
     common: "Twitter",
-    name: "NickVeles",
-    href: "https://x.com/NickVeles",
+    href: "https://x.com/nickveles",
   },
   {
     icon: "linkedin-logo.svg",
     common: "LinkedIn",
-    name: "in/nickveles",
     href: "https://www.linkedin.com/in/nickveles/",
   },
   {
     icon: "github-logo.svg",
     common: "GitHub",
-    name: "NickVeles",
-    href: "https://github.com/NickVeles/",
+    href: "https://github.com/nickveles/",
   },
   {
     icon: "/google-logo.svg",
     common: "Google Forms",
-    name: "forms.gle",
     href: "https://forms.gle/4YNLofEUcJ6YVA3a9",
   },
 ];
