@@ -56,7 +56,6 @@ export default function RootLayout({
             <Header />
             <div className="flex-1 ">{children}</div>
             <Footer />
-            <ContactDrawer /> //TODO: make this appear only in the future "About Me" page
           </div>
         </ThemeProvider>
       </body>
