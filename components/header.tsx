@@ -26,9 +26,6 @@ export function Header() {
   const { theme } = useTheme();
   const scrollDirection = useScrollDirection();
 
-  // Ensure theme is loaded before rendering
-  if (typeof theme === "undefined") return null;
-
   return (
     <header
       className={cn(
