@@ -49,6 +49,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto-sans);
   --font-mono: var(--font-roboto-mono);
+  --font-serif: var(--font-roboto-serif);
   --font-dyslexic: "OpenDyslexic", sans-serif;
   --font-dyslexic-mono: "OpenDyslexicMono", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
