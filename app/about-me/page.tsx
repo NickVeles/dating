@@ -15,12 +15,18 @@ export default function AboutMe() {
     <main className="flex flex-col flex-1 gap-8">
       <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
       <SectionContainer accented>
-          <p className="text-lg text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quo reiciendis suscipit voluptates tenetur ab soluta quibusdam inventore, atque quas nulla blanditiis eligendi temporibus maxime? Possimus architecto quam fuga delectus.
-          </p>
-          <p className="text-lg text-justify mt-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum inventore magnam, nam accusantium maxime sequi odio repellendus, at cumque veniam non voluptates error, assumenda ea! Reiciendis explicabo sunt recusandae quisquam!
-          </p>
+        <p className="text-lg text-justify">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quo
+          reiciendis suscipit voluptates tenetur ab soluta quibusdam inventore,
+          atque quas nulla blanditiis eligendi temporibus maxime? Possimus
+          architecto quam fuga delectus.
+        </p>
+        <p className="text-lg text-justify mt-4">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+          inventore magnam, nam accusantium maxime sequi odio repellendus, at
+          cumque veniam non voluptates error, assumenda ea! Reiciendis explicabo
+          sunt recusandae quisquam!
+        </p>
       </SectionContainer>
     </main>
   );
