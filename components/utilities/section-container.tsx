@@ -1,5 +1,3 @@
-import React from "react";
-
 type SectionContainerProps = {
   accented?: boolean;
   children: React.ReactNode;
