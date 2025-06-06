@@ -8,27 +8,27 @@ import { Toaster } from "./ui/sonner";
 
 const links = [
   {
-    icon: "instagram-logo.svg",
+    icon: "icons/instagram-logo.svg",
     common: "Instagram",
     href: "https://www.instagram.com/nick.veles/",
   },
   {
-    icon: "x-logo.svg",
+    icon: "icons/x-logo.svg",
     common: "Twitter",
     href: "https://x.com/nickveles",
   },
   {
-    icon: "linkedin-logo.svg",
+    icon: "icons/linkedin-logo.svg",
     common: "LinkedIn",
     href: "https://www.linkedin.com/in/nickveles/",
   },
   {
-    icon: "github-logo.svg",
+    icon: "icons/github-logo.svg",
     common: "GitHub",
     href: "https://github.com/nickveles/",
   },
   {
-    icon: "/google-logo.svg",
+    icon: "icons/google-logo.svg",
     common: "Google Forms",
     href: "https://forms.gle/4YNLofEUcJ6YVA3a9",
   },
@@ -59,7 +59,7 @@ export function Footer() {
               className="flex items-center gap-2 hover:cursor-pointer hover:underline"
             >
               <Image
-                src="discord-logo.svg"
+                src="icons/discord-logo.svg"
                 alt="Discord logo"
                 width={0}
                 height={0}

@@ -7,7 +7,6 @@ import { Toggle } from "@/components/ui/toggle";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
@@ -44,7 +43,7 @@ export function FontToggle() {
             className="dark:invert w-[1.2rem] h-[1.2rem]"
             width={0}
             height={0}
-            src="dyslexic.svg"
+            src="icons/dyslexic.svg"
             alt="dyslexia toggle"
             priority
           />
