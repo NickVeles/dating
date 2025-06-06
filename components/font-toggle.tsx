@@ -31,30 +31,28 @@ export function FontToggle() {
   }, [isDyslexic]);
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Toggle
-            className="hover:cursor-pointer"
-            variant="outline"
-            aria-label="Toggle dyslexic font"
-            pressed={isDyslexic}
-            onPressedChange={setIsDyslexic}
-          >
-            <Image
-              className="dark:invert w-[1.2rem] h-[1.2rem]"
-              width={0}
-              height={0}
-              src="dyslexic.svg"
-              alt="dyslexia toggle"
-              priority
-            />
-          </Toggle>
-        </TooltipTrigger>
-        <TooltipContent side="top" className="text-xs">
-          Toggle dyslexic font
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Toggle
+          className="hover:cursor-pointer"
+          variant="outline"
+          aria-label="Toggle dyslexic font"
+          pressed={isDyslexic}
+          onPressedChange={setIsDyslexic}
+        >
+          <Image
+            className="dark:invert w-[1.2rem] h-[1.2rem]"
+            width={0}
+            height={0}
+            src="dyslexic.svg"
+            alt="dyslexia toggle"
+            priority
+          />
+        </Toggle>
+      </TooltipTrigger>
+      <TooltipContent side="top" className="text-xs">
+        Toggle dyslexic font
+      </TooltipContent>
+    </Tooltip>
   );
 }
