@@ -9,27 +9,27 @@ import { Toaster } from "./ui/sonner";
 const links = [
   {
     icon: "icons/instagram-logo.svg",
-    common: "Instagram",
+    name: "Instagram",
     href: "https://www.instagram.com/nick.veles/",
   },
   {
     icon: "icons/x-logo.svg",
-    common: "Twitter",
+    name: "Twitter",
     href: "https://x.com/nickveles",
   },
   {
     icon: "icons/linkedin-logo.svg",
-    common: "LinkedIn",
+    name: "LinkedIn",
     href: "https://www.linkedin.com/in/nickveles/",
   },
   {
     icon: "icons/github-logo.svg",
-    common: "GitHub",
+    name: "GitHub",
     href: "https://github.com/nickveles/",
   },
   {
     icon: "icons/google-logo.svg",
-    common: "Google Forms",
+    name: "Google Forms",
     href: "https://forms.gle/4YNLofEUcJ6YVA3a9",
   },
 ];
@@ -71,7 +71,7 @@ export function Footer() {
             </span>
           </li>
           {links.map((link) => (
-            <li key={link.common}>
+            <li key={link.name}>
               <a
                 href={link.href}
                 target="_blank"
@@ -80,13 +80,13 @@ export function Footer() {
               >
                 <Image
                   src={link.icon}
-                  alt={`${link.common} logo`}
+                  alt={`${link.name} logo`}
                   width={0}
                   height={0}
                   className="size-6 align-middle dark:invert"
                 />
                 <span className="flex flex-1 truncate">
-                  {link.common}
+                  {link.name}
                   <ArrowSquareOut className="inline align-top size-4" />
                 </span>
               </a>
