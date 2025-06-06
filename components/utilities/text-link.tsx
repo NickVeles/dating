@@ -11,7 +11,7 @@ export function TextLink({
   href,
   children,
   blank = false,
-  className = "text-pink-600 dark:text-pink-400 hover:underline",
+  className = "text-blue-600 dark:text-blue-400 visited:text-pink-600 dark:visited:text-pink-400 hover:underline",
 }: TextLinkProps) {
   return (
     <a
