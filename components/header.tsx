@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { List, House } from "phosphor-react";
+import { List, House, User } from "phosphor-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { FontToggle } from "@/components/font-toggle";
 import { Button } from "@/components/ui/button";
@@ -16,9 +16,11 @@ import {
 import { cn } from "@/lib/utils";
 import { useScrollDirection } from "@/lib/use-scroll-direction";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
+  { icon: User, name: "About Me", href: "/about-me" },
   //TODO add more pages
 ];
 
@@ -60,7 +62,7 @@ export function Header() {
                 {pages.map((page) => (
                   <li key={page.href}>
                     <SheetClose asChild>
-                      <a
+                      <Link
                         href={page.href}
                         className="flex items-center gap-2 p-2 rounded hover:bg-accent transition-colors"
                       >
@@ -70,7 +72,7 @@ export function Header() {
                           <div className="w-[1.6rem] h-[1.6rem]" />
                         )}
                         {page.name}
-                      </a>
+                      </Link>
                     </SheetClose>
                   </li>
                 ))}
@@ -82,7 +84,7 @@ export function Header() {
 
       {/* Center: Logo */}
       <div className="flex flex-1 justify-center">
-        <a href="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src={theme == "dark" ? "/dark-logo.svg" : "/light-logo.svg"}
             alt="Logo"
@@ -91,7 +93,7 @@ export function Header() {
             priority
             className="h-8 w-auto"
           />
-        </a>
+        </Link>
       </div>
 
       {/* Right: Accessibility toggles */}
