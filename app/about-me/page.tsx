@@ -1,6 +1,7 @@
 "use client";
 
 import SectionContainer from "@/components/utilities/section-container";
+import TitleContainer from "@/components/utilities/title-container";
 import { useTheme } from "next-themes";
 import { UserCircle } from "phosphor-react";
 
@@ -12,10 +13,7 @@ export default function AboutMe() {
 
   return (
     <main className="flex flex-col flex-1 gap-8">
-      <div className="flex flex-col gap-2 mt-[5rem]">
-        <UserCircle className="w-24 h-24 mx-auto text-primary" />
-        <h1 className="text-4xl text-center font-bold font-serif">About Me</h1>
-      </div>
+      <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
       <SectionContainer accented>
           <p className="text-lg text-justify">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quo reiciendis suscipit voluptates tenetur ab soluta quibusdam inventore, atque quas nulla blanditiis eligendi temporibus maxime? Possimus architecto quam fuga delectus.
