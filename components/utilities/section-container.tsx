@@ -10,7 +10,7 @@ export default function SectionContainer({
   children,
 }: SectionContainerProps) {
   const innerClass =
-    "sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full p-[1rem] flex flex-col items-center justify-center";
+    "sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center";
 
   if (accented) {
     return (
