@@ -66,7 +66,7 @@ export function Footer() {
                 className="size-6 align-middle dark:invert"
               />
               <span className="flex flex-1 truncate">
-                discord <CopySimple className="inline align-top size-4" />
+                discord<CopySimple className="inline align-top size-4" />
               </span>
             </span>
           </li>
