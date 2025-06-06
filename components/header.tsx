@@ -1,5 +1,9 @@
 "use client";
 
+//TODO: Add "skip to content"
+//TODO: Add "back to top" button
+//TODO: Fix - header should appear when selecting its content with tab (Accessibility)
+
 import Image from "next/image";
 import { List, House, User } from "phosphor-react";
 import { ThemeToggle } from "@/components/theme-toggle";
