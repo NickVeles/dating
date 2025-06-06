@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowSquareOut } from "phosphor-react";
 
 interface TextLinkProps {
@@ -14,7 +15,7 @@ export function TextLink({
   className = "text-blue-600 dark:text-blue-400 visited:text-pink-600 dark:visited:text-pink-400 hover:underline",
 }: TextLinkProps) {
   return (
-    <a
+    <Link
       href={href}
       target={blank ? "_blank" : undefined}
       rel={blank ? "noopener noreferrer" : undefined}
@@ -22,7 +23,7 @@ export function TextLink({
     >
       {children}
       {blank && <ArrowSquareOut className="inline align-text-top size-4" />}
-    </a>
+    </Link>
   );
 }
 

@@ -5,6 +5,7 @@ import { ArrowSquareOut, CopySimple } from "phosphor-react";
 import { toast } from "sonner";
 import TextLink from "./utilities/text-link";
 import { Toaster } from "./ui/sonner";
+import Link from "next/link";
 
 const links = [
   {
@@ -72,7 +73,7 @@ export function Footer() {
           </li>
           {links.map((link) => (
             <li key={link.name}>
-              <a
+              <Link
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -89,7 +90,7 @@ export function Footer() {
                   {link.name}
                   <ArrowSquareOut className="inline align-top size-4" />
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
