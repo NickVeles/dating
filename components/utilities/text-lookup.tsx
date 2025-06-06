@@ -1,10 +1,10 @@
 import { MagnifyingGlass } from "phosphor-react";
-import { ReactNode } from "react";
+import { JSX, ReactNode } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 interface TextLookupProps {
   text: string;
-  children: ReactNode;
+  children: JSX.Element | ReactNode;
   className?: string;
 }
 
