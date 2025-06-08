@@ -1,6 +1,6 @@
 type TitleContainerProps = {
   Icon?: React.ElementType;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export default function TitleContainer({

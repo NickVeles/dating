@@ -1,6 +1,6 @@
 type SectionContainerProps = {
   accented?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export default function SectionContainer({
