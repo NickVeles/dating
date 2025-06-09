@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowSquareOut, CopySimple } from "phosphor-react";
+import { ArrowSquareOut, CopySimple, X } from "phosphor-react";
 import { toast } from "sonner";
-import TextLink from "./utilities/text-link";
 import { Toaster } from "./ui/sonner";
+import TextLink from "./utilities/text-link";
 import Link from "next/link";
 
 const links = [
@@ -39,11 +39,15 @@ export function Footer() {
   const handleDiscordCopy = async (username: string) => {
     try {
       await navigator.clipboard.writeText(username);
-      toast("Nickname copied successfully!");
+      toast("Nickname copied successfully!", {
+        action: { label: <X />, onClick: () => {} },
+      });
     } catch (err) {
       toast("Oops!", {
         description: JSON.stringify(err),
+        action: { label: <X />, onClick: () => {} },
       });
+      console.error(err);
     }
   };
 
@@ -67,7 +71,8 @@ export function Footer() {
                 className="size-6 align-middle dark:invert"
               />
               <span className="flex flex-1 truncate">
-                discord<CopySimple className="inline align-top size-4" />
+                discord
+                <CopySimple className="inline align-top size-4" />
               </span>
             </span>
           </li>
