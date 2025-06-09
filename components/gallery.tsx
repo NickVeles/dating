@@ -1,5 +1,7 @@
 "use client";
 
+// TODO: Fix carousel item style and maybe use CldImage for better image handling
+
 import {
   Carousel,
   CarouselContent,
