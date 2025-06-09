@@ -5,40 +5,40 @@
 @custom-variant dyslexic (&:is(.dyslexic *));
 
 @font-face {
-  font-family: 'OpenDyslexic';
-  src: url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenDyslexic';
-  src: url('/fonts/OpenDyslexic-Bold.otf') format('opentype');
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenDyslexic';
-  src: url('/fonts/OpenDyslexic-Italic.otf') format('opentype');
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Italic.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenDyslexic';
-  src: url('/fonts/OpenDyslexic-Bold-Italic.otf') format('opentype');
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Bold-Italic.otf") format("opentype");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenDyslexicMono';
-  src: url('/fonts/OpenDyslexicMono-Regular.otf') format('opentype');
+  font-family: "OpenDyslexicMono";
+  src: url("/fonts/OpenDyslexicMono-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
