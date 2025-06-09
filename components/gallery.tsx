@@ -20,7 +20,7 @@ type ImageResource = {
 };
 
 const images:string[] = [
-
+  
 ]
 
 export default function Gallery() {
