@@ -19,23 +19,11 @@ type ImageResource = {
   alt: string;
 };
 
+const images:string[] = [
+
+]
+
 export default function Gallery() {
-  const [images, setImages] = useState<ImageResource[]>([]);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const res = await fetch("/api/gallery");
-        const data = await res.json();
-        console.log("Fetched images:", data);
-        setImages(data);
-      } catch (error) {
-        console.error("Failed to fetch images:", error);
-      }
-    };
-
-    fetchImages();
-  }, []);
 
   return (
     <Carousel
@@ -49,24 +37,24 @@ export default function Gallery() {
         }),
       ]}
     >
-      <CarouselContent>
-        {images.map((img) => (
+      <CarouselContent className="flex gap-2 items-center justify-center">
+        {images.map((src, index) => (
           <CarouselItem
-            key={img.id}
+            key={index}
             className="hover:cursor-grab active:cursor-grabbing"
           >
             <Image
-              src={img.url}
-              alt={img.alt}
-              width={500}
-              height={500}
+              src={src}
+              alt={`Image ${index + 1}`}
+              height={300}
+              width={300}
               className="object-cover rounded-lg items-center justify-center"
             />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hover:cursor-pointer" />
-      <CarouselNext className="hover:cursor-pointer" />
+      <CarouselPrevious className="hover:cursor-pointer hidden sm:flex" />
+      <CarouselNext className="hover:cursor-pointer hidden sm:flex" />
     </Carousel>
   );
 }
