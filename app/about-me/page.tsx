@@ -8,15 +8,24 @@ import { UserCircle } from "phosphor-react";
 
 export default function AboutMe() {
   const { theme } = useTheme();
-    
+  // Calculate age based on birth date: 21st March 2003
+  const birthDate = new Date(2003, 2, 21); // Month is 0-indexed (2 = March)
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
   // Ensure theme is loaded before rendering
   if (typeof theme === "undefined") return null;
 
   return (
     <main className="flex flex-col flex-1 gap-8">
       <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
-      <SectionContainer>
+      <SectionContainer className="gap-7">
         <Gallery />
+        <p className="text-4xl font-bold text-justify mt-4">Nick, {age}</p>
       </SectionContainer>
       <SectionContainer accented>
         <p className="text-lg text-justify">
