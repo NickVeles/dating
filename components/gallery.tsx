@@ -39,6 +39,7 @@ export default function Gallery() {
 
   return (
     <Carousel
+      className="w-full max-w-xs"
       opts={{
         loop: true,
       }}
@@ -50,13 +51,16 @@ export default function Gallery() {
     >
       <CarouselContent>
         {images.map((img) => (
-          <CarouselItem key={img.id} className="hover:cursor-grab active:cursor-grabbing">
+          <CarouselItem
+            key={img.id}
+            className="hover:cursor-grab active:cursor-grabbing"
+          >
             <Image
               src={img.url}
               alt={img.alt}
               width={500}
               height={500}
-              className="object-cover rounded-lg"
+              className="object-cover rounded-lg items-center justify-center"
             />
           </CarouselItem>
         ))}
