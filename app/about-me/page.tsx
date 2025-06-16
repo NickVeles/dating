@@ -100,21 +100,6 @@ const chips = [
         tooltip: "Children",
         icon: "baby-carriage",
       },
-      {
-        text: "Never",
-        tooltip: "Smoking",
-        icon: "cigarette",
-      },
-      {
-        text: "Never",
-        tooltip: "Drinking",
-        icon: "wine",
-      },
-      {
-        text: "Never",
-        tooltip: "Substances",
-        icon: "pill",
-      },
     ],
   },
   {
@@ -130,6 +115,21 @@ const chips = [
         text: "Low-fat | Hates pork",
         tooltip: "Diet",
         icon: "fork-knife",
+      },
+      {
+        text: "Never",
+        tooltip: "Smoking",
+        icon: "cigarette",
+      },
+      {
+        text: "Never",
+        tooltip: "Drinking",
+        icon: "wine",
+      },
+      {
+        text: "Never",
+        tooltip: "Substances",
+        icon: "pill",
       },
     ],
   },
