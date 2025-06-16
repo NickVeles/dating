@@ -86,6 +86,16 @@ const chips = [
         icon: "monogamy",
       },
       {
+        text: "Serious Dater",
+        tooltip: "Relationship maturity",
+        icon: "lock-heart",
+      },
+      {
+        text: "Single & Looking",
+        tooltip: "Relationship status",
+        icon: "magnifying-glass-heart",
+      },
+      {
         text: "None | Open to having",
         tooltip: "Children",
         icon: "baby-carriage",
