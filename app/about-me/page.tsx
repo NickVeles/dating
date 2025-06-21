@@ -208,7 +208,7 @@ export default function AboutMe() {
         </div>
       </SectionContainer>
       <SectionContainer accented>
-        <h3 className="text-2xl text-center font-medium">
+        <h3 className="text-2xl dyslexic:text-xl text-center font-medium">
           Quick facts about me!
         </h3>
         {chips.map((category) => (
