@@ -278,7 +278,7 @@ export default function AboutMe() {
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.3 }}
             >
               {attributes[currentAttribute]}
             </motion.div>
