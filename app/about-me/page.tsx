@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 import SectionContainer from "@/components/utilities/section-container";
 import TitleContainer from "@/components/utilities/title-container";
-import { H2, H3, P } from "@/components/utilities/typography";
+import { H2, H3 } from "@/components/utilities/typography";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -224,11 +224,11 @@ export default function AboutMe() {
           </div>
         )}
         <div className="flex flex-col gap-2 items-center justify-center">
-          <H2 className="mt-4">Nick, {age}</H2>
-          <P className="flex items-center justify-center">
-            <Cake alt="Birthday cake" className="size-4 mr-1" />
+          <H2 className="mt-4 border-none pb-0">Nick, {age}</H2>
+          <p className="flex items-center justify-center mt-0">
+            <Cake alt="Birthday cake" className="size-5 mr-1" />
             March 21st, 2003
-          </P>
+          </p>
         </div>
       </SectionContainer>
       <SectionContainer accented>
