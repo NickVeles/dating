@@ -107,7 +107,7 @@ const chips = [
     color: "emerald",
     items: [
       {
-        text: "6d/week",
+        text: "5d/week",
         tooltip: "Workout",
         icon: "barbell",
       },
