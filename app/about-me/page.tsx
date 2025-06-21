@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/tooltip";
 import SectionContainer from "@/components/utilities/section-container";
 import TitleContainer from "@/components/utilities/title-container";
+import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { UserCircle } from "phosphor-react";
@@ -16,7 +17,7 @@ import { Cake } from "phosphor-react";
 const chips = [
   {
     name: "Core",
-    color: "red",
+    color: "bg-red-200 dark:bg-red-800 hover:bg-red-300 dark:hover:bg-red-700",
     items: [
       {
         text: "6'3/190cm",
@@ -42,7 +43,7 @@ const chips = [
   },
   {
     name: "Career",
-    color: "sky",
+    color: "bg-sky-200 dark:bg-sky-800 hover:bg-sky-300 dark:hover:bg-sky-700",
     items: [
       {
         text: "Software Dev",
@@ -73,7 +74,7 @@ const chips = [
   },
   {
     name: "Values",
-    color: "yellow",
+    color: "bg-yellow-200 dark:bg-yellow-800 hover:bg-yellow-300 dark:hover:bg-yellow-700",
     items: [
       {
         text: "Atheist/Agnostic",
@@ -104,7 +105,7 @@ const chips = [
   },
   {
     name: "Lifestyle",
-    color: "emerald",
+    color: "bg-emerald-200 dark:bg-emerald-800 hover:bg-emerald-300 dark:hover:bg-emerald-700",
     items: [
       {
         text: "5d/week",
@@ -135,7 +136,7 @@ const chips = [
   },
   {
     name: "Other",
-    color: "gray",
+    color: "bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700",
     items: [
       {
         text: "Dog",
@@ -181,7 +182,7 @@ export default function AboutMe() {
   return (
     <main className="flex flex-col flex-1 gap-8">
       <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
-      <SectionContainer className="gap-7 relative">
+      <SectionContainer className="gap-8 relative">
         <Gallery />
         {isBirthday && (
           <div
@@ -221,7 +222,7 @@ export default function AboutMe() {
                 <Tooltip key={index}>
                   <TooltipTrigger>
                     <p
-                      className={`flex items-center justify-center bg-${category.color}-200 dark:bg-${category.color}-800 hover:bg-${category.color}-300 dark:hover:bg-${category.color}-700 border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3 hover:cursor-pointer`}
+                      className={cn(`flex items-center justify-center border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3 hover:cursor-pointer`, category.color)}
                     >
                       <Image
                         src={`/icons/${item.icon}.svg`}
