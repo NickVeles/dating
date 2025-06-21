@@ -1,5 +1,9 @@
 "use client";
 
+import Flags from "@/components/about-me/flags";
+import Goals from "@/components/about-me/goals";
+import Interests from "@/components/about-me/interests";
+import Personality from "@/components/about-me/personality";
 import Gallery from "@/components/gallery";
 import {
   Tooltip,
@@ -8,10 +12,13 @@ import {
 } from "@/components/ui/tooltip";
 import SectionContainer from "@/components/utilities/section-container";
 import TitleContainer from "@/components/utilities/title-container";
+import { H2, H3, P } from "@/components/utilities/typography";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { UserCircle, Cake } from "phosphor-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const chips = [
   {
@@ -164,8 +171,23 @@ const chips = [
   },
 ];
 
+const attributes: Record<string, React.ReactNode> = {
+  interests: <Interests />,
+  goals: <Goals />,
+  personality: <Personality />,
+  flags: <Flags />,
+};
+
+const attribAnimVariants = {
+  initial: { opacity: 0, x: -50 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 50 },
+};
+
 export default function AboutMe() {
   const { theme } = useTheme();
+  const [currentAttribute, setCurrentAttribute] =
+    useState<keyof typeof attributes>("interests");
   // Calculate age based on birth date: 21st March 2003
   const birthDate = new Date(2003, 2, 21); // Month is 0-indexed (2 = March)
   const today = new Date();
@@ -202,17 +224,15 @@ export default function AboutMe() {
           </div>
         )}
         <div className="flex flex-col gap-2 items-center justify-center">
-          <h2 className="text-4xl font-bold mt-4">Nick, {age}</h2>
-          <p className="flex items-center justify-center">
-            <Cake alt="Birthday cake" className="text-xl mr-1" />
+          <H2 className="mt-4">Nick, {age}</H2>
+          <P className="flex items-center justify-center">
+            <Cake alt="Birthday cake" className="size-4 mr-1" />
             March 21st, 2003
-          </p>
+          </P>
         </div>
       </SectionContainer>
       <SectionContainer accented>
-        <h3 className="text-2xl dyslexic:text-xl text-center font-medium">
-          Quick facts about me!
-        </h3>
+        <H3 className="text-center font-medium">Quick facts about me!</H3>
         {chips.map((category) => (
           <div
             className="flex flex-col font-serif dyslexic:font-[family-name:var(--font-dyslexic)]"
@@ -245,6 +265,25 @@ export default function AboutMe() {
             </div>
           </div>
         ))}
+      </SectionContainer>
+      <SectionContainer>
+        {/* //TODO: ADD BUTTONS THAT CHANGE THE attributes STATE */}
+      </SectionContainer>
+      <SectionContainer accented>
+        <div className="min-h-[48px] flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentAttribute}
+              variants={attribAnimVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.2 }}
+            >
+              {attributes[currentAttribute]}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </SectionContainer>
     </main>
   );
