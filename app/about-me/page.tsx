@@ -11,8 +11,7 @@ import TitleContainer from "@/components/utilities/title-container";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { UserCircle } from "phosphor-react";
-import { Cake } from "phosphor-react";
+import { UserCircle, Cake } from "phosphor-react";
 
 const chips = [
   {
@@ -74,7 +73,8 @@ const chips = [
   },
   {
     name: "Values",
-    color: "bg-yellow-200 dark:bg-yellow-800 hover:bg-yellow-300 dark:hover:bg-yellow-700",
+    color:
+      "bg-yellow-200 dark:bg-yellow-800 hover:bg-yellow-300 dark:hover:bg-yellow-700",
     items: [
       {
         text: "Atheist/Agnostic",
@@ -105,7 +105,8 @@ const chips = [
   },
   {
     name: "Lifestyle",
-    color: "bg-emerald-200 dark:bg-emerald-800 hover:bg-emerald-300 dark:hover:bg-emerald-700",
+    color:
+      "bg-emerald-200 dark:bg-emerald-800 hover:bg-emerald-300 dark:hover:bg-emerald-700",
     items: [
       {
         text: "5d/week",
@@ -136,7 +137,8 @@ const chips = [
   },
   {
     name: "Other",
-    color: "bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700",
+    color:
+      "bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700",
     items: [
       {
         text: "Dog",
@@ -222,7 +224,10 @@ export default function AboutMe() {
                 <Tooltip key={index}>
                   <TooltipTrigger>
                     <p
-                      className={cn(`flex items-center justify-center border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3 hover:cursor-pointer`, category.color)}
+                      className={cn(
+                        `flex items-center justify-center border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3 hover:cursor-pointer`,
+                        category.color
+                      )}
                     >
                       <Image
                         src={`/icons/${item.icon}.svg`}
