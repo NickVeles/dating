@@ -57,7 +57,7 @@ export function Footer() {
         <h4 className="mb-2 text-lg font-semibold tracking-wide text-primary">
           Contact
         </h4>
-        <ul className="flex flex-wrap flex-col sm:flex-row gap-2 sm:gap-8 items-center justify-center text-sm dyslexic:text-xs">
+        <ul className="flex flex-wrap gap-8 items-center justify-center text-sm dyslexic:text-xs">
           <li key="discord">
             <span
               onClick={() => handleDiscordCopy("nickveles")}
