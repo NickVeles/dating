@@ -249,7 +249,7 @@ export default function AboutMe() {
                   <TooltipTrigger>
                     <p
                       className={cn(
-                        `flex items-center justify-center border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3 hover:cursor-pointer`,
+                        "flex items-center justify-center border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3 hover:cursor-pointer",
                         category.color
                       )}
                     >
