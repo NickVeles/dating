@@ -331,7 +331,7 @@ export default function AboutMe() {
                 height={32}
                 className="dark:invert"
               />
-              <span className="text-xl uppercase font-medium font-serif dyslexic:font-dyslexic">{btn.label}</span>
+              <span className="text-xl dyslexic:text-lg uppercase font-medium font-serif dyslexic:font-dyslexic">{btn.label}</span>
             </button>
           ))}
         </div>
