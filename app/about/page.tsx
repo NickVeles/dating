@@ -236,7 +236,7 @@ export default function AboutMe() {
 
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
+      <TitleContainer Icon={UserCircle}>About The Author</TitleContainer>
 
       {/* Gallery section */}
       <SectionContainer className="gap-8 relative">
