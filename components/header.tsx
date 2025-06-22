@@ -24,7 +24,7 @@ import Link from "next/link";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
-  { icon: User, name: "About Me", href: "/about-me" },
+  { icon: User, name: "About", href: "/about" },
   //TODO add more pages
 ];
 

@@ -354,6 +354,8 @@ export default function AboutMe() {
           </AnimatePresence>
         </div>
       </SectionContainer>
+
+      {/* Silly Stats carousel section */}
     </main>
   );
 }
