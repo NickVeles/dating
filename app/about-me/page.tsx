@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { UserCircle, Cake } from "phosphor-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const chips = [
@@ -178,6 +178,33 @@ const attributes: Record<string, React.ReactNode> = {
   flags: <Flags />,
 };
 
+const attributeButtons = [
+  {
+    key: "interests",
+    icon: "/icons/game-controller.svg",
+    label: "Interests",
+    color: "bg-sky-200 dark:bg-sky-800 hover:bg-sky-300 dark:hover:bg-sky-700",
+  },
+  {
+    key: "goals",
+    icon: "/icons/target.svg",
+    label: "Goals",
+    color: "bg-green-200 dark:bg-green-800 hover:bg-green-300 dark:hover:bg-green-700",
+  },
+  {
+    key: "personality",
+    icon: "/icons/smiley-wink.svg",
+    label: "Personality",
+    color: "bg-fuchsia-200 dark:bg-fuchsia-800 hover:bg-fuchsia-300 dark:hover:bg-fuchsia-700",
+  },
+  {
+    key: "flags",
+    icon: "/icons/flag-pennant.svg",
+    label: "Flags",
+    color: "bg-red-200 dark:bg-red-800 hover:bg-red-300 dark:hover:bg-red-700",
+  },
+];
+
 const attribAnimVariants = {
   initial: { opacity: 0, x: -50 },
   animate: { opacity: 1, x: 0 },
@@ -188,6 +215,10 @@ export default function AboutMe() {
   const { theme } = useTheme();
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
+
+  // Reference for the attribute content section to scroll into view
+  const attributeSectionRef = useRef<HTMLDivElement>(null);
+
   // Calculate age based on birth date: 21st March 2003
   const birthDate = new Date(2003, 2, 21); // Month is 0-indexed (2 = March)
   const today = new Date();
@@ -204,7 +235,7 @@ export default function AboutMe() {
   if (typeof theme === "undefined") return null;
 
   return (
-    <main className="flex flex-col flex-1 gap-8">
+    <main className="flex flex-col flex-1">
       <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
 
       {/* Gallery section */}
@@ -273,12 +304,42 @@ export default function AboutMe() {
 
       {/* Attribute buttons section */}
       <SectionContainer>
-        {/* //TODO: ADD BUTTONS THAT CHANGE THE attributes STATE */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5 w-full">
+          {attributeButtons.map((btn) => (
+            <button
+              key={btn.key}
+              type="button"
+              onClick={() => {
+                setCurrentAttribute(btn.key as keyof typeof attributes);
+                // Scroll to the attribute content section after state update
+                setTimeout(() => {
+                  attributeSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 0);
+              }}
+              className={cn(
+                "flex flex-col items-center justify-center gap-2 border border-black/20 dark:border-white/20 hover:cursor-pointer py-4 px-2 transition-colors first:rounded-t-lg last:rounded-b-lg sm:first:rounded-none sm:last:rounded-none sm:[&:nth-child(1)]:rounded-tl-lg sm:[&:nth-child(2)]:rounded-tr-lg sm:[&:nth-child(3)]:rounded-bl-lg sm:[&:nth-child(4)]:rounded-br-lg",
+                currentAttribute === btn.key
+                  ? btn.color
+                  : "hover:bg-muted"
+              )}
+              aria-pressed={currentAttribute === btn.key}
+            >
+              <Image
+                src={btn.icon}
+                alt={btn.label}
+                width={32}
+                height={32}
+                className="dark:invert"
+              />
+              <span className="text-xl uppercase font-medium font-serif dyslexic:font-dyslexic">{btn.label}</span>
+            </button>
+          ))}
+        </div>
       </SectionContainer>
 
       {/* Attribute content section */}
       <SectionContainer accented>
-        <div className="min-h-[48px] flex items-center justify-center">
+        <div className="min-h-[48px] flex items-center justify-center" ref={attributeSectionRef}>
           <AnimatePresence mode="wait">
             <motion.div
               key={currentAttribute}
