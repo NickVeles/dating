@@ -235,7 +235,7 @@ export default function AboutMe() {
   if (typeof theme === "undefined") return null;
 
   return (
-    <main className="flex flex-col flex-1">
+    <main className="flex flex-col flex-1 gap-4">
       <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
 
       {/* Gallery section */}
