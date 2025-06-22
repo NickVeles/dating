@@ -206,6 +206,8 @@ export default function AboutMe() {
   return (
     <main className="flex flex-col flex-1 gap-8">
       <TitleContainer Icon={UserCircle}>About Me</TitleContainer>
+
+      {/* Gallery section */}
       <SectionContainer className="gap-8 relative">
         <Gallery />
         {isBirthday && (
@@ -231,6 +233,8 @@ export default function AboutMe() {
           </p>
         </div>
       </SectionContainer>
+
+      {/* Quick facts section */}
       <SectionContainer accented>
         <H3 className="text-center font-medium">Quick facts about me!</H3>
         {chips.map((category) => (
@@ -266,9 +270,13 @@ export default function AboutMe() {
           </div>
         ))}
       </SectionContainer>
+
+      {/* Attribute buttons section */}
       <SectionContainer>
         {/* //TODO: ADD BUTTONS THAT CHANGE THE attributes STATE */}
       </SectionContainer>
+
+      {/* Attribute section */}
       <SectionContainer accented>
         <div className="min-h-[48px] flex items-center justify-center">
           <AnimatePresence mode="wait">
