@@ -276,7 +276,7 @@ export default function AboutMe() {
         {/* //TODO: ADD BUTTONS THAT CHANGE THE attributes STATE */}
       </SectionContainer>
 
-      {/* Attribute section */}
+      {/* Attribute content section */}
       <SectionContainer accented>
         <div className="min-h-[48px] flex items-center justify-center">
           <AnimatePresence mode="wait">
