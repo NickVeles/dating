@@ -372,7 +372,7 @@ export default function AboutMe() {
         </div>
       </SectionContainer>
 
-      {/* Attribute content section */}
+      {/* Attribute Content section */}
       <SectionContainer accented>
         <div
           className="min-h-[48px] flex items-center justify-center"
@@ -393,7 +393,7 @@ export default function AboutMe() {
         </div>
       </SectionContainer>
 
-      {/* Silly Stats carousel section */}
+      {/* Silly Stats Carousel section */}
       <SectionContainer>
         <H3 className="text-center font-medium mb-4">Silly Stats</H3>
         <div className="relative flex items-center justify-center">
@@ -426,6 +426,11 @@ export default function AboutMe() {
             <CarouselNext className="hover:cursor-pointer" />
           </Carousel>
         </div>
+      </SectionContainer>
+
+      {/* FAQ */}
+      <SectionContainer accented>
+        //TODO - accordion
       </SectionContainer>
     </main>
   );
