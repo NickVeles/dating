@@ -101,8 +101,8 @@ const chips = [
         icon: "monogamy",
       },
       {
-        text: "Serious Dater",
-        tooltip: "Relationship maturity",
+        text: "Long-term",
+        tooltip: "Relationship expectations",
         icon: "lock-heart",
       },
       {
