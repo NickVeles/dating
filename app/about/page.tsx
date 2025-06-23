@@ -19,6 +19,13 @@ import Image from "next/image";
 import { UserCircle, Cake } from "phosphor-react";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const chips = [
   {
@@ -189,13 +196,15 @@ const attributeButtons = [
     key: "goals",
     icon: "/icons/target.svg",
     label: "Goals",
-    color: "bg-green-200 dark:bg-green-800 hover:bg-green-300 dark:hover:bg-green-700",
+    color:
+      "bg-green-200 dark:bg-green-800 hover:bg-green-300 dark:hover:bg-green-700",
   },
   {
     key: "personality",
     icon: "/icons/smiley-wink.svg",
     label: "Personality",
-    color: "bg-fuchsia-200 dark:bg-fuchsia-800 hover:bg-fuchsia-300 dark:hover:bg-fuchsia-700",
+    color:
+      "bg-fuchsia-200 dark:bg-fuchsia-800 hover:bg-fuchsia-300 dark:hover:bg-fuchsia-700",
   },
   {
     key: "flags",
@@ -210,6 +219,29 @@ const attribAnimVariants = {
   animate: { opacity: 1, x: 0 },
   exit: { opacity: 0, x: 50 },
 };
+
+const sillyStats = [
+  {
+    name: "Aries",
+    icon: "/icons/aries.svg",
+  },
+  {
+    name: "INTJ (Architect)",
+    icon: "/icons/strategy.svg",
+  },
+  {
+    name: "8w7 (Challenger)",
+    icon: "/icons/boxing-glove.svg",
+  },
+  {
+    name: "Sunflower Bread",
+    icon: "/icons/bread.svg",
+  },
+  {
+    name: "Favorite Colors",
+    icon: "/icons/color.svg",
+  },
+];
 
 export default function AboutMe() {
   const { theme } = useTheme();
@@ -313,14 +345,15 @@ export default function AboutMe() {
                 setCurrentAttribute(btn.key as keyof typeof attributes);
                 // Scroll to the attribute content section after state update
                 setTimeout(() => {
-                  attributeSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  attributeSectionRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
                 }, 0);
               }}
               className={cn(
                 "flex flex-col items-center justify-center gap-2 border border-black/20 dark:border-white/20 hover:cursor-pointer py-4 px-2 transition-colors first:rounded-t-lg last:rounded-b-lg sm:first:rounded-none sm:last:rounded-none sm:[&:nth-child(1)]:rounded-tl-lg sm:[&:nth-child(2)]:rounded-tr-lg sm:[&:nth-child(3)]:rounded-bl-lg sm:[&:nth-child(4)]:rounded-br-lg",
-                currentAttribute === btn.key
-                  ? btn.color
-                  : "hover:bg-muted"
+                currentAttribute === btn.key ? btn.color : "hover:bg-muted"
               )}
               aria-pressed={currentAttribute === btn.key}
             >
@@ -331,7 +364,9 @@ export default function AboutMe() {
                 height={32}
                 className="dark:invert"
               />
-              <span className="text-xl dyslexic:text-lg uppercase font-medium font-serif dyslexic:font-dyslexic">{btn.label}</span>
+              <span className="text-xl dyslexic:text-lg uppercase font-medium font-serif dyslexic:font-dyslexic">
+                {btn.label}
+              </span>
             </button>
           ))}
         </div>
@@ -339,7 +374,10 @@ export default function AboutMe() {
 
       {/* Attribute content section */}
       <SectionContainer accented>
-        <div className="min-h-[48px] flex items-center justify-center" ref={attributeSectionRef}>
+        <div
+          className="min-h-[48px] flex items-center justify-center"
+          ref={attributeSectionRef}
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={currentAttribute}
@@ -356,6 +394,39 @@ export default function AboutMe() {
       </SectionContainer>
 
       {/* Silly Stats carousel section */}
+      <SectionContainer>
+        <H3 className="text-center font-medium mb-4">Silly Stats</H3>
+        <div className="relative flex items-center justify-center">
+          <Carousel
+            className="w-60"
+            opts={{
+              loop: true,
+              align: "center",
+            }}
+          >
+            <CarouselContent className="-ml-4">
+              {sillyStats.map((stat) => (
+                <CarouselItem key={stat.name} className="pl-4">
+                  <div className="flex flex-col gap-2 items-center justify-center p-8 border rounded-lg aspect-[1/1]">
+                    <Image
+                      src={stat.icon}
+                      alt={stat.name}
+                      width={60}
+                      height={60}
+                      className="dark:invert"
+                    />
+                    <span className="text-xl dyslexic:text-base font-serif dyslexic:font-dyslexic uppercase font-semibold text-center text-wrap">
+                      {stat.name}
+                    </span>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hover:cursor-pointer" />
+            <CarouselNext className="hover:cursor-pointer" />
+          </Carousel>
+        </div>
+      </SectionContainer>
     </main>
   );
 }
