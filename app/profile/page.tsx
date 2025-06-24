@@ -201,7 +201,7 @@ const attributeButtons = [
   },
   {
     key: "personality",
-    icon: "/icons/smiley-wink.svg",
+    icon: "/icons/smiley.svg",
     label: "Personality",
     color:
       "bg-fuchsia-200 dark:bg-fuchsia-800 hover:bg-fuchsia-300 dark:hover:bg-fuchsia-700",
