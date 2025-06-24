@@ -184,17 +184,17 @@ const chips = [
       },
       {
         text: "English (C2)",
-        tooltip: "Language",
+        tooltip: "Language proficiency",
         icon: "lang-english",
       },
       {
         text: "Polish (C2)",
-        tooltip: "Language",
+        tooltip: "Language proficiency",
         icon: "lang-polish",
       },
       {
         text: "Mandarin (HSK1)",
-        tooltip: "Language",
+        tooltip: "Language proficiency",
         icon: "lang-chinese",
       },
     ],
