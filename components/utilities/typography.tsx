@@ -36,7 +36,7 @@ export function H3({ children, className }: TypographyProps) {
   return (
     <h3
       className={cn(
-        "scroll-m-20 text-2xl dyslexic:text-xl font-semibold tracking-tight",
+        "scroll-m-20 text-2xl dyslexic:text-xl font-medium tracking-tight",
         className
       )}
     >
@@ -49,7 +49,7 @@ export function H4({ children, className }: TypographyProps) {
   return (
     <h4
       className={cn(
-        "scroll-m-20 text-xl dyslexic:text-lg font-semibold tracking-tight",
+        "scroll-m-20 text-xl dyslexic:text-lg font-medium tracking-tight",
         className
       )}
     >
