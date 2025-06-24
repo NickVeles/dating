@@ -57,7 +57,8 @@ const playlists = [
   {
     name: "Kocham Cię ♥",
     url: "https://soundcloud.com/nickveles/sets/kochamcie",
-    image: "https://i1.sndcdn.com/artworks-78bWCHl1dHZx0lFv-5yrQHg-t1080x1080.jpg",
+    image:
+      "https://i1.sndcdn.com/artworks-78bWCHl1dHZx0lFv-5yrQHg-t1080x1080.jpg",
   },
 ];
 
@@ -110,7 +111,9 @@ export default function SpotifyHighlights({
       const tw = el.offsetWidth;
       setTrackWidth(tw);
       const cols = Math.ceil((tw + 8) / (itemWidth + 8));
-      setDesiredTrackWidth(Math.min(cols * itemWidth + 8 * (cols - 1), itemWidth * 5 + 32));
+      setDesiredTrackWidth(
+        Math.min(cols * itemWidth + 8 * (cols - 1), itemWidth * 5 + 32)
+      );
     }
   }, [track, itemWidth]);
 
@@ -137,43 +140,54 @@ export default function SpotifyHighlights({
           </Alert>
         )}
         {track && (
-          <Link
-            href={track.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            ref={trackRef}
-            style={desiredTrackWidth ? { width: desiredTrackWidth } : undefined}
-            className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20"
-          >
-            <div className="relative w-24 h-24">
-              <Image
-                src={track.albumArt}
-                alt={track.name}
-                width={200}
-                height={200}
-                className="min-w-24 min-h-24 rounded"
-              />
-              <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
-                <Badge
-                  variant="secondary"
-                  className="mt-1 text-xs uppercase font-mono dyslexic:font-dyslexic-mono text-gray-600 dark:text-gray-400"
-                >
-                  {track.isCurrentlyPlaying ? "current" : "recent"}
-                </Badge>
-              </div>
-            </div>
-            <div>
-              <h5 className="text-xl font-bold hover:underline">
-                <span className="inline font-serif dyslexic:font-dyslexic">
-                  {track.name}
-                  <ArrowSquareOut className="inline align-text-top size-4" />
-                </span>
-              </h5>
-              <p className="text-gray-600 dark:text-gray-400">
-                {track.artists}
-              </p>
-            </div>
-          </Link>
+          <Tooltip>
+            <TooltipTrigger>
+              <Link
+                href={track.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={trackRef}
+                style={
+                  desiredTrackWidth ? { width: desiredTrackWidth } : undefined
+                }
+                className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20"
+              >
+                <div className="relative w-24 h-24">
+                  <Image
+                    src={track.albumArt}
+                    alt={track.name}
+                    width={200}
+                    height={200}
+                    className="min-w-24 min-h-24 rounded"
+                  />
+                  <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
+                    <Badge
+                      variant="secondary"
+                      className="mt-1 text-xs uppercase font-mono dyslexic:font-dyslexic-mono text-gray-600 dark:text-gray-400"
+                    >
+                      {track.isCurrentlyPlaying ? "current" : "recent"}
+                    </Badge>
+                  </div>
+                </div>
+                <div>
+                  <h5 className="text-xl font-bold hover:underline">
+                    <span className="inline font-serif dyslexic:font-dyslexic">
+                      {track.name}
+                      <ArrowSquareOut className="inline align-text-top size-4" />
+                    </span>
+                  </h5>
+                  <p className="text-gray-600 dark:text-gray-400 text-start">
+                    {track.artists}
+                  </p>
+                </div>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              {track.isCurrentlyPlaying
+                ? "Currently playing"
+                : "Recently played"}
+            </TooltipContent>
+          </Tooltip>
         )}
         {playlists.map((playlist, idx) => (
           <Tooltip key={playlist.name}>
