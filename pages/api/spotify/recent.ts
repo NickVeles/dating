@@ -61,6 +61,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
+    let isCurrentlyPlaying = true;
     const accessToken = await getAccessToken();
 
     // Try currently playing
@@ -95,6 +96,7 @@ export default async function handler(
 
       const recentData: { items: SpotifyRecentItem[] } = await recentRes.json();
       track = recentData.items[0]?.track || null;
+      isCurrentlyPlaying = false;
     }
 
     if (!track) {
@@ -107,6 +109,7 @@ export default async function handler(
       artists: track.artists.map(a => a.name).join(', '),
       albumArt: track.album.images[0]?.url,
       url: track.external_urls.spotify,
+      isCurrentlyPlaying: isCurrentlyPlaying,
     });
   } catch (error) {
     console.error(error);
