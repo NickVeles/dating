@@ -84,7 +84,7 @@ export default function SpotifyHighlights({
   return (
     <div className={cn("w-full", className)}>
       <H4 className="font-serif dyslexic:font-dyslexic text-center mb-2">
-        Spotify
+        My Spotify
       </H4>
       <div className="flex flex-wrap items-center justify-center gap-2">
         {loading && (

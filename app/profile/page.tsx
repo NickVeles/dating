@@ -401,7 +401,6 @@ export default function Profile() {
 
       {/* Music section */}
       <SectionContainer className="gap-4">
-        <H3>Music I Listen To</H3>
         <SpotifyHighlights />
       </SectionContainer>
 
