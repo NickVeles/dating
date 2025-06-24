@@ -33,6 +33,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import TextLink from "@/components/utilities/text-link";
 
 const chips = [
   {
@@ -541,7 +542,17 @@ export default function Profile() {
               <H4>What did you use to create this website?</H4>
             </AccordionTrigger>
             <AccordionContent>
-              <P></P>
+              <P>
+                I created it all by myself using Next.js! You can find the repo
+                for this project on my{" "}
+                <TextLink
+                  href="https://github.com/NickVeles/dating"
+                  blank={true}
+                >
+                  Github
+                </TextLink>
+                !
+              </P>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
