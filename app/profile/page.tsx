@@ -221,15 +221,6 @@ const attribAnimVariants = {
   exit: { opacity: 0, x: 50 },
 };
 
-const spotifyPlaylistIds = [
-  "04FrUFPt3kAcpaTErp7iHN",
-  "433kjfAZMGMVBAzPnUAdM5",
-  "78j8dIcBHjwQc8ONojijo2",
-  "2acOrxOZ4Aea8LFFbSmF5c",
-  "3kfUrufomJ7gHkBWWUewnX",
-  "6j2ZVhZAf8gmjTGkZCxjBd",
-];
-
 const sillyStats = [
   {
     name: "Aries",
