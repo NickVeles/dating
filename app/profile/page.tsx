@@ -400,9 +400,9 @@ export default function Profile() {
       </SectionContainer>
 
       {/* Music section */}
-      <SectionContainer>
-        <H3>What I recently listened to</H3>
-        <SpotifyHighlights customPlaylistIds={spotifyPlaylistIds} />
+      <SectionContainer className="gap-4">
+        <H3>Music I listen to</H3>
+        <SpotifyHighlights />
       </SectionContainer>
 
       {/* Silly Stats Carousel section */}
