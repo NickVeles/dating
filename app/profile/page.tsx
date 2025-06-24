@@ -27,7 +27,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SpotifyHighlights from "@/components/spotify-highlights";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const chips = [
   {
@@ -449,7 +454,7 @@ export default function Profile() {
             <AccordionTrigger>
               <H4>Why did you make this dating profile?</H4>
             </AccordionTrigger>
-            <AccordionContent className="bg-accent p-2 rounded-lg">
+            <AccordionContent>
               <P>
                 I’ll be honest&mdash;dating has felt a bit exhausting lately.
                 This page is simply a way for me to share more about who I am,
@@ -484,6 +489,59 @@ export default function Profile() {
                 </span>
                 .
               </P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* What are your preferences? */}
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              <H4>What are your preferences?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P></P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* You're quite mature for your age */}
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              <H4>
+                You're quite mature for your age &ndash; shouldn't you live your
+                life to the fullest in your early 20s?
+              </H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P></P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* What will happen to this page once you find someone? */}
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              <H4>What will happen to this page once you find someone?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P></P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* How can I reach out to you? */}
+          <AccordionItem value="item-5">
+            <AccordionTrigger>
+              <H4>How can I reach out to you?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P></P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* What did you use to create this website? */}
+          <AccordionItem value="item-6">
+            <AccordionTrigger>
+              <H4>What did you use to create this website?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P></P>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
