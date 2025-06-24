@@ -110,7 +110,7 @@ export default function SpotifyHighlights({
       const tw = el.offsetWidth;
       setTrackWidth(tw);
       const cols = Math.ceil((tw + 8) / (itemWidth + 8));
-      setDesiredTrackWidth(cols * itemWidth + 8 * (cols - 1));
+      setDesiredTrackWidth(Math.min(cols * itemWidth + 8 * (cols - 1), itemWidth * 5 + 32));
     }
   }, [track, itemWidth]);
 
@@ -162,7 +162,7 @@ export default function SpotifyHighlights({
                 </Badge>
               </div>
             </div>
-            <div className="mr-2">
+            <div>
               <h5 className="text-xl font-bold hover:underline">
                 <span className="inline font-serif dyslexic:font-dyslexic">
                   {track.name}
