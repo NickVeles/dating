@@ -398,9 +398,9 @@ export default function Profile() {
 
       {/* Silly Stats Carousel section */}
       <SectionContainer accented className="gap-4">
-        <H3>Silly things</H3>
+        <H3>Silly Facts About Me</H3>
         <p className="font-serif dyslexic:font-dyslexic text-center">
-          If you really beliefe these are scientific we might not click...
+          If you really believe these are scientific we might not click...
         </p>
         <div className="relative flex items-center justify-center">
           <Carousel
