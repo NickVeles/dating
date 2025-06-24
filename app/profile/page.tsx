@@ -1,9 +1,9 @@
 "use client";
 
-import Flags from "@/components/about-me/flags";
-import Goals from "@/components/about-me/goals";
-import Interests from "@/components/about-me/interests";
-import Personality from "@/components/about-me/personality";
+import Flags from "@/components/profile/flags";
+import Goals from "@/components/profile/goals";
+import Interests from "@/components/profile/interests";
+import Personality from "@/components/profile/personality";
 import Gallery from "@/components/gallery";
 import {
   Tooltip,
@@ -26,6 +26,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import SpotifyHighlights from "@/components/spotify-highlights";
 
 const chips = [
   {
@@ -220,6 +221,15 @@ const attribAnimVariants = {
   exit: { opacity: 0, x: 50 },
 };
 
+const spotifyPlaylistIds = [
+  "04FrUFPt3kAcpaTErp7iHN",
+  "433kjfAZMGMVBAzPnUAdM5",
+  "78j8dIcBHjwQc8ONojijo2",
+  "2acOrxOZ4Aea8LFFbSmF5c",
+  "3kfUrufomJ7gHkBWWUewnX",
+  "6j2ZVhZAf8gmjTGkZCxjBd",
+];
+
 const sillyStats = [
   {
     name: "Aries",
@@ -234,7 +244,7 @@ const sillyStats = [
     icon: "/icons/boxing-glove.svg",
   },
   {
-    name: "Sunflower Bread",
+    name: "Sunflower Bread Type",
     icon: "/icons/bread.svg",
   },
   {
@@ -389,9 +399,18 @@ export default function Profile() {
         </div>
       </SectionContainer>
 
-      {/* Silly Stats Carousel section */}
+      {/* Music section */}
       <SectionContainer>
-        <H3 className="text-center font-medium mb-4">Silly Stats</H3>
+        <H3>What I recently listened to</H3>
+        <SpotifyHighlights customPlaylistIds={spotifyPlaylistIds} />
+      </SectionContainer>
+
+      {/* Silly Stats Carousel section */}
+      <SectionContainer accented className="gap-4">
+        <H3>Silly things</H3>
+        <p className="font-serif dyslexic:font-dyslexic text-center">
+          If you really beliefe these are scientific we might not click...
+        </p>
         <div className="relative flex items-center justify-center">
           <Carousel
             className="w-60"
@@ -425,9 +444,7 @@ export default function Profile() {
       </SectionContainer>
 
       {/* FAQ */}
-      <SectionContainer accented>
-        //TODO - accordion
-      </SectionContainer>
+      <SectionContainer>//TODO - accordion</SectionContainer>
     </main>
   );
 }
