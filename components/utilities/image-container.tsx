@@ -28,8 +28,8 @@ export default function ImageContainer({
           <Image
             src={src}
             alt={alt || "Image"}
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             className="w-full object-cover rounded-lg max-h-[440px]"
           />
           <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
