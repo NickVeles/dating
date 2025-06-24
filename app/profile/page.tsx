@@ -435,7 +435,7 @@ export default function Profile() {
             <CarouselContent className="-ml-4">
               {sillyStats.map((stat) => (
                 <CarouselItem key={stat.name} className="pl-4">
-                  <div className="flex flex-col gap-2 items-center justify-center p-8 border border-black/20 dark:border-white/20 rounded-lg aspect-[1/1] bg-background">
+                  <div className="flex flex-col gap-2 items-center justify-center p-8 border border-black/20 dark:border-white/20 rounded-lg aspect-[1/1] bg-background hover:cursor-grab active:cursor-grabbing">
                     <Image
                       src={stat.icon}
                       alt={stat.name}
