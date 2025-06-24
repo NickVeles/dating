@@ -52,7 +52,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="flex-row items-center justify-center text-center w-full px-2 py-4 border-t bg-background">
+    <footer className="flex-row items-center justify-center text-center w-full px-2 py-4 mt-4 border-t bg-background">
       <div className="mb-8">
         <h4 className="mb-2 text-lg font-semibold tracking-wide text-primary">
           Contact
