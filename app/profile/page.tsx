@@ -243,7 +243,7 @@ const sillyStats = [
   },
 ];
 
-export default function AboutMe() {
+export default function Profile() {
   const { theme } = useTheme();
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
@@ -268,7 +268,7 @@ export default function AboutMe() {
 
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <TitleContainer Icon={UserCircle}>About The Author</TitleContainer>
+      <TitleContainer Icon={UserCircle}>Dating Profile</TitleContainer>
 
       {/* Gallery section */}
       <SectionContainer className="gap-8 relative">
