@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { Badge } from "../ui/badge";
+import { CornersOut } from "phosphor-react";
 
 type ImageContainerProps = {
   src: string;
@@ -19,7 +21,7 @@ export default function ImageContainer({
       <DialogTrigger asChild>
         <div
           className={cn(
-            "w-full h-full flex justify-center items-center mx-2 my-6",
+            "w-full h-full relative justify-center items-center mx-2 my-6 hover:cursor-pointer",
             className
           )}
         >
@@ -28,8 +30,16 @@ export default function ImageContainer({
             alt={alt || "Image"}
             width={500}
             height={500}
-            className="w-full object-cover rounded-lg hover:cursor-pointer max-h-[440px]"
+            className="w-full object-cover rounded-lg max-h-[440px]"
           />
+          <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
+            <Badge
+              variant="secondary"
+              className="p-1"
+            >
+              <CornersOut className="inline align-text-top" />
+            </Badge>
+          </div>
         </div>
       </DialogTrigger>
       <DialogContent className="w-screen h-screen max-w-none rounded-none gap-0 pt-14 pb-0 px-0">
