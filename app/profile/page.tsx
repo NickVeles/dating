@@ -372,11 +372,8 @@ export default function Profile() {
       </SectionContainer>
 
       {/* Attribute Content section */}
-      <SectionContainer accented>
-        <div
-          className="min-h-[48px] flex items-center justify-center"
-          ref={attributeSectionRef}
-        >
+      <SectionContainer accented ref={attributeSectionRef}>
+        <div className="min-h-[48px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentAttribute}

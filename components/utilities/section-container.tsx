@@ -1,34 +1,33 @@
 import { cn } from "@/lib/utils";
+import React from "react";
 
-type SectionContainerProps = {
+type SectionContainerProps = React.HTMLAttributes<HTMLDivElement> & {
   accented?: boolean;
-  className?: string;
-  children?: React.ReactNode;
-  props?: React.HTMLAttributes<HTMLDivElement>;
 };
 
-export default function SectionContainer({
-  accented,
-  className = "",
-  children,
-  props,
-}: SectionContainerProps) {
-  return (
-    <div
-      className={cn(
-        "w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]",
-        accented ? "bg-accent" : ""
-      )}
-      {...props}
-    >
+const SectionContainer = React.forwardRef<HTMLDivElement, SectionContainerProps>(
+  ({ accented, className = "", children, ...rest }, ref) => {
+    return (
       <div
+        ref={ref}
         className={cn(
-          "sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center",
-          className
+          "w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]",
+          accented ? "bg-accent" : ""
         )}
+        {...rest}
       >
-        {children}
+        <div
+          className={cn(
+            "sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center",
+            className
+          )}
+        >
+          {children}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+);
+
+SectionContainer.displayName = "SectionContainer";
+export default SectionContainer;
