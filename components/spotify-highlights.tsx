@@ -116,13 +116,13 @@ export default function SpotifyHighlights({
       </H4>
       <div className="flex flex-wrap items-center justify-center gap-2">
         {loading && (
-          <Skeleton className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20">
+          <div className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20">
             <Skeleton className="h-24 w-24 rounded-lg" />
             <div className="space-y-2">
               <Skeleton className="h-5 w-[250px]" />
               <Skeleton className="h-4 w-[200px]" />
             </div>
-          </Skeleton>
+          </div>
         )}
         {error && (
           <Alert variant="destructive">
@@ -153,7 +153,7 @@ export default function SpotifyHighlights({
                   variant="secondary"
                   className="mt-1 text-xs uppercase font-mono dyslexic:font-dyslexic-mono text-gray-600 dark:text-gray-400"
                 >
-                  {track.isCurrentlyPlaying ? "current" : "recent/24H"}
+                  {track.isCurrentlyPlaying ? "current" : "recent"}
                 </Badge>
               </div>
             </div>
