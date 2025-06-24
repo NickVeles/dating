@@ -4,7 +4,7 @@ type SectionContainerProps = {
   accented?: boolean;
   className?: string;
   children?: React.ReactNode;
-  props: React.HTMLAttributes<HTMLDivElement>;
+  props?: React.HTMLAttributes<HTMLDivElement>;
 };
 
 export default function SectionContainer({
@@ -15,11 +15,11 @@ export default function SectionContainer({
 }: SectionContainerProps) {
   return (
     <div
-      {...props}
       className={cn(
         "w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw]",
         accented ? "bg-accent" : ""
       )}
+      {...props}
     >
       <div
         className={cn(
