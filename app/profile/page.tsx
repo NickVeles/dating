@@ -297,15 +297,14 @@ export default function Profile() {
         </div>
       </SectionContainer>
 
-      {/* Quick facts section */}
+      {/* Chips */}
       <SectionContainer accented>
-        <H3 className="text-center font-medium">Quick facts about me!</H3>
         {chips.map((category) => (
           <div
-            className="flex flex-col font-serif dyslexic:font-[family-name:var(--font-dyslexic)]"
+            className="flex flex-col font-serif dyslexic:font-[family-name:var(--font-dyslexic)] [&>:not(:first-child)]:mb-6"
             key={category.name}
           >
-            <h4 className="text-lg text-center mt-6 mb-2">{category.name}</h4>
+            <h4 className="text-lg text-center mb-2">{category.name}</h4>
             <div className="flex flex-wrap items-center justify-center text-sm dyslexic:text-xs gap-2">
               {category.items.map((item, index) => (
                 <Tooltip key={index}>
