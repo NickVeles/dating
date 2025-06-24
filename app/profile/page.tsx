@@ -311,7 +311,7 @@ export default function Profile() {
       <SectionContainer accented>
         {chips.map((category) => (
           <div
-            className="flex flex-col font-serif dyslexic:font-[family-name:var(--font-dyslexic)] [&>:not(:first-child)]:mb-6"
+            className="flex flex-col font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mb-6"
             key={category.name}
           >
             <h4 className="text-lg text-center mb-2">{category.name}</h4>
