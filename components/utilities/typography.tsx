@@ -60,7 +60,7 @@ export function H4({ children, className }: TypographyProps) {
 
 export function P({ children, className }: TypographyProps) {
   return (
-    <p className={cn("leading-7 [&:not(:first-child)]:mt-6 font-serif dyslexic:font-dyslexic dyslexic:text-sm text-justify", className)}>
+    <p className={cn("leading-7 w-full [&:not(:first-child)]:mt-6 font-serif dyslexic:font-dyslexic dyslexic:text-sm text-justify", className)}>
       {children}
     </p>
   );
