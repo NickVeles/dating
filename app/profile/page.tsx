@@ -498,7 +498,7 @@ export default function Profile() {
             <AccordionTrigger>
               <H4>What are your preferences?</H4>
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="flex justify-center">
               <P></P>
             </AccordionContent>
           </AccordionItem>
