@@ -32,16 +32,15 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <g
-     id="g2"
-     transform="matrix(1.1705907,0,0,1.1699411,0.33708351,-4.1571715)"
-     style="stroke-width:0.854507">
+     id="g1"
+     transform="translate(0,0.80604455)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.70901;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill"
-       d="M 7.8992443,6.9722922 V 27.486146 H 23.214106"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+       d="M 10.02719,5.3299749 V 25.057936 h 17.040785"
        id="path1" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.70901;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill"
-       d="M 3.5465995,21.924433 16.576657,14.401526"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+       d="M 4.932025,20.88859 20.184889,12.087232"
        id="path2" />
   </g>
 </svg>
