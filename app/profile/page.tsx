@@ -250,6 +250,7 @@ const sillyStats = [
   {
     name: "Favorite Colors",
     icon: "/icons/color.svg",
+    dontInvert: true,
   },
 ];
 
@@ -421,13 +422,13 @@ export default function Profile() {
             <CarouselContent className="-ml-4">
               {sillyStats.map((stat) => (
                 <CarouselItem key={stat.name} className="pl-4">
-                  <div className="flex flex-col gap-2 items-center justify-center p-8 border rounded-lg aspect-[1/1]">
+                  <div className="flex flex-col gap-2 items-center justify-center p-8 border border-black/20 dark:border-white/20 rounded-lg aspect-[1/1] bg-background">
                     <Image
                       src={stat.icon}
                       alt={stat.name}
                       width={60}
                       height={60}
-                      className="dark:invert"
+                      className={stat.dontInvert ? "" : "dark:invert"}
                     />
                     <span className="text-xl dyslexic:text-base font-serif dyslexic:font-dyslexic uppercase font-semibold text-center text-wrap">
                       {stat.name}
