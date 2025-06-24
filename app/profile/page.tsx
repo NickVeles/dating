@@ -479,8 +479,11 @@ export default function Profile() {
               </P>
               <P>
                 It really says a thing when building an entire website feels
-                easier than dating itself. By reading my guide you might get a
-                better sense what I had to go through.
+                easier than dating itself. By reading my{" "}
+                <TextLink href="/" blank={true}>
+                  guide
+                </TextLink>{" "}
+                you might get a better sense what I had to go through.
               </P>
               <P>
                 Dating opportunities are pretty limited where I live—being in
