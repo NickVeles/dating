@@ -151,7 +151,7 @@ export default function SpotifyHighlights({
                 alt={track.name}
                 width={200}
                 height={200}
-                className="w-24 h-24 rounded"
+                className="min-w-24 min-h-24 rounded"
               />
               <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
                 <Badge
