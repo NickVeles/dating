@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 import SectionContainer from "@/components/utilities/section-container";
 import TitleContainer from "@/components/utilities/title-container";
-import { H2, H3 } from "@/components/utilities/typography";
+import { H2, H3, H4, P } from "@/components/utilities/typography";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -27,6 +27,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SpotifyHighlights from "@/components/spotify-highlights";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const chips = [
   {
@@ -437,7 +438,55 @@ export default function Profile() {
       {/* FAQ */}
       <SectionContainer>
         <H3>FAQ</H3>
-        
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full"
+          defaultValue="item-1"
+        >
+          {/* Why did you make this dating profile? */}
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              <H4>Why did you make this dating profile?</H4>
+            </AccordionTrigger>
+            <AccordionContent className="bg-accent p-2 rounded-lg">
+              <P>
+                I’ll be honest&mdash;dating has felt a bit exhausting lately.
+                This page is simply a way for me to share more about who I am,
+                what I enjoy, and what I’m looking for in a relationship, all in
+                one place.
+              </P>
+              <P>
+                It really says a thing when building an entire website feels
+                easier than dating itself. By reading my guide you might get a
+                better sense what I had to go through.
+              </P>
+              <P>
+                Dating opportunities are pretty limited where I live—being in
+                the countryside of an already small town doesn’t exactly help.
+                I’ve thought about moving to a bigger city, but I’m actually
+                planning to relocate abroad, which takes quite a bit of
+                preparation, which you can read more about in my{" "}
+                <span
+                  onClick={() => {
+                    setCurrentAttribute("goals");
+                    // Scroll to the attribute content section after state update
+                    setTimeout(() => {
+                      attributeSectionRef.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }, 0);
+                  }}
+                  className="hover:cursor-pointer underline"
+                >
+                  Goals
+                </span>
+                .
+              </P>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </SectionContainer>
     </main>
   );
