@@ -12,18 +12,28 @@ interface Track {
 export default function SpotifyHighlights() {
   const [track, setTrack] = useState<Track | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchTrack() {
-      const res = await fetch('/api/spotify/recent');
-      const data = await res.json();
-      if (res.ok) setTrack(data);
+      try {
+        const res = await fetch('/api/spotify/recent');
+        const data = await res.json();
+        if (res.ok && data.name) {
+          setTrack(data);
+        } else {
+          setError('No recent track found.');
+        }
+      } catch (e) {
+        setError('Error fetching track.');
+      }
       setLoading(false);
     }
     fetchTrack();
   }, []);
 
   if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
   if (!track) return <p>No recent track found.</p>;
 
   return (

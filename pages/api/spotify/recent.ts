@@ -14,8 +14,8 @@ interface SpotifyTokenResponse {
   scope: string;
 }
 
-interface SpotifyTrack {
-  item: {
+interface SpotifyTrackItem {
+  track: {
     name: string;
     artists: { name: string }[];
     album: { images: { url: string }[] };
@@ -44,6 +44,7 @@ async function getAccessToken(): Promise<string> {
   );
 
   if (!res.ok) {
+    console.error('Token refresh failed:', await res.text());
     throw new Error('Failed to refresh Spotify token');
   }
 
@@ -67,13 +68,19 @@ export default async function handler(
     );
 
     if (!trackRes.ok) {
+      const errorMsg = await trackRes.text();
+      console.error('Spotify fetch error:', errorMsg);
       return res
         .status(trackRes.status)
         .json({ error: 'Failed to fetch recent track' });
     }
 
-    const data: { items: SpotifyTrack[] } = await trackRes.json();
-    const latest = data.items[0]?.item;
+    const data: { items: SpotifyTrackItem[] } = await trackRes.json();
+    const latest = data.items[0]?.track;
+
+    if (!latest) {
+      return res.status(200).json({});
+    }
 
     res.status(200).json({
       name: latest.name,
