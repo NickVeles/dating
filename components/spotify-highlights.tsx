@@ -52,7 +52,12 @@ const playlists = [
   {
     name: "MyClassical",
     url: "https://open.spotify.com/playlist/6j2ZVhZAf8gmjTGkZCxjBd",
-    image: "https://i.scdn.co/image/ab67706c0000da8485f93cfe2b8dde8633c3de98",
+    image: "https://i.scdn.co/image/ab67706c0000da849fa285bcd91bc52cb48b4635",
+  },
+  {
+    name: "Kocham Cię ♥",
+    url: "https://soundcloud.com/nickveles/sets/kochamcie",
+    image: "https://i1.sndcdn.com/artworks-78bWCHl1dHZx0lFv-5yrQHg-t1080x1080.jpg",
   },
 ];
 
@@ -112,7 +117,7 @@ export default function SpotifyHighlights({
   return (
     <div className={cn("w-full", className)}>
       <H4 className="font-serif dyslexic:font-dyslexic text-center mb-2">
-        My Spotify
+        My Music
       </H4>
       <div className="flex flex-wrap items-center justify-center gap-2">
         {loading && (
