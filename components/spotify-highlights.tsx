@@ -124,8 +124,8 @@ export default function SpotifyHighlights({
           <div className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20">
             <Skeleton className="h-24 w-24 rounded-lg" />
             <div className="space-y-2">
-              <Skeleton className="h-5 w-[250px]" />
-              <Skeleton className="h-4 w-[200px]" />
+              <Skeleton className="h-5 w-[228px]" />
+              <Skeleton className="h-4 w-[150px]" />
             </div>
           </div>
         )}
