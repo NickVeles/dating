@@ -182,6 +182,21 @@ const chips = [
         tooltip: "Pet",
         icon: "paw-print",
       },
+      {
+        text: "English (C2)",
+        tooltip: "Language",
+        icon: "lang-english",
+      },
+      {
+        text: "Polish (C2)",
+        tooltip: "Language",
+        icon: "lang-polish",
+      },
+      {
+        text: "Mandarin (HSK1)",
+        tooltip: "Language",
+        icon: "lang-chinese",
+      },
     ],
   },
 ];
