@@ -8,6 +8,7 @@ import { ArrowSquareOut, WarningCircle } from "phosphor-react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Badge } from "./ui/badge";
 
 interface SpotifyHighlightsProps {
   className?: string;
@@ -54,10 +55,16 @@ export default function SpotifyHighlights({
         {/* //TODO - adjust skeleton size */}
         {loading && (
           <Skeleton className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20">
-            <Skeleton className="h-20 w-20 rounded-lg" />
+            <Skeleton className="h-24 w-24 rounded-lg" />
             <div className="space-y-2">
               <Skeleton className="h-5 w-[250px]" />
               <Skeleton className="h-4 w-[200px]" />
+              <Badge
+                variant="secondary"
+                className="mt-1 text-xs uppercase font-mono dyslexic:font-dyslexic-mono text-gray-600 dark:text-gray-400"
+              >
+                recent/24h
+              </Badge>
             </div>
           </Skeleton>
         )}
@@ -80,7 +87,7 @@ export default function SpotifyHighlights({
               alt={track.name}
               width={200}
               height={200}
-              className="w-20 h-20 rounded"
+              className="w-24 h-24 rounded"
             />
             <div className="mr-2">
               <h5 className="text-xl font-bold hover:underline">
@@ -92,6 +99,12 @@ export default function SpotifyHighlights({
               <p className="text-gray-600 dark:text-gray-400">
                 {track.artists}
               </p>
+              <Badge
+                variant="secondary"
+                className="mt-1 text-xs uppercase font-mono dyslexic:font-dyslexic-mono text-gray-600 dark:text-gray-400"
+              >
+                recent/24h
+              </Badge>
             </div>
           </Link>
         )}
