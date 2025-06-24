@@ -400,7 +400,7 @@ export default function Profile() {
       <SectionContainer accented className="gap-4">
         <H3>Silly Facts About Me</H3>
         <p className="font-serif dyslexic:font-dyslexic text-center">
-          If you really believe these are scientific we might not click...
+          If you really believe these define a person, we might not click...
         </p>
         <div className="relative flex items-center justify-center">
           <Carousel
@@ -435,7 +435,10 @@ export default function Profile() {
       </SectionContainer>
 
       {/* FAQ */}
-      <SectionContainer>//TODO - accordion</SectionContainer>
+      <SectionContainer>
+        <H3>FAQ</H3>
+        
+      </SectionContainer>
     </main>
   );
 }
