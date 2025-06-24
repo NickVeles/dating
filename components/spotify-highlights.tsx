@@ -169,14 +169,14 @@ export default function SpotifyHighlights({
                     </Badge>
                   </div>
                 </div>
-                <div>
+                <div className="text-start">
                   <h5 className="text-xl font-bold hover:underline">
                     <span className="inline font-serif dyslexic:font-dyslexic">
                       {track.name}
                       <ArrowSquareOut className="inline align-text-top size-4" />
                     </span>
                   </h5>
-                  <p className="text-gray-600 dark:text-gray-400 text-start">
+                  <p className="text-gray-600 dark:text-gray-400">
                     {track.artists}
                   </p>
                 </div>
