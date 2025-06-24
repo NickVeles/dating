@@ -540,7 +540,12 @@ export default function Profile() {
               <H4>What will happen to this page once you find someone?</H4>
             </AccordionTrigger>
             <AccordionContent>
-              <P></P>
+              <P>
+                This page will most likely become{" "}
+                <span className="font-bold">inaccessible</span>, or at the very
+                least I will put a huge notification saying that I'm no longer
+                looking.
+              </P>
             </AccordionContent>
           </AccordionItem>
 
@@ -550,7 +555,10 @@ export default function Profile() {
               <H4>How can I reach out to you?</H4>
             </AccordionTrigger>
             <AccordionContent>
-              <P></P>
+              <P>
+                The contact info is located at the bottom of this page, just
+                below this FAQ!
+              </P>
             </AccordionContent>
           </AccordionItem>
 
