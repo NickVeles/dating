@@ -14,13 +14,20 @@ interface SpotifyTokenResponse {
   scope: string;
 }
 
-interface SpotifyTrackItem {
-  track: {
-    name: string;
-    artists: { name: string }[];
-    album: { images: { url: string }[] };
-    external_urls: { spotify: string };
-  };
+interface SpotifyTrackData {
+  name: string;
+  artists: { name: string }[];
+  album: { images: { url: string }[] };
+  external_urls: { spotify: string };
+}
+
+interface SpotifyCurrentlyPlaying {
+  item: SpotifyTrackData;
+  is_playing: boolean;
+}
+
+interface SpotifyRecentItem {
+  track: SpotifyTrackData;
 }
 
 async function getAccessToken(): Promise<string> {
@@ -28,20 +35,17 @@ async function getAccessToken(): Promise<string> {
     `${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
   ).toString('base64');
 
-  const res = await fetch(
-    'https://accounts.spotify.com/api/token',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${credentials}`,
-      },
-      body: querystring.stringify({
-        grant_type: 'refresh_token',
-        refresh_token: SPOTIFY_REFRESH_TOKEN,
-      }),
-    }
-  );
+  const res = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Authorization: `Basic ${credentials}`,
+    },
+    body: querystring.stringify({
+      grant_type: 'refresh_token',
+      refresh_token: SPOTIFY_REFRESH_TOKEN,
+    }),
+  });
 
   if (!res.ok) {
     console.error('Token refresh failed:', await res.text());
@@ -58,35 +62,51 @@ export default async function handler(
 ) {
   try {
     const accessToken = await getAccessToken();
-    const trackRes = await fetch(
-      'https://api.spotify.com/v1/me/player/recently-played?limit=1',
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
+
+    // Try currently playing
+    const currRes = await fetch(
+      'https://api.spotify.com/v1/me/player/currently-playing',
+      { headers: { Authorization: `Bearer ${accessToken}` } }
     );
 
-    if (!trackRes.ok) {
-      const errorMsg = await trackRes.text();
-      console.error('Spotify fetch error:', errorMsg);
-      return res
-        .status(trackRes.status)
-        .json({ error: 'Failed to fetch recent track' });
+    let track: SpotifyTrackData | null = null;
+
+    if (currRes.ok && currRes.status === 200) {
+      const current: SpotifyCurrentlyPlaying = await currRes.json();
+      // Only use if a track is playing
+      if (current.is_playing && current.item) {
+        track = current.item;
+      }
     }
 
-    const data: { items: SpotifyTrackItem[] } = await trackRes.json();
-    const latest = data.items[0]?.track;
+    // Fallback to recently played
+    if (!track) {
+      const recentRes = await fetch(
+        'https://api.spotify.com/v1/me/player/recently-played?limit=1',
+        { headers: { Authorization: `Bearer ${accessToken}` } }
+      );
 
-    if (!latest) {
+      if (!recentRes.ok) {
+        console.error('Recent track fetch failed:', await recentRes.text());
+        return res
+          .status(recentRes.status)
+          .json({ error: 'Failed to fetch recent track' });
+      }
+
+      const recentData: { items: SpotifyRecentItem[] } = await recentRes.json();
+      track = recentData.items[0]?.track || null;
+    }
+
+    if (!track) {
       return res.status(200).json({});
     }
 
+    // Return unified format
     res.status(200).json({
-      name: latest.name,
-      artists: latest.artists.map(a => a.name).join(', '),
-      albumArt: latest.album.images[0]?.url,
-      url: latest.external_urls.spotify,
+      name: track.name,
+      artists: track.artists.map(a => a.name).join(', '),
+      albumArt: track.album.images[0]?.url,
+      url: track.external_urls.spotify,
     });
   } catch (error) {
     console.error(error);

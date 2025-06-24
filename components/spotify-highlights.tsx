@@ -22,7 +22,7 @@ export default function SpotifyHighlights() {
         if (res.ok && data.name) {
           setTrack(data);
         } else {
-          setError('No recent track found.');
+          setError('No track playing or recently played.');
         }
       } catch (e) {
         setError('Error fetching track.');
@@ -34,7 +34,7 @@ export default function SpotifyHighlights() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
-  if (!track) return <p>No recent track found.</p>;
+  if (!track) return <p>No track to display.</p>;
 
   return (
     <div className="p-4 max-w-sm bg-white rounded-2xl shadow">
