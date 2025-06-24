@@ -13,7 +13,21 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs1" />
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter3"
+       x="-0.021428571"
+       y="-0.021428571"
+       width="1.0428571"
+       height="1.0428571">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur3" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#505050"
@@ -23,15 +37,21 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="17.832349"
-     inkscape:cx="15.253178"
-     inkscape:cy="13.430648"
+     inkscape:zoom="12.609375"
+     inkscape:cx="8.0099133"
+     inkscape:cy="15.028501"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1" />
+  <circle
+     style="stroke-width:15.84;fill:#ffffff;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill;filter:url(#filter3)"
+     id="path3"
+     cx="128"
+     cy="128"
+     r="112" />
   <g
      id="g2"
      transform="matrix(0.61871843,0.61871843,-0.61871843,0.61871843,128,-30.391918)"
