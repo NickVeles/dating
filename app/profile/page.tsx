@@ -445,7 +445,7 @@ export default function Profile() {
                 <Bold>What if you're not from one of those palces?</Bold> Unless
                 you plan to move there&mdash;
                 <Italic>with an actual plan!</Italic>&mdash;at the same time or
-                sooner and I do, I can't say much else. It is what it is.
+                sooner than I do, I can't say much else. It is what it is.
               </P>
               <P>
                 <Italic>Note:</Italic> if I get a full-term job offer in one of
