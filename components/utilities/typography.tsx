@@ -100,7 +100,7 @@ export function Bold({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "font-bold",
+        "inline font-serif dyslexic:font-dyslexic font-bold",
         className
       )}
     >
@@ -113,7 +113,7 @@ export function Italic({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "italic",
+        "inline font-serif dyslexic:font-dyslexic italic",
         className
       )}
     >
@@ -126,7 +126,7 @@ export function BoldItalic({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "font-bold italic",
+        "inline font-serif dyslexic:font-dyslexic font-bold italic",
         className
       )}
     >
