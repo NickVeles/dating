@@ -95,3 +95,42 @@ export function Code({ children, className }: TypographyProps) {
     </code>
   );
 }
+
+export function Bold({ children, className }: TypographyProps) {
+  return (
+    <pre
+      className={cn(
+        "font-bold",
+        className
+      )}
+    >
+      {children}
+    </pre>
+  );
+}
+
+export function Italic({ children, className }: TypographyProps) {
+  return (
+    <pre
+      className={cn(
+        "italic",
+        className
+      )}
+    >
+      {children}
+    </pre>
+  );
+}
+
+export function BoldItalic({ children, className }: TypographyProps) {
+  return (
+    <pre
+      className={cn(
+        "font-bold italic",
+        className
+      )}
+    >
+      {children}
+    </pre>
+  );
+}
