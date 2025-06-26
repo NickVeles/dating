@@ -448,7 +448,7 @@ export default function Profile() {
                 sooner than I do, I can't say much else. It is what it is.
               </P>
               <P>
-                <Italic>Note:</Italic> if I get a full-term job offer in one of
+                <Italic>Note:</Italic> if I get a full-time job offer in one of
                 those countries, there is no way I will be moving from there
                 anytime soon!
               </P>
