@@ -603,7 +603,7 @@ export default function Profile() {
                 <Bold>Why?</Bold> There are two core reasons: I like these
                 countries culturally and I can see myself working there without
                 much issue; and these regions are really generous with their
-                visa policies, which is a huge plus for any long distance
+                visa policies, which is a huge plus for any long-distance
                 relationship!
               </P>
               <P>
@@ -614,7 +614,7 @@ export default function Profile() {
               </P>
               <P>
                 <Italic>Note:</Italic> if I get a full-term job offer in one
-                of these countries, there is no way I will be moving from there
+                of those countries, there is no way I will be moving from there
                 anytime soon!
               </P>
               <ImageContainer
