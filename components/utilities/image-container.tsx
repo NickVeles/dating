@@ -30,7 +30,7 @@ export default function ImageContainer({
             alt={alt || "Image"}
             width={1000}
             height={1000}
-            className="object-cover rounded-lg max-h-[440px]"
+            className="object-cover rounded-lg max-h-[440px] shadow dark:shadow-white"
           />
           <div className="absolute bottom-7 right-3">
             <Badge variant="secondary" className="p-1">
