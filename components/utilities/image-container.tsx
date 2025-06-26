@@ -21,7 +21,7 @@ export default function ImageContainer({
       <DialogTrigger asChild>
         <div
           className={cn(
-            "w-full h-full relative justify-center items-center mx-2 my-6 hover:cursor-pointer",
+            "w-full h-full relative justify-center items-center px-2 py-6 hover:cursor-pointer",
             className
           )}
         >
@@ -30,13 +30,10 @@ export default function ImageContainer({
             alt={alt || "Image"}
             width={1000}
             height={1000}
-            className="w-full object-cover rounded-lg max-h-[440px]"
+            className="object-cover rounded-lg max-h-[440px]"
           />
-          <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
-            <Badge
-              variant="secondary"
-              className="p-1"
-            >
+          <div className="absolute bottom-7 right-3">
+            <Badge variant="secondary" className="p-1">
               <CornersOut className="inline align-text-top" />
             </Badge>
           </div>
