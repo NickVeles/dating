@@ -50,6 +50,7 @@
   --font-sans: var(--font-roboto-sans);
   --font-mono: var(--font-roboto-mono);
   --font-serif: var(--font-roboto-serif);
+  --font-emoji: var(--font-noto-color-emoji);
   --font-dyslexic: "OpenDyslexic", sans-serif;
   --font-dyslexic-mono: "OpenDyslexicMono", monospace;
   --color-sidebar-ring: var(--sidebar-ring);
