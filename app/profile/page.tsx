@@ -12,7 +12,16 @@ import {
 } from "@/components/ui/tooltip";
 import SectionContainer from "@/components/utilities/section-container";
 import TitleContainer from "@/components/utilities/title-container";
-import { H2, H3, H4, P } from "@/components/utilities/typography";
+import {
+  Bold,
+  Emoji,
+  H2,
+  H3,
+  H4,
+  Italic,
+  P,
+  Ul,
+} from "@/components/utilities/typography";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -34,6 +43,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import TextLink from "@/components/utilities/text-link";
+import ImageContainer from "@/components/utilities/image-container";
 
 const chips = [
   {
@@ -267,6 +277,41 @@ const sillyStats = [
   },
 ];
 
+const countries = [
+  {
+    emoji: "🇦🇺",
+    name: "Australia",
+  },
+  {
+    emoji: "🇨🇦",
+    name: "Canada",
+  },
+  {
+    emoji: "🇩🇪",
+    name: "Germany",
+  },
+  {
+    emoji: "🇯🇵",
+    name: "Japan",
+  },
+  {
+    emoji: "🇳🇱",
+    name: "Netherlands",
+  },
+  {
+    emoji: "🇳🇿",
+    name: "New Zealand",
+  },
+  {
+    emoji: "🇰🇷",
+    name: "South Korea",
+  },
+  {
+    emoji: "🇹🇼",
+    name: "Taiwan",
+  },
+];
+
 export default function Profile() {
   const { theme } = useTheme();
   const [currentAttribute, setCurrentAttribute] =
@@ -335,7 +380,7 @@ export default function Profile() {
                   <TooltipTrigger>
                     <p
                       className={cn(
-                        "flex items-center justify-center border-1 border-black/20 dark:border-white/20 rounded-full py-2 px-3",
+                        "flex items-center justify-center border border-black/20 dark:border-white/20 rounded-full py-2 px-3",
                         category.color
                       )}
                     >
@@ -516,8 +561,66 @@ export default function Profile() {
             <AccordionTrigger>
               <H4>What are your preferences?</H4>
             </AccordionTrigger>
-            <AccordionContent className="flex justify-center">
-              <P></P>
+            <AccordionContent>
+              <P>
+                I don't really have any preferences <Italic>per se</Italic>,
+                besides having similar values to those I myself hold (I guess).
+                I generally consider myself to be quite open-minded, at least to
+                an extent. Just please,{" "}
+                <Bold>do NOT message me if you are below the age of 18</Bold>
+                &mdash;I will instantly block you if you do so!
+              </P>
+              <P>
+                There is, however, one thing I'd like you to have in mind when
+                contacting me: <Italic>location</Italic>. I do want to move out
+                of Poland someday, as stated in my{" "}
+                <span
+                  onClick={() => {
+                    setCurrentAttribute("goals");
+                    // Scroll to the attribute content section after state update
+                    setTimeout(() => {
+                      attributeSectionRef.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }, 0);
+                  }}
+                  className="hover:cursor-pointer underline"
+                >
+                  Goals
+                </span>
+                , and I'd be down for a long-distance relationship, but only
+                with a person from either of the following countries:
+              </P>
+              <Ul>
+                {countries.map((country) => (
+                  <li key={country.name}>
+                    <Emoji>{country.emoji}</Emoji> <span>{country.name}</span>
+                  </li>
+                ))}
+              </Ul>
+              <P>
+                <Bold>Why?</Bold> There are two core reasons: I like these
+                countries culturally and I can see myself working there without
+                much issue; and these regions are really generous with their
+                visa policies, which is a huge plus for any long distance
+                relationship!
+              </P>
+              <P>
+                <Bold>What if you're not from one of these palces?</Bold> Unless
+                you plan to move there&mdash;
+                <Italic>with an actual plan!</Italic>&mdash;at the same time or
+                sooner and I do, I can't say much else. It is what it is.
+              </P>
+              <P>
+                <Italic>Note:</Italic> if I get a full-term job offer in one
+                of these countries, there is no way I will be moving from there
+                anytime soon!
+              </P>
+              <ImageContainer
+                src="/map.jpg"
+                alt="Map of countries I could move to"
+              />
             </AccordionContent>
           </AccordionItem>
 
@@ -541,10 +644,9 @@ export default function Profile() {
             </AccordionTrigger>
             <AccordionContent>
               <P>
-                This page will most likely become{" "}
-                <span className="font-bold">inaccessible</span>, or at the very
-                least I will put a huge notification saying that I'm no longer
-                looking.
+                This page will most likely become <Bold>inaccessible</Bold>, or
+                at the very least I will put a huge notification saying that I'm
+                no longer looking.
               </P>
             </AccordionContent>
           </AccordionItem>
