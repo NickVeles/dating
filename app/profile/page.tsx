@@ -607,7 +607,7 @@ export default function Profile() {
                 relationship!
               </P>
               <P>
-                <Bold>What if you're not from one of these palces?</Bold> Unless
+                <Bold>What if you're not from one of those palces?</Bold> Unless
                 you plan to move there&mdash;
                 <Italic>with an actual plan!</Italic>&mdash;at the same time or
                 sooner and I do, I can't say much else. It is what it is.
