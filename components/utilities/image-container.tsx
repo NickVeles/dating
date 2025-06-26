@@ -39,7 +39,7 @@ export default function ImageContainer({
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="w-screen h-screen max-w-none rounded-none gap-0 pt-14 pb-0 px-0">
+      <DialogContent className="w-screen h-screen max-w-none rounded-none gap-0 pt-14 pb-0 px-0 bg-black text-white">
         <div className="flex justify-center items-center w-full h-full">
           <TransformWrapper minScale={0.75}>
             <TransformComponent
