@@ -442,7 +442,7 @@ export default function Profile() {
                 relationship!
               </P>
               <P>
-                <Bold>What if you're not from one of those palces?</Bold> Unless
+                <Bold>What if you're not from one of those places?</Bold> Unless
                 you plan to move there&mdash;
                 <Italic>with an actual plan!</Italic>&mdash;at the same time or
                 sooner than I do, I can't say much else. It is what it is.
