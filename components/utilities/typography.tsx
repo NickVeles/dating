@@ -77,7 +77,7 @@ export function Blockquote({ children, className }: TypographyProps) {
 
 export function Ul({ children, className }: TypographyProps) {
   return (
-    <ul className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className)}>
+    <ul className={cn("my-6 ml-6 list-disc font-serif dyslexic:font-dyslexic [&>li]:mt-2", className)}>
       {children}
     </ul>
   );
@@ -100,7 +100,7 @@ export function Bold({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "inline font-serif dyslexic:font-dyslexic font-bold",
+        "inline font-serif text-wrap dyslexic:font-dyslexic font-bold",
         className
       )}
     >
@@ -113,7 +113,7 @@ export function Italic({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "inline font-serif dyslexic:font-dyslexic italic",
+        "inline font-serif text-wrap dyslexic:font-dyslexic italic",
         className
       )}
     >
@@ -126,7 +126,20 @@ export function BoldItalic({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "inline font-serif dyslexic:font-dyslexic font-bold italic",
+        "inline font-serif text-wrap dyslexic:font-dyslexic font-bold italic",
+        className
+      )}
+    >
+      {children}
+    </pre>
+  );
+}
+
+export function Emoji({ children, className }: TypographyProps) {
+  return (
+    <pre
+      className={cn(
+        "inline font-emoji",
         className
       )}
     >
