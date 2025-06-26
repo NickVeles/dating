@@ -480,7 +480,7 @@ export default function Profile() {
                 </Italic>{" "}
                 and I understand the sentiment: life is short, and chasing
                 thrills can be fun. But I also think there’s value in balance.
-                Choosing not to drink excessively, smoke, or engage in one-night
+                Choosing not to drink excessively, do drugs, or engage in one-night
                 flings isn’t a lack of spirit&mdash;it’s a conscious decision to
                 invest in experiences and relationships that matter to me.
               </P>
