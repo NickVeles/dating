@@ -568,7 +568,7 @@ export default function Profile() {
                 I generally consider myself to be quite open-minded, at least to
                 an extent. Just please,{" "}
                 <Bold>do NOT message me if you are below the age of 18</Bold>
-                &mdash;I will instantly block you if you do so!
+                &mdash;I will instantly block you if you do!
               </P>
               <P>
                 There is, however, one thing I'd like you to have in mind when
@@ -613,8 +613,8 @@ export default function Profile() {
                 sooner and I do, I can't say much else. It is what it is.
               </P>
               <P>
-                <Italic>Note:</Italic> if I get a full-term job offer in one
-                of those countries, there is no way I will be moving from there
+                <Italic>Note:</Italic> if I get a full-term job offer in one of
+                those countries, there is no way I will be moving from there
                 anytime soon!
               </P>
               <ImageContainer
@@ -633,7 +633,30 @@ export default function Profile() {
               </H4>
             </AccordionTrigger>
             <AccordionContent>
-              <P></P>
+              <P>
+                I believe <Bold>I am already living life to the fullest</Bold>
+                &mdash;just in a way that feels true to me, rather than
+                following a script that might lead to regrets down the road.
+              </P>
+              <P>
+                I’ve heard the refrain,{" "}
+                <Italic>
+                  “You’ve gotta be batsh*t crazy while you’re still young,”
+                </Italic>{" "}
+                and I understand the sentiment: life is short, and chasing
+                thrills can be fun. But I also think there’s value in balance.
+                Choosing not to drink excessively, smoke, or engage in one-night
+                flings isn’t a lack of spirit&mdash;it’s a conscious decision to
+                invest in experiences and relationships that matter to me.
+              </P>
+              <P>
+                For me, “living life to the fullest” means building a foundation
+                I can be proud of&mdash;a stable career, a home, and meaningful
+                connections. It means making choices today that won’t leave me
+                looking back with regret tomorrow. If that comes across as
+                “boring,” I’ll gladly own it&mdash;because I’d rather lead a
+                life defined by intention than by a checklist of clichés.
+              </P>
             </AccordionContent>
           </AccordionItem>
 
