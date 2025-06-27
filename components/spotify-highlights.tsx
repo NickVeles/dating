@@ -142,7 +142,7 @@ export default function SpotifyHighlights({
                   </div>
                 </div>
                 <div className="text-start">
-                  <h5 className="text-xl font-bold hover:underline">
+                  <h5 className="text-xl font-bold hover:underline mr-2">
                     <span className="inline font-serif dyslexic:font-dyslexic">
                       {track.name}
                       <ArrowSquareOut className="inline align-text-top size-4" />
