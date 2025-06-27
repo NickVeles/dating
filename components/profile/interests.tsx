@@ -54,7 +54,7 @@ export default function Interests() {
           >
             {hobby.title}
           </Banner>
-          <p className="mt-4 font-sans dyslexic:font-dyslexic text-center text-gray-700 dark:text-gray-300">
+          <p className="mt-4 font-serif dyslexic:font-dyslexic text-center text-gray-700 dark:text-gray-300">
             {hobby.subtitle}
           </p>
           {hobby.content}
