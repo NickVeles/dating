@@ -351,25 +351,38 @@ export default function Profile() {
             </AccordionTrigger>
             <AccordionContent>
               <P>
-                I’ll be honest&mdash;dating has felt a bit exhausting lately.
-                This page is simply a way for me to share more about who I am,
-                what I enjoy, and what I’m looking for in a relationship, all in
-                one place.
+                I’ll be honest&mdash;
+                <Bold>dating has felt a bit exhausting lately</Bold>. This page
+                is simply a way for me to share more about who I am, what I
+                enjoy, and what I’m looking for in a relationship, all in one
+                place.
               </P>
               <P>
-                It really says a thing when building an entire website feels
-                easier than dating itself. By reading my{" "}
-                <TextLink href="/" blank={true}>
-                  guide
-                </TextLink>{" "}
-                you might get a better sense what I had to go through.
+                What I really liked about dating when I was still a beginner was
+                customizing your unique profile on various apps. I love data
+                science, so I'm a sucker for everything that can be described
+                with badges and chips.{" "}
+                <Bold>
+                  I thought it would be a neat idea to create something similar
+                  all by myself
+                </Bold>
+                , while slowly retiring from dating apps (at least for now).
+                Then doubts ran over me so I decided to rebrand this entire
+                website into a dating guide, cuz dating profiles alone are
+                apparently weird for some reason.
               </P>
               <P>
-                Dating opportunities are pretty limited where I live—being in
-                the countryside of an already small town doesn’t exactly help.
-                I’ve thought about moving to a bigger city, but I’m actually
-                planning to relocate abroad, which takes quite a bit of
-                preparation, which you can read more about in my{" "}
+                In reality, there's a lot of <Italic>chill vibe</Italic> behind
+                this project, and I don't actually expect to find anyone through
+                it. Though who knows, haha, dating opportunities are pretty
+                limited where I live after all—being in the countryside of an
+                already small town doesn’t exactly help.
+              </P>
+              <P>
+                Yes, I did actually think about moving to a bigger city, where
+                there are more dating opportunities, but I ended up planning to
+                relocate abroad, which takes quite a bit of preparation, which
+                you can read more about in my{" "}
                 <span
                   onClick={() => {
                     setCurrentAttribute("goals");
@@ -398,11 +411,11 @@ export default function Profile() {
             <AccordionContent>
               <P>
                 I don't really have any preferences <Italic>per se</Italic>,
-                besides having similar values to those I myself hold (I guess).
-                I generally consider myself to be quite open-minded, at least to
-                an extent. Just please,{" "}
+                besides having similar values to those I myself hold, I guess. I
+                generally consider myself to be quite open-minded, at least to
+                an extent. (Just please,{" "}
                 <Bold>do NOT message me if you are below the age of 18</Bold>
-                &mdash;I will instantly block you if you do!
+                &mdash;I will instantly block you if you do!)
               </P>
               <P>
                 There is, however, one thing I'd like you to have in mind when
