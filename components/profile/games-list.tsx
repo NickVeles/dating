@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 
-const games = ["roblox", "minecraft", "rivals"];
+const games = ["minecraft", "roblox", "rivals"];
 
 export default function GamesList() {
   return (
