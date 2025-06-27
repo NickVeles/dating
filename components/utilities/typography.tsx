@@ -98,52 +98,52 @@ export function Code({ children, className }: TypographyProps) {
 
 export function Bold({ children, className }: TypographyProps) {
   return (
-    <pre
+    <span
       className={cn(
         "inline font-serif text-wrap dyslexic:font-dyslexic font-bold",
         className
       )}
     >
       {children}
-    </pre>
+    </span>
   );
 }
 
 export function Italic({ children, className }: TypographyProps) {
   return (
-    <pre
+    <span
       className={cn(
         "inline font-serif text-wrap dyslexic:font-dyslexic italic",
         className
       )}
     >
       {children}
-    </pre>
+    </span>
   );
 }
 
 export function BoldItalic({ children, className }: TypographyProps) {
   return (
-    <pre
+    <span
       className={cn(
         "inline font-serif text-wrap dyslexic:font-dyslexic font-bold italic",
         className
       )}
     >
       {children}
-    </pre>
+    </span>
   );
 }
 
 export function Emoji({ children, className }: TypographyProps) {
   return (
-    <pre
+    <span
       className={cn(
         "inline font-emoji",
         className
       )}
     >
       {children}
-    </pre>
+    </span>
   );
 }
