@@ -5,7 +5,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Badge } from "../ui/badge";
 import { CornersOut } from "phosphor-react";
 
-type ImageContainerProps = {
+type ImageProps = {
   src: string;
   alt?: string;
   className?: string;
@@ -15,7 +15,7 @@ export default function ImageContainer({
   src,
   alt,
   className,
-}: ImageContainerProps) {
+}: ImageProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
