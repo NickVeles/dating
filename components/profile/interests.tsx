@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { H4 } from "../utilities/typography";
 import GamesList from "./games-list";
+import Banner from "../utilities/banner";
 
 const hobbies = [
   {
@@ -46,27 +47,13 @@ export default function Interests() {
     <div className="flex flex-col gap-12 w-full">
       {hobbies.map((hobby) => (
         <div className="w-full" key={hobby.title}>
-          <div
-            className="rounded-lg py-4"
-            style={{
-              backgroundImage: `url(${hobby.banner})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+          <Banner
+            url={hobby.banner}
+            alt={hobby.icon}
+            icon={`/icons/${hobby.icon}.svg`}
           >
-            <div className="w-full flex flex-col justify-center items-center my-2 py-2 text-white bg-gray-800/80 shadow">
-              <Image
-                src={`/icons/${hobby.icon}.svg`}
-                width={32}
-                height={32}
-                alt={hobby.title}
-                className="invert"
-              />
-              <H4 className="font-serif dyslexic:font-dyslexic text-center">
-                {hobby.title}
-              </H4>
-            </div>
-          </div>
+            {hobby.title}
+          </Banner>
           <p className="mt-4 font-sans dyslexic:font-dyslexic text-center text-gray-700 dark:text-gray-300">
             {hobby.subtitle}
           </p>
