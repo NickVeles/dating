@@ -469,7 +469,7 @@ export default function Profile() {
             </AccordionTrigger>
             <AccordionContent>
               <P>
-                I believe <Bold>I am already living life to the fullest</Bold>
+                I believe <Bold>I am already living my life to the fullest</Bold>
                 &mdash;just in a way that feels true to me, rather than
                 following a script that might lead to regrets down the road.
               </P>
