@@ -4,7 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { H4 } from "./utilities/typography";
 import { Skeleton } from "./ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { ArrowSquareOut, WarningCircle } from "phosphor-react";
+import {
+  ArrowSquareOut,
+  WarningCircle,
+  ClockCounterClockwise,
+  MusicNotes,
+} from "phosphor-react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -161,11 +166,12 @@ export default function SpotifyHighlights({
                     className="min-w-24 min-h-24 rounded"
                   />
                   <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
-                    <Badge
-                      variant="secondary"
-                      className="mt-1 text-xs uppercase font-mono dyslexic:font-dyslexic-mono text-gray-600 dark:text-gray-400"
-                    >
-                      {track.isCurrentlyPlaying ? "current" : "recent"}
+                    <Badge variant="secondary" className="p-1">
+                      {track.isCurrentlyPlaying ? (
+                        <MusicNotes className="size-5" />
+                      ) : (
+                        <ClockCounterClockwise className="size-5" />
+                      )}
                     </Badge>
                   </div>
                 </div>
@@ -209,7 +215,7 @@ export default function SpotifyHighlights({
                   />
                   <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
                     <Badge variant="secondary" className="p-1">
-                      <ArrowSquareOut className="inline align-text-top size-5" />
+                      <ArrowSquareOut className="size-5" />
                     </Badge>
                   </div>
                 </div>
