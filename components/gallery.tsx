@@ -6,11 +6,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useRef, useCallback, useEffect, useState } from "react";
-import type { CarouselApi } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
+import { Eye } from "phosphor-react";
 
 type ImageResource = {
   id: string;
@@ -26,7 +28,8 @@ const images: string[] = Array.from(
 export default function Gallery() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  
+  const [revealed, setRevealed] = useState(false);
+
   const autoplayRef = useRef(
     Autoplay({
       delay: 5000,
@@ -72,35 +75,49 @@ export default function Gallery() {
           {images.map((src, index) => (
             <CarouselItem
               key={index}
-              className="hover:cursor-grab active:cursor-grabbing flex items-center justify-center pl-8 basis-auto"
+              className="flex items-center justify-center pl-8 basis-auto"
             >
-              <div 
-                className={`relative h-[45vh] aspect-[3/5] transition-all duration-500 ease-out ${
-                  current === index 
-                    ? 'scale-100 opacity-100' 
-                    : 'scale-75 opacity-0'
-                }`}
+              <div
+                onClick={() => setRevealed(true)}
+                className={cn(
+                  "relative h-[45vh] aspect-[3/5] overflow-hidden rounded-lg transition-all duration-500 ease-out",
+                  revealed
+                    ? "hover:cursor-grab active:cursor-grabbing"
+                    : "hover:cursor-pointer",
+                  current === index
+                    ? "scale-100 opacity-100"
+                    : "scale-75 opacity-0"
+                )}
               >
                 <Image
                   src={src}
                   alt={`Image ${index + 1}`}
                   fill
-                  className="object-cover rounded-lg"
+                  className={cn(
+                    "object-cover rounded-lg transition-all ease-out",
+                    revealed ? "blue-0" : "blur-sm brightness-75"
+                  )}
                   sizes="(max-width: 640px) 100vw, 600px"
                   priority={index === 0}
                 />
+                {!revealed && (
+                  <div className="absolute object-cover rounded-lg inset-0 flex flex-col items-center justify-center text-white text-2xl font-semibold bg-black/30 pb-20 transition-all ease-out">
+                    <Eye className="size-20" />
+                    CLICK TO REVEAL
+                  </div>
+                )}
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious 
+        <CarouselPrevious
           className="hover:cursor-pointer hidden sm:flex z-20"
           onClick={(e) => {
             e.stopPropagation();
             resetAutoplay();
           }}
         />
-        <CarouselNext 
+        <CarouselNext
           className="hover:cursor-pointer hidden sm:flex z-20"
           onClick={(e) => {
             e.stopPropagation();
