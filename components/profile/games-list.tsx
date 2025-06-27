@@ -7,7 +7,7 @@ export default function GamesList() {
   return (
     <div className="flex justify-center gap-1 m-1">
       {games.map((game) => (
-        <Tooltip>
+        <Tooltip key={game}>
           <TooltipTrigger>
             <Image
               src={`/images/${game}.png`}
