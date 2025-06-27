@@ -452,7 +452,7 @@ export default function Profile() {
                 anytime soon!
               </P>
               <ImageContainer
-                src="/map.jpg"
+                src="/images/map.jpg"
                 alt="Map of countries I could move to"
               />
             </AccordionContent>
