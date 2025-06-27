@@ -1,17 +1,19 @@
 import Image from "next/image";
 import { H4 } from "./typography";
+import { cn } from "@/lib/utils";
 
 type BannerProps = {
   children?: React.ReactNode;
   url: string;
   alt?: string;
   icon: string;
+  className?: string;
 };
 
-export default function Banner({ children, url, alt, icon }: BannerProps) {
+export default function Banner({ children, url, alt, icon, className }: BannerProps) {
   return (
     <div
-      className="rounded-lg py-4"
+      className={cn("rounded-lg py-4", className)}
       style={{
         backgroundImage: `url(${url})`,
         backgroundSize: "cover",
