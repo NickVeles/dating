@@ -80,7 +80,7 @@ export default function Gallery() {
               <div
                 onClick={() => setRevealed(true)}
                 className={cn(
-                  "relative h-[520px] aspect-[3/5] overflow-hidden rounded-lg shadow transition-all duration-500 ease-out",
+                  "relative h-[460px] aspect-[3/5] overflow-hidden rounded-lg shadow transition-all duration-500 ease-out",
                   revealed
                     ? "hover:cursor-grab active:cursor-grabbing"
                     : "hover:cursor-pointer",
