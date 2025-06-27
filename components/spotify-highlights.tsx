@@ -74,15 +74,6 @@ export default function SpotifyHighlights({
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Refs and state for width calculation
-  const playlistItemRef = useRef<HTMLAnchorElement>(null);
-  const trackRef = useRef<HTMLAnchorElement>(null);
-  const [itemWidth, setItemWidth] = useState<number>(0);
-  const [trackWidth, setTrackWidth] = useState<number>(0);
-  const [desiredTrackWidth, setDesiredTrackWidth] = useState<
-    number | undefined
-  >();
-
   useEffect(() => {
     async function fetchTrack() {
       try {
@@ -100,27 +91,6 @@ export default function SpotifyHighlights({
     }
     fetchTrack();
   }, []);
-
-  // Measure playlist item width once
-  useEffect(() => {
-    const el = playlistItemRef.current;
-    if (el) {
-      setItemWidth(el.offsetWidth);
-    }
-  }, []);
-
-  // Once track link and item width are measured, compute desired width
-  useEffect(() => {
-    const el = trackRef.current;
-    if (el && itemWidth) {
-      const tw = el.offsetWidth;
-      setTrackWidth(tw);
-      const cols = Math.ceil((tw + 8) / (itemWidth + 8));
-      setDesiredTrackWidth(
-        Math.min(cols * itemWidth + 8 * (cols - 1), itemWidth * 5 + 32)
-      );
-    }
-  }, [track, itemWidth]);
 
   return (
     <div className={cn("w-full", className)}>
@@ -151,10 +121,6 @@ export default function SpotifyHighlights({
                 href={track.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                ref={trackRef}
-                style={
-                  desiredTrackWidth ? { width: desiredTrackWidth } : undefined
-                }
                 className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20"
               >
                 <div className="relative w-24 h-24">
@@ -202,7 +168,6 @@ export default function SpotifyHighlights({
                 href={playlist.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                ref={idx === 0 ? playlistItemRef : undefined}
                 className="flex items-center p-2 gap-4 rounded-lg border border-black/20 dark:border-white/20"
               >
                 <div className="relative w-24 h-24">
