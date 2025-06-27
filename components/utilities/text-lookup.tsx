@@ -16,7 +16,7 @@ export function TextLookup({
   return (
     <Tooltip>
       <TooltipContent>{children}</TooltipContent>
-      <TooltipTrigger className={`inline ${className}`}>
+      <TooltipTrigger className={`inline underline hover:cursor-pointer ${className}`}>
         {text}
         <MagnifyingGlass className="inline align-text-top size-4" />
       </TooltipTrigger>
