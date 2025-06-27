@@ -443,9 +443,9 @@ export default function Profile() {
               </P>
               <P>
                 <Bold>What if you're not from one of those places?</Bold> Unless
-                you have a concrete relocation plan for one of these
-                countries&mdash;at the same time or sooner than I do, I can't
-                say much else. It is what it is.
+                you have a concrete relocation plan for one of them&mdash;at the
+                same time or sooner than I do, I can't say much else. It is what
+                it is.
               </P>
               <P>
                 <Italic>Note:</Italic> if I get a full-time job offer in one of
