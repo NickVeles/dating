@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "../ui/dialog";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Badge } from "../ui/badge";
 import { CornersOut } from "phosphor-react";
@@ -40,6 +40,7 @@ export default function ImageContainer({
         </div>
       </DialogTrigger>
       <DialogContent className="w-screen h-screen max-w-none rounded-none gap-0 pt-14 pb-0 px-0 bg-black text-white">
+        <DialogTitle className="sr-only">{alt || "Image"}</DialogTitle>
         <div className="flex justify-center items-center w-full h-full">
           <TransformWrapper minScale={0.75}>
             <TransformComponent
