@@ -285,6 +285,7 @@ export default function Profile() {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.3 }}
+            className="w-full"
           >
             {attributes[currentAttribute]}
           </motion.div>
