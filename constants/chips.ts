@@ -23,6 +23,11 @@ export const chips = [
         tooltip: "Orientation",
         icon: "hetero",
       },
+      {
+        text: "ASD",
+        tooltip: "Autism Spectrum Disorder",
+        icon: "infinity",
+      },
     ],
   },
   {
