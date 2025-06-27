@@ -544,7 +544,7 @@ export default function Profile() {
               <P>
                 If I get enough requests, I might consider making this template
                 reusable for everyone, on this very website. Hosting would
-                inquire costs tho.
+                inquire costs though.
               </P>
             </AccordionContent>
           </AccordionItem>
