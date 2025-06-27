@@ -277,20 +277,18 @@ export default function Profile() {
 
       {/* Attribute Content section */}
       <SectionContainer accented ref={attributeSectionRef}>
-        <div className="min-h-[48px] flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentAttribute}
-              variants={attribAnimVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.3 }}
-            >
-              {attributes[currentAttribute]}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentAttribute}
+            variants={attribAnimVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.3 }}
+          >
+            {attributes[currentAttribute]}
+          </motion.div>
+        </AnimatePresence>
       </SectionContainer>
 
       {/* Music section */}
