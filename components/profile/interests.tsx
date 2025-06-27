@@ -44,7 +44,7 @@ const hobbies = [
 
 export default function Interests() {
   return (
-    <div className="flex flex-col gap-12 w-full">
+    <div className="flex flex-col gap-16 w-full">
       {hobbies.map((hobby) => (
         <div className="w-full" key={hobby.title}>
           <Banner
