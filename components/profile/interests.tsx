@@ -54,13 +54,13 @@ export default function Interests() {
               backgroundPosition: "center",
             }}
           >
-            <div className="w-full flex flex-col justify-center items-center my-2 py-2 bg-accent/75 shadow">
+            <div className="w-full flex flex-col justify-center items-center my-2 py-2 text-white bg-gray-800/80 shadow">
               <Image
                 src={`/icons/${hobby.icon}.svg`}
                 width={32}
                 height={32}
                 alt={hobby.title}
-                className="dark:invert"
+                className="invert"
               />
               <H4 className="font-serif dyslexic:font-dyslexic text-center">
                 {hobby.title}
