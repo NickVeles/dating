@@ -100,7 +100,7 @@ export function Bold({ children, className }: TypographyProps) {
   return (
     <span
       className={cn(
-        "inline font-serif text-wrap dyslexic:font-dyslexic font-bold",
+        "dyslexic:font-dyslexic font-bold",
         className
       )}
     >
@@ -113,7 +113,7 @@ export function Italic({ children, className }: TypographyProps) {
   return (
     <span
       className={cn(
-        "inline font-serif text-wrap dyslexic:font-dyslexic italic",
+        "dyslexic:font-dyslexic italic",
         className
       )}
     >
@@ -126,7 +126,7 @@ export function BoldItalic({ children, className }: TypographyProps) {
   return (
     <span
       className={cn(
-        "inline font-serif text-wrap dyslexic:font-dyslexic font-bold italic",
+        "dyslexic:font-dyslexic font-bold italic",
         className
       )}
     >
@@ -139,7 +139,7 @@ export function Emoji({ children, className }: TypographyProps) {
   return (
     <span
       className={cn(
-        "inline font-emoji",
+        "font-emoji",
         className
       )}
     >
