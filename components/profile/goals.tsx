@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Banner from "../utilities/banner";
-import { Bold, H3, P } from "../utilities/typography";
+import TextLookup from "../utilities/text-lookup";
+import { Bold, H3, Italic, P } from "../utilities/typography";
 
 const goals = [
   {
@@ -45,7 +47,38 @@ const goals = [
     banner:
       "https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Creating my own philosophy-themed community",
-    content: <div></div>,
+    content: (
+      <div>
+        <P className="mt-6">
+          Swiping constantly and going through shallow conversations daily gets
+          quite lonely&mdash;isolating, even. I thought a cool way of curing
+          this dread would be to become a <Bold>community founder</Bold>, and
+          that's why I'm planning to create my own community website (blog) and
+          a Discord server some time in the future. (Well... the server is
+          already done, just lacking bots and people)
+        </P>
+        <P>
+          One of my favorite topics of all time is <Bold>philosophy</Bold>,
+          especially existentialism&mdash;I love pondering about the meaning of
+          life all day every day&mdash;it's just a quirk of mine, I
+          guess!&mdash;that's why it's going to be focused around this exact
+          theme! It will have my own spin to it&mdash;I've been in{" "}
+          <Italic>quite a few</Italic>{" "}
+          philosophical communities, and I liked none of them, that's why I
+          decided to build something more <Italic>me</Italic>. Here's a quick{" "}
+          <TextLookup text="sneak peak">
+            <Image
+              src="/icons/symbol.svg"
+              alt="symbol"
+              width={24}
+              height={24}
+              className="invert dark:invert-0"
+            />
+          </TextLookup>
+          !
+        </P>
+      </div>
+    ),
   },
   {
     icon: "airplane-tilt",
@@ -58,12 +91,12 @@ const goals = [
 
 export default function Goals() {
   return (
-    <div className="w-full flex flex-col gap-12">
-      <H3 className="font-serif dyslexic:font-dyslexic text-center -mb-6">
+    <div className="w-full flex flex-col gap-16">
+      <H3 className="font-serif dyslexic:font-dyslexic text-center -mb-10">
         Goals for 2025/26
       </H3>
       {goals.map((goal) => (
-        <div key={goal.title}>
+        <div className="text-gray-700 dark:text-gray-300" key={goal.title}>
           <Banner
             url={goal.banner}
             alt={goal.icon}
