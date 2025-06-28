@@ -13,7 +13,7 @@ type BannerProps = {
 export default function Banner({ children, url, alt, icon, className }: BannerProps) {
   return (
     <div
-      className={cn("rounded-lg py-4 shadow", className)}
+      className={cn("flex justify-center rounded-lg py-4 shadow", className)}
       style={{
         backgroundImage: `url(${url})`,
         backgroundSize: "cover",
