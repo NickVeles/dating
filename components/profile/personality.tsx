@@ -98,9 +98,8 @@ const traits = [
     content: (
       <span>
         Diagnosed at 17, being on the autism spectrum has gifted me with strong
-        analytical skills&mdash;and taught me how to manage sensory overload.
-        What used to trigger anxiety has become a driver for self‑awareness and
-        personal growth.
+        analytical skills&mdash;and since my diagnosis, what used to trigger
+        anxiety has become a driver for self‑awareness and personal growth.
       </span>
     ),
   },
