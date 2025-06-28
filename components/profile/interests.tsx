@@ -46,7 +46,7 @@ export default function Interests() {
     <div className="flex flex-col gap-4 w-full">
       {hobbies.map((hobby) => (
         <div
-          className="flex flex-col md:flex-row md:even:flex-row-reverse [&>*]:w-full p-2 border rounded-lg border-black/20 dark:border-white/20"
+          className="flex flex-col md:flex-row md:even:flex-row-reverse [&>*]:w-full p-2 border rounded-lg border-black/20 dark:border-white/20 gap-4"
           key={hobby.title}
         >
           <Banner
@@ -58,7 +58,7 @@ export default function Interests() {
             {hobby.title}
           </Banner>
 
-          <div className="mt-4 md:mt-0 font-serif dyslexic:font-dyslexic flex justify-center text-center w-full text-gray-700 dark:text-gray-300">
+          <div className="md:mt-0 font-serif dyslexic:font-dyslexic flex justify-center text-center w-full text-gray-700 dark:text-gray-300">
             <span className="block md:hidden">
               {hobby.items.map((item, idx) => (
                 <span key={idx}>
