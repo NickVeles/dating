@@ -101,7 +101,7 @@ export default function Gallery() {
                   priority={index === 0}
                 />
                 {!revealed && (
-                  <div className="absolute object-cover rounded-lg inset-0 flex flex-col items-center justify-center text-white text-2xl font-semibold bg-black/30 pb-20 transition-all ease-out">
+                  <div className="absolute object-cover rounded-lg inset-0 flex flex-col items-center justify-center text-white text-center text-2xl font-semibold bg-black/30 pb-20 transition-all ease-out">
                     <Eye className="size-20" />
                     CLICK TO REVEAL
                   </div>
