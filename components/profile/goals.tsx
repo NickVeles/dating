@@ -63,9 +63,9 @@ const goals = [
           life all day every day&mdash;it's just a quirk of mine, I
           guess!&mdash;that's why it's going to be focused around this exact
           theme! It will have my own spin to it&mdash;I've been in{" "}
-          <Italic>quite a few</Italic>{" "}
-          philosophical communities, and I liked none of them, that's why I
-          decided to build something more <Italic>me</Italic>. Here's a quick{" "}
+          <Italic>quite a few</Italic> philosophical communities, and I liked
+          none of them, that's why I decided to build something more{" "}
+          <Italic>me</Italic>. Here's a quick{" "}
           <TextLookup text="sneak peak">
             <Image
               src="/icons/symbol.svg"
@@ -85,7 +85,43 @@ const goals = [
     banner:
       "https://images.unsplash.com/photo-1522689764216-4e6966e5e444?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Moving out of Poland",
-    content: <div></div>,
+    content: (
+      <div>
+        <P className="mt-6">
+          Is it going to happen soon? I wish! But{" "}
+          <Bold>the reality is that it will take me between 6-18 months</Bold>{" "}
+          (assuming it's July 2025), depending on lots of
+          circumstances&mdash;that's why it's at the end of this section. I
+          don't have a concrete location yet, and{" "}
+          <Bold>everything is a subject to change</Bold>.
+        </P>
+        <P>
+          However, it is sure I will not be spending all my life in Poland, and
+          I did my fair bit of research, including visa and permanent residency
+          options&mdash;as well as living and other various
+          expenses&mdash;around essentially all of the world. No joke, I spent
+          dozens of hours exploring various travel blogs and government websites
+          to educate myself as much as possible.
+        </P>
+        <P>
+          If I had to choose a single city I see myself in, it would be{" "}
+          <Bold>Toronto, Canada</Bold>. If not Toronto, probably{" "}
+          <Bold>Vancouver</Bold> or other Canadian city. If not Canada, most
+          likely <Bold>Australia</Bold> or <Bold>New Zealand</Bold>. If not
+          these two, I'd feel great in either <Bold>Germany</Bold> or the{" "}
+          <Bold>Netherlands</Bold>, because I have direct family there. I'm also
+          curious and considering whether I'd handle a working-holiday visa in
+          either <Bold>Japan</Bold>, <Bold>South Korea</Bold>, or{" "}
+          <Bold>Taiwan</Bold>&mdash;all three interest me culturally and I'd
+          wish to visit all of them eventually, even just for vacation.
+        </P>
+        <P>
+          The gist of it all is, the world is huge, and I don't want to
+          preemptively close any doors in front of me, though I'm actively
+          working towards this goal, even if it's somewhat messier this way.
+        </P>
+      </div>
+    ),
   },
 ];
 
