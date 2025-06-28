@@ -14,7 +14,7 @@ export default function Flags() {
         </Banner>
         <Ul>
           <li>Organized &ndash; will always find time for you.</li>
-          <li>Growth-mindset.</li>
+          <li>Always leveling up (in life, not just in games).</li>
           <li>Emotionally mature.</li>
           <li>Health-oriented.</li>
           <li>High self-discipline.</li>
