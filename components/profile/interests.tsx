@@ -53,7 +53,7 @@ export default function Interests() {
             url={hobby.banner}
             alt={hobby.icon}
             icon={`/icons/${hobby.icon}.svg`}
-            className="rounded"
+            className="rounded shadow-none"
           >
             {hobby.title}
           </Banner>
