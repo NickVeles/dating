@@ -77,7 +77,7 @@ export function Blockquote({ children, className }: TypographyProps) {
 
 export function Ul({ children, className }: TypographyProps) {
   return (
-    <ul className={cn("my-6 ml-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>li]:mt-2", className)}>
+    <ul className={cn("py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>li]:mt-2", className)}>
       {children}
     </ul>
   );
