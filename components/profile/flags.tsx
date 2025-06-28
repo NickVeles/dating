@@ -29,7 +29,7 @@ export default function Flags() {
           Red Flags
         </Banner>
         <Ul>
-          <li>Built a dating rofile website.</li>
+          <li>Built a dating profile website.</li>
           <li>Will probably take you to a museum on the first date.</li>
           <li>Regular deep talks is a must.</li>
           <li>We <Bold>WILL</Bold> become gym buddies.</li>
