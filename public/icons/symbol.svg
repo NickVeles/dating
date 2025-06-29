@@ -3,7 +3,7 @@
    viewBox="0 0 256 256"
    version="1.1"
    id="svg1"
-   sodipodi:docname="circle.svg"
+   sodipodi:docname="symbol.svg"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -18,9 +18,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="1.5761719"
-     inkscape:cx="215.71252"
-     inkscape:cy="201.43742"
+     inkscape:zoom="2.1931359"
+     inkscape:cx="128.583"
+     inkscape:cy="167.56828"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -29,29 +29,32 @@
      inkscape:current-layer="svg1" />
   <defs
      id="defs1" />
-  <rect
-     width="256"
-     height="256"
-     fill="none"
-     id="rect1" />
-  <circle
-     cx="1.4210855e-14"
-     cy="181.01933"
-     r="96"
-     fill="none"
-     stroke="currentColor"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     stroke-width="16"
-     id="circle1"
-     transform="rotate(-45)" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linejoin:bevel;stroke-dasharray:none"
-     inkscape:label="Triangle"
-     d="M 47.537348,75.638165 H 208.46266 L 128,224.03571 Z"
-     id="path1" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:16;stroke-linejoin:bevel;stroke-miterlimit:4.5;stroke-dasharray:none;paint-order:markers stroke fill"
-     d="M 128,224.03571 V 75.638165"
-     id="path2" />
+  <g
+     id="g1">
+    <rect
+       width="256"
+       height="256"
+       fill="none"
+       id="rect1" />
+    <circle
+       cx="1.4210855e-14"
+       cy="181.01933"
+       r="96"
+       fill="none"
+       stroke="currentColor"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="16"
+       id="circle1"
+       transform="rotate(-45)" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:16;stroke-linejoin:bevel;stroke-miterlimit:4.5;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 128,224.03571 V 80.001577"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:16;stroke-linejoin:bevel;stroke-dasharray:none"
+       inkscape:label="Triangle"
+       d="M 44.860648,80.001577 H 211.13935 L 128.00001,224 Z"
+       id="path1" />
+  </g>
 </svg>
