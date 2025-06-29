@@ -10,7 +10,7 @@ const traits = [
     content: (
       <span>
         More on the introverted site, but my social battery is big enough to
-        handle whatever social thing you throw at me.
+        handle whatever social situation you throw at me.
       </span>
     ),
   },
@@ -22,7 +22,7 @@ const traits = [
     content: (
       <span>
         Kinda rare these days I'd say. Complex psychology besides, why can't
-        more people simply make it their habit? Patience and respect are my
+        more people simply make that their habit? Patience and respect are my
         middle names.
       </span>
     ),
@@ -35,7 +35,8 @@ const traits = [
     content: (
       <span>
         Empathy is highly underrated. There's no such thing as{" "}
-        <Italic>enough</Italic> people who think about you!
+        <Italic>enough</Italic> people who think about you! Keep this in mind,
+        champ!
       </span>
     ),
   },
@@ -73,7 +74,7 @@ const traits = [
       <span>
         Fun fact: my old surname loosely meant <Italic>"Yapper,"</Italic> and it
         still fits&mdash;I’m the guy who can turn any topic into an hour‑long
-        conversation. (yes, I changed my name)
+        conversation. (Yes, I changed my name)
       </span>
     ),
   },

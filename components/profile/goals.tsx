@@ -104,21 +104,24 @@ const goals = [
           to educate myself as much as possible.
         </P>
         <P>
-          If I had to choose a single city I see myself in, it would be{" "}
-          <Bold>Toronto, Canada</Bold>. If not Toronto, probably{" "}
-          <Bold>Vancouver</Bold> or other Canadian city. If not Canada, most
-          likely <Bold>Australia</Bold> or <Bold>New Zealand</Bold>. If not
-          these two, I'd feel great in either <Bold>Germany</Bold> or the{" "}
-          <Bold>Netherlands</Bold>, because I have direct family there. I'm also
-          curious and considering whether I'd handle a working-holiday visa in
-          either <Bold>Japan</Bold>, <Bold>South Korea</Bold>, or{" "}
-          <Bold>Taiwan</Bold>&mdash;all three interest me culturally and I'd
-          wish to visit all of them eventually, even just for vacation.
+          Even though I am not "locked into" any of the following locations, I
+          am currently working towards moving to <Bold>Canada</Bold>,
+          specifically <Bold>Toronto</Bold>. My other options include{" "}
+          <Bold>Vancouver</Bold> or any other Canadian city. If not Canada, I
+          would definitely choose <Bold>Australia</Bold> or{" "}
+          <Bold>New Zealand</Bold> (I very much prefer English-speaking
+          countries). If not these two, I'd feel great in either{" "}
+          <Bold>Germany</Bold> or the <Bold>Netherlands</Bold>, because I have
+          direct family there. I'm also curious and considering whether I'd
+          handle a working-holiday visa in either <Bold>Japan</Bold>,{" "}
+          <Bold>South Korea</Bold>, or <Bold>Taiwan</Bold>&mdash;all three
+          interest me culturally and I'd wish to visit all of them eventually,
+          even just for vacation.
         </P>
         <P>
           The gist of it all is, the world is huge, and I don't want to
           preemptively close any doors in front of me, though I'm actively
-          working towards this goal, even if it's somewhat messier this way.
+          working towards this goal, defaulting to Canada as of now.
         </P>
       </div>
     ),

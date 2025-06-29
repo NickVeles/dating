@@ -119,7 +119,7 @@ const countries = [
   },
   {
     emoji: "🇨🇦",
-    name: "Canada",
+    name: "Canada ⭐",
   },
   {
     emoji: "🇩🇪",
@@ -461,8 +461,9 @@ export default function Profile() {
               </P>
               <P>
                 <Italic>Note:</Italic> if I get a full-time job offer in one of
-                those countries, there is no way I will be moving from there
-                anytime soon!
+                those countries (most likely Canada, as it's the country I'm
+                currently defaulting to), there is no way I will be moving from
+                there anytime soon!
               </P>
               <ImageContainer
                 src="/images/map.jpg"
