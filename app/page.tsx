@@ -1,5 +1,8 @@
 "use client";
 
+import SectionContainer from "@/components/utilities/section-container";
+import TextLink from "@/components/utilities/text-link";
+import { Bold, P, Ul } from "@/components/utilities/typography";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -10,7 +13,7 @@ export default function Home() {
   if (typeof theme === "undefined") return null;
 
   return (
-    <main className="flex flex-1">
+    <main className="flex flex-col flex-1">
       <div
         className="relative h-screen w-screen flex items-center justify-center"
         style={{
@@ -34,6 +37,22 @@ export default function Home() {
           priority
         />
       </div>
+      <SectionContainer>
+        <P>
+          This site is a <Bold>WORK IN PROGRESS</Bold> (WIP).
+        </P>
+        <P>
+          You can check the <TextLink href="/profile">Dating Profile</TextLink>{" "}
+          page though. It's already finished.
+        </P>
+        <P>The following will be added in the future updates:</P>
+        <Ul>
+          <li>Blog page with dating guide articles.</li>
+          <li>Content for the home page (the one you're currently seeing).</li>
+          <li>Improved accessiblity features.</li>
+          <li>Bugfixes.</li>
+        </Ul>
+      </SectionContainer>
     </main>
   );
 }
