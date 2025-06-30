@@ -9,6 +9,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import path from "path";
 
 export function FontToggle() {
   const [isDyslexic, setIsDyslexic] = useState(false);
@@ -43,7 +44,7 @@ export function FontToggle() {
             className="dark:invert w-[1.2rem] h-[1.2rem]"
             width={0}
             height={0}
-            src="icons/dyslexic.svg"
+            src={path.join(process.cwd(), "icons/dyslexic.svg")}
             alt="dyslexia toggle"
             priority
           />

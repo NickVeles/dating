@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { Toaster } from "./ui/sonner";
 import TextLink from "./utilities/text-link";
 import Link from "next/link";
+import path from "path";
 
 const links = [
   {
@@ -64,7 +65,7 @@ export function Footer() {
               className="flex items-center gap-2 hover:cursor-pointer hover:underline"
             >
               <Image
-                src="icons/discord-logo.svg"
+                src={path.join(process.cwd(), "icons/discord-logo.svg")}
                 alt="Discord logo"
                 width={0}
                 height={0}
@@ -85,7 +86,7 @@ export function Footer() {
                 className="flex items-center gap-2 hover:underline"
               >
                 <Image
-                  src={link.icon}
+                  src={path.join(process.cwd(), link.icon)}
                   alt={`${link.name} logo`}
                   width={0}
                   height={0}
