@@ -48,7 +48,7 @@ export default function Home() {
         </P>
         <P>The following will be added in the future updates:</P>
         <Ul>
-          <li>Blog page with dating guide articles.</li>
+          <li><TextLink href="/blog">Blog</TextLink> page with dating guide articles. (working on it right now)</li>
           <li>Content for the home page (the one you're currently seeing).</li>
           <li>Improved accessiblity features.</li>
           <li>Bugfixes.</li>
