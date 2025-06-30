@@ -39,7 +39,6 @@ export function Header() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    // Optionally return null or a placeholder to avoid flicker
     return null;
   }
 
