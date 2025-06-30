@@ -6,7 +6,6 @@ import { toast } from "sonner";
 import { Toaster } from "./ui/sonner";
 import TextLink from "./utilities/text-link";
 import Link from "next/link";
-import path from "path";
 
 // Icons
 import DiscordIcon from "@/assets/icons/discord-logo.svg";

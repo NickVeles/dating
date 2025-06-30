@@ -21,7 +21,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   const source = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(source);
+  const { data } = matter(source);
 
   return (
     <article>
