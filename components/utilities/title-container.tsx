@@ -1,3 +1,5 @@
+"use client";
+
 type TitleContainerProps = {
   Icon?: React.ElementType;
   children?: React.ReactNode;
