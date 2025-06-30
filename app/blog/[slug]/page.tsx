@@ -12,7 +12,7 @@ interface PostPageProps {
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const { slug } = await params;
+  const { slug } = params;
   const postsDir = path.join(process.cwd(), "posts");
   const fullPath = path.join(postsDir, `${slug}.mdx`);
 
