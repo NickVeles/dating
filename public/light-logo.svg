@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="light-logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showguides="true"
      inkscape:zoom="11.313708"
-     inkscape:cx="16.661204"
-     inkscape:cy="9.4133594"
+     inkscape:cx="16.61701"
+     inkscape:cy="9.3249711"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -43,17 +43,11 @@
     <g
        id="g8"
        transform="translate(0.14331373,1.1231438)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:6.35px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Thin';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787;stroke-miterlimit:4.5;stroke-opacity:1;paint-order:markers stroke fill"
-         x="75.095581"
-         y="116.45469"
-         id="text1"><tspan
-           sodipodi:role="line"
-           id="tspan1"
-           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Medium';fill:#be185d;fill-opacity:1;stroke:none;stroke-width:0.204787;stroke-opacity:1"
-           x="75.095581"
-           y="116.45469">N</tspan></text>
+      <path
+         style="font-weight:500;font-size:6.35px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Medium';text-align:center;text-anchor:middle;fill:#be185d;stroke-width:0.204787;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+         d="m 73.430291,116.45469 v -4.445 h 0.57785 l 2.219325,3.4798 v -3.4798 h 0.5334 v 4.445 h -0.574675 l -2.2225,-3.4798 v 3.4798 z"
+         id="text1"
+         aria-label="N" />
       <path
          id="text5"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.40833px;font-family:Parisienne;-inkscape-font-specification:Parisienne;text-align:end;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.166688;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.5;paint-order:markers stroke fill"
