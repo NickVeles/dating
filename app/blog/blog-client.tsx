@@ -44,8 +44,15 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     className="flex object-cover rounded aspect-[5/2] lg:aspect-[5/3] w-full"
                   />
                   <div className="absolute inset-0 flex justify-start items-start top-1 left-1">
-                    <Badge variant="secondary" className="p-1 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs shadow">
-                      {date}
+                    <Badge
+                      variant="secondary"
+                      className="p-1 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs shadow"
+                    >
+                      {new Date(date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
                     </Badge>
                   </div>
                 </div>
