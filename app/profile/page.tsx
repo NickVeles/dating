@@ -46,6 +46,18 @@ import TextLink from "@/components/utilities/text-link";
 import ImageContainer from "@/components/utilities/image-container";
 import { chips } from "@/constants/chips";
 
+// Icons
+import GameControllerIcon from "@/assets/icons/game-controller.svg";
+import TargetIcon from "@/assets/icons/target.svg";
+import SmileyIcon from "@/assets/icons/smiley.svg";
+import FlagPennantIcon from "@/assets/icons/flag-pennant.svg";
+
+import AriesIcon from "@/assets/icons/aries.svg";
+import StrategyIcon from "@/assets/icons/strategy.svg";
+import BoxingGloveIcon from "@/assets/icons/boxing-glove.svg";
+import BreadIcon from "@/assets/icons/bread.svg";
+import ColorIcon from "@/assets/icons/color.svg";
+
 const attributes: Record<string, React.ReactNode> = {
   interests: <Interests />,
   goals: <Goals />,
@@ -56,27 +68,27 @@ const attributes: Record<string, React.ReactNode> = {
 const attributeButtons = [
   {
     key: "interests",
-    icon: "/icons/game-controller.svg",
+    icon: GameControllerIcon,
     label: "Interests",
     color: "bg-sky-200 dark:bg-sky-800 hover:bg-sky-300 dark:hover:bg-sky-700",
   },
   {
     key: "goals",
-    icon: "/icons/target.svg",
+    icon: TargetIcon,
     label: "Goals",
     color:
       "bg-green-200 dark:bg-green-800 hover:bg-green-300 dark:hover:bg-green-700",
   },
   {
     key: "personality",
-    icon: "/icons/smiley.svg",
+    icon: SmileyIcon,
     label: "Personality",
     color:
       "bg-fuchsia-200 dark:bg-fuchsia-800 hover:bg-fuchsia-300 dark:hover:bg-fuchsia-700",
   },
   {
     key: "flags",
-    icon: "/icons/flag-pennant.svg",
+    icon: FlagPennantIcon,
     label: "Flags",
     color: "bg-red-200 dark:bg-red-800 hover:bg-red-300 dark:hover:bg-red-700",
   },
@@ -91,23 +103,23 @@ const attribAnimVariants = {
 const sillyStats = [
   {
     name: "Aries",
-    icon: "/icons/aries.svg",
+    icon: AriesIcon,
   },
   {
     name: "INTJ (Architect)",
-    icon: "/icons/strategy.svg",
+    icon: StrategyIcon,
   },
   {
     name: "8w7 (Challenger)",
-    icon: "/icons/boxing-glove.svg",
+    icon: BoxingGloveIcon,
   },
   {
     name: "Sunflower Bread Type",
-    icon: "/icons/bread.svg",
+    icon: BreadIcon,
   },
   {
     name: "Favorite Colors",
-    icon: "/icons/color.svg",
+    icon: ColorIcon,
     dontInvert: true,
   },
 ];
@@ -220,7 +232,7 @@ export default function Profile() {
                       )}
                     >
                       <Image
-                        src={`/icons/${item.icon}.svg`}
+                        src={item.icon}
                         alt={item.text}
                         height={18}
                         width={18}
