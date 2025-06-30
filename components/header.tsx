@@ -23,6 +23,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import DarkLogo from "@/assets/dark-logo.svg";
 import LightLogo from "@/assets/light-logo.svg";
+import { useEffect, useState } from "react";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
@@ -31,8 +32,16 @@ const pages = [
 ];
 
 export function Header() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const scrollDirection = useScrollDirection();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    // Optionally return null or a placeholder to avoid flicker
+    return null;
+  }
 
   return (
     <header
@@ -92,7 +101,7 @@ export function Header() {
       <div className="flex flex-1 justify-center">
         <Link href="/" className="flex items-center">
           <Image
-            src={theme == "dark" ? DarkLogo : LightLogo}
+            src={resolvedTheme === "dark" ? DarkLogo : LightLogo}
             alt="Logo"
             width={120}
             height={32}
