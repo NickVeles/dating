@@ -6,6 +6,9 @@ import { Bold, P, Ul } from "@/components/utilities/typography";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
+import DarkLogoFull from "@/assets/dark-logo-full.svg";
+import LightLogoFull from "@/assets/light-logo-full.svg";
+
 export default function Home() {
   const { theme } = useTheme();
 
@@ -27,9 +30,7 @@ export default function Home() {
         }}
       >
         <Image
-          src={
-            theme === "dark" ? "/dark-logo-full.svg" : "/light-logo-full.svg"
-          }
+          src={theme === "dark" ? DarkLogoFull : LightLogoFull}
           alt="Logo"
           width={0}
           height={0}

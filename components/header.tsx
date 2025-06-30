@@ -21,6 +21,8 @@ import { cn } from "@/lib/utils";
 import { useScrollDirection } from "@/lib/use-scroll-direction";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import DarkLogo from "@/assets/dark-logo.svg";
+import LightLogo from "@/assets/light-logo.svg";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
@@ -91,7 +93,7 @@ export function Header() {
       <div className="flex flex-1 justify-center">
         <Link href="/" className="flex items-center">
           <Image
-            src={theme == "dark" ? "/dark-logo.svg" : "/light-logo.svg"}
+            src={theme == "dark" ? DarkLogo : LightLogo}
             alt="Logo"
             width={120}
             height={32}
