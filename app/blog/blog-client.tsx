@@ -5,7 +5,7 @@ import { HeartStraight } from "phosphor-react";
 import TitleContainer from "@/components/utilities/title-container";
 import SectionContainer from "@/components/utilities/section-container";
 import Image from "next/image";
-import { H3, H4 } from "@/components/utilities/typography";
+import { H4 } from "@/components/utilities/typography";
 
 const DefaultImage =
   "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
