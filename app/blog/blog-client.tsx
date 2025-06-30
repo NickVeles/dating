@@ -48,7 +48,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                   <p className="font-sans dyslexic:font-dyslexic dyslexic:text-sm">
                     {date}
                   </p>
-                  <p className="pt-2 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs">
+                  <p className="pt-2 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs text-gray-700 dark:text-gray-300 px-2">
                     {description}
                   </p>
                 </div>
