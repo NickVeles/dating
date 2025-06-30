@@ -5,7 +5,7 @@ import { HeartStraight } from "phosphor-react";
 import TitleContainer from "@/components/utilities/title-container";
 import SectionContainer from "@/components/utilities/section-container";
 import Image from "next/image";
-import { H3 } from "@/components/utilities/typography";
+import { H3, H4 } from "@/components/utilities/typography";
 
 const DefaultImage =
   "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -42,13 +42,15 @@ export default function BlogClient({ posts }: BlogClientProps) {
                   className="flex flex-1 object-cover rounded aspect-[5/2] lg:aspect-[5/3] w-full"
                 />
                 <div className="flex flex-2 flex-col w-full px-2 lg:py-2 lg:px-0">
-                  <H3 className="font-serif dyslexic:font-dyslexic dyslexic:text-xl text-wrap">
+                  <H4 className="font-serif dyslexic:font-dyslexic dyslexic:text-lg text-wrap font-semibold">
                     {title}
-                  </H3>
+                  </H4>
                   <p className="font-sans dyslexic:font-dyslexic dyslexic:text-sm">
                     {date}
                   </p>
-                  <p className="pt-2 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs">{description}</p>
+                  <p className="pt-2 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs">
+                    {description}
+                  </p>
                 </div>
               </Link>
             </li>
