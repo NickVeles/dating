@@ -8,6 +8,7 @@ import RobotIcon from "@/assets/icons/robot.svg";
 import CircuitryIcon from "@/assets/icons/circuitry.svg";
 import UsersFourIcon from "@/assets/icons/users-four.svg";
 import AirplaneTiltIcon from "@/assets/icons/airplane-tilt.svg";
+import SymbolIcon from "@/assets/icons/symbol.svg"
 
 const goals = [
   {
@@ -74,7 +75,7 @@ const goals = [
           <Italic>me</Italic>. Here's a quick{" "}
           <TextLookup text="sneak peak">
             <Image
-              src="/icons/symbol.svg"
+              src={SymbolIcon}
               alt="symbol"
               width={24}
               height={24}
