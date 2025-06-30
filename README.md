@@ -11,7 +11,7 @@ A modern, accessible, and honest guide blog and dating profile built with [Next.
 - **Personal Dating Profile**: Interactive sections for interests, goals, personality, and more.
 - **Guide Blog**: Easily extensible blog system using MDX for dating and relationship articles.
 - **Accessibility**: Dyslexic-friendly font toggle, responsive design, and keyboard navigation.
-- **Custom UI Components**: Built with Radix UI primitives and Tailwind CSS for a consistent look.
+- **Custom UI Components**: Built with shadcn/ui and Tailwind CSS for a consistent look.
 - **Spotify Integration**: Displays currently playing or recently played tracks.
 - **Image Gallery**: Responsive, zoomable gallery for profile images.
 - **Contact & Social Links**: Quick access to Discord, Instagram, Twitter, LinkedIn, GitHub, and more.
@@ -24,13 +24,11 @@ A modern, accessible, and honest guide blog and dating profile built with [Next.
 - [Next.js](https://nextjs.org/) (App Router, Server Components)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Radix UI](https://www.radix-ui.com/)
+- [shadcn](https://ui.shadcn.com/)
 - [Phosphor Icons](https://phosphoricons.com/)
 - [Framer Motion](https://www.framer.com/motion/) (animations)
 - [MDX](https://mdxjs.com/) (blog content)
 - [next-themes](https://github.com/pacocoursey/next-themes) (theme switching)
-- [Sonner](https://sonner.emilkowal.ski/) (toasts)
-- [Embla Carousel](https://www.embla-carousel.com/) (carousel)
 - [OpenDyslexic Font](https://opendyslexic.org/) (dyslexia-friendly)
 
 ---
@@ -65,12 +63,12 @@ A modern, accessible, and honest guide blog and dating profile built with [Next.
 
 ## Project Structure
 
-- app — Next.js app directory (pages, layouts, blog, profile, etc.)
-- components — Reusable UI and utility components
-- constants — Static data (e.g., chips for profile)
-- lib — Utility functions and hooks
-- posts — Blog posts in MDX format
-- public — Static assets (fonts, images)
+- `app/` — Next.js app directory (pages, layouts, blog, profile, etc.)
+- `components/` — Reusable UI and utility components
+- `constants/` — Static data (e.g., chips for profile)
+- `lib/` — Utility functions and hooks
+- `posts/` — Blog posts in MDX format
+- `public/` — Static assets (fonts, images)
 - `styles/` — Global and component styles
 
 ---
