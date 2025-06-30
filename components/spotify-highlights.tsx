@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { H4 } from "./utilities/typography";
 import { Skeleton } from "./ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
@@ -81,11 +81,9 @@ export default function SpotifyHighlights({
         const data = await res.json();
         if (res.ok && data.name) {
           setTrack(data);
-        } else {
-          setError("No track playing or recently played.");
         }
       } catch (e) {
-        setError("Error fetching track.");
+        setError(e instanceof Error ? e.message : String(e));
       }
       setLoading(false);
     }
@@ -161,7 +159,7 @@ export default function SpotifyHighlights({
             </TooltipContent>
           </Tooltip>
         )}
-        {playlists.map((playlist, idx) => (
+        {playlists.map((playlist) => (
           <Tooltip key={playlist.name}>
             <TooltipTrigger>
               <Link

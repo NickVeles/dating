@@ -14,12 +14,6 @@ import { useRef, useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Eye } from "phosphor-react";
 
-type ImageResource = {
-  id: string;
-  url: string;
-  alt: string;
-};
-
 const images: string[] = Array.from(
   { length: 7 },
   (_, i) => `/gallery/00${i + 1}.jpg`

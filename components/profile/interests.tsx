@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { H4 } from "../utilities/typography";
 import GamesList from "./games-list";
 import Banner from "../utilities/banner";
 
