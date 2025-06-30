@@ -28,7 +28,6 @@ const pages = [
   { icon: House, name: "Home", href: "/" },
   { icon: HeartStraight, name: "Guide Blog", href: "/blog" },
   { icon: User, name: "Dating Profile", href: "/profile" },
-  //TODO add more pages
 ];
 
 export function Header() {
