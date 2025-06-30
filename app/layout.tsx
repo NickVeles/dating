@@ -29,6 +29,7 @@ const robotoSerif = Roboto_Serif({
 const notoColorEmoji = Noto_Color_Emoji({
   weight: "400",
   variable: "--font-noto-color-emoji",
+  subsets: ["emoji"]
 });
 
 export const metadata: Metadata = {
