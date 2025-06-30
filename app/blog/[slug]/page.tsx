@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import TitleContainer from "@/components/utilities/title-container";
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+  const { slug } = params;
   const postsDir = path.join(process.cwd(), "posts");
   const fullPath = path.join(postsDir, `${slug}.mdx`);
 
