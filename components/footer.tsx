@@ -8,29 +8,37 @@ import TextLink from "./utilities/text-link";
 import Link from "next/link";
 import path from "path";
 
+// Icons
+import DiscordIcon from "@/assets/icons/discord-logo.svg";
+import InstagramIcon from "@/assets/icons/instagram-logo.svg"
+import XIcon from "@/assets/icons/x-logo.svg"
+import LinkedInIcon from "@/assets/icons/linkedin-logo.svg"
+import GitHubIcon from "@/assets/icons/github-logo.svg"
+import GoogleIcon from "@/assets/icons/google-logo.svg"
+
 const links = [
   {
-    icon: "icons/instagram-logo.svg",
+    icon: InstagramIcon,
     name: "Instagram",
     href: "https://www.instagram.com/nick.veles/",
   },
   {
-    icon: "icons/x-logo.svg",
+    icon: XIcon,
     name: "Twitter",
     href: "https://x.com/nickveles",
   },
   {
-    icon: "icons/linkedin-logo.svg",
+    icon: LinkedInIcon,
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/nickveles/",
   },
   {
-    icon: "icons/github-logo.svg",
+    icon: GitHubIcon,
     name: "GitHub",
     href: "https://github.com/nickveles/",
   },
   {
-    icon: "icons/google-logo.svg",
+    icon: GoogleIcon,
     name: "Google Forms",
     href: "https://forms.gle/4YNLofEUcJ6YVA3a9",
   },
@@ -65,7 +73,7 @@ export function Footer() {
               className="flex items-center gap-2 hover:cursor-pointer hover:underline"
             >
               <Image
-                src={path.join(process.cwd(), "icons/discord-logo.svg")}
+                src={DiscordIcon}
                 alt="Discord logo"
                 width={0}
                 height={0}
@@ -86,7 +94,7 @@ export function Footer() {
                 className="flex items-center gap-2 hover:underline"
               >
                 <Image
-                  src={path.join(process.cwd(), link.icon)}
+                  src={link.icon}
                   alt={`${link.name} logo`}
                   width={0}
                   height={0}
