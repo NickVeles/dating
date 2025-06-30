@@ -5,7 +5,7 @@
 //TODO: Fix - header should appear when selecting its content with tab (Accessibility)
 
 import Image from "next/image";
-import { List, House, User } from "phosphor-react";
+import { List, House, HeartStraight, User } from "phosphor-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { FontToggle } from "@/components/font-toggle";
 import { Button } from "@/components/ui/button";
@@ -24,6 +24,7 @@ import Link from "next/link";
 
 const pages = [
   { icon: House, name: "Home", href: "/" },
+  { icon: HeartStraight, name: "Guide Blog", href: "/blog" },
   { icon: User, name: "Dating Profile", href: "/profile" },
   //TODO add more pages
 ];

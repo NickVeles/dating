@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Heart } from 'phosphor-react'
+import { HeartStraight } from 'phosphor-react'
 import TitleContainer from '@/components/utilities/title-container'
 
 type Post = {
@@ -17,7 +17,7 @@ interface BlogClientProps {
 export default function BlogClient({ posts }: BlogClientProps) {
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <TitleContainer Icon={Heart}>Dating Guide</TitleContainer>
+      <TitleContainer Icon={HeartStraight}>Guide Blog</TitleContainer>
       <ul>
         {posts.map(({ slug, title, date }) => (
           <li key={slug}>
