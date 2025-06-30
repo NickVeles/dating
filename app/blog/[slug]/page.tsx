@@ -5,8 +5,8 @@ import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import TitleContainer from "@/components/utilities/title-container";
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function PostPage({ params }: any) {
+  const { slug } = await params;
   const postsDir = path.join(process.cwd(), "posts");
   const fullPath = path.join(postsDir, `${slug}.mdx`);
 
