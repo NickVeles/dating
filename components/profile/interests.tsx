@@ -35,7 +35,8 @@ const hobbies = [
     banner:
       "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Gaming",
-    items: ["CO-OP", "Horror", "RPG", <GamesList />],
+    items: ["CO-OP", "Horror", "RPG"],
+    other: <GamesList />,
   },
 ];
 
@@ -64,11 +65,13 @@ export default function Interests() {
                   {idx < hobby.items.length - 1 && ", "}
                 </span>
               ))}
+              {hobby.other}
             </span>
             <ul className="hidden md:flex flex-col justify-center items-center gap-1">
               {hobby.items.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}
+              {hobby.other && <li key="extra">{hobby.other}</li>}
             </ul>
           </div>
         </div>
