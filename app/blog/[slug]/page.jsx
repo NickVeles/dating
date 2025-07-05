@@ -50,8 +50,10 @@ export default async function PostPage({ params }) {
   return (
     <article>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
-      <time>{data.date ?? ""}</time>
       <SectionContainer>
+        <time>{data.date ?? ""}</time>
+      </SectionContainer>
+      <SectionContainer accented>
         <MDXRemote source={content} components={components} />
       </SectionContainer>
     </article>
