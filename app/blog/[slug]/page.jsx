@@ -4,6 +4,36 @@ import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import TitleContainer from "@/components/utilities/title-container";
+import SectionContainer from "@/components/utilities/section-container";
+import {
+  Blockquote,
+  Bold,
+  Code,
+  H1,
+  H2,
+  H3,
+  H4,
+  Italic,
+  P,
+  Ul,
+} from "@/components/utilities/typography";
+import TextLink from "@/components/utilities/text-link";
+import ImageContainer from "@/components/utilities/image-container";
+
+const components = {
+  h1: (props) => <H1 {...props} />,
+  h2: (props) => <H2 {...props} />,
+  h3: (props) => <H3 {...props} />,
+  h4: (props) => <H4 {...props} />,
+  p: (props) => <P {...props} />,
+  blockquote: (props) => <Blockquote {...props} />,
+  ul: (props) => <Ul {...props} />,
+  code: (props) => <Code {...props} />,
+  em: (props) => <Italic {...props} />,
+  strong: (props) => <Bold {...props} />,
+  a: (props) => <TextLink {...props} />,
+  img: (props) => <ImageContainer {...props} />,
+};
 
 export default async function PostPage({ params }) {
   const { slug } = await params;
@@ -15,13 +45,15 @@ export default async function PostPage({ params }) {
   }
 
   const source = fs.readFileSync(fullPath, "utf8");
-  const { data } = matter(source);
+  const { data, content } = matter(source);
 
   return (
     <article>
-      <TitleContainer>{data.title}</TitleContainer>
-      <time>{data.date}</time>
-      <MDXRemote source={source} />
+      <TitleContainer>{data.title ?? ""}</TitleContainer>
+      <time>{data.date ?? ""}</time>
+      <SectionContainer>
+        <MDXRemote source={content} components={components} />
+      </SectionContainer>
     </article>
   );
 }
