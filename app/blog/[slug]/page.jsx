@@ -19,6 +19,7 @@ import {
 } from "@/components/utilities/typography";
 import TextLink from "@/components/utilities/text-link";
 import ImageContainer from "@/components/utilities/image-container";
+import { articleDateTime } from "@/lib/utils";
 
 const components = {
   h1: (props) => <H1 {...props} />,
@@ -44,17 +45,26 @@ export default async function PostPage({ params }) {
     return notFound();
   }
 
+  // Read frontmatter & content
   const source = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(source);
+
+  // Get file stats
+  const stats = fs.statSync(fullPath);
+  const fileCreatedAt = stats.birthtime;
 
   return (
     <article>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
-      <SectionContainer>
-        <time>{data.date ?? ""}</time>
-      </SectionContainer>
       <SectionContainer accented>
         <MDXRemote source={content} components={components} />
+      </SectionContainer>
+      <SectionContainer>
+        <P className="mt-0 italic font-sans dyslexic:font-dyslexic">
+          <time dateTime={fileCreatedAt.toISOString()}>
+            {articleDateTime(fileCreatedAt)}
+          </time>
+        </P>
       </SectionContainer>
     </article>
   );
