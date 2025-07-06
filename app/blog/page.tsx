@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import BlogClient from "./blog-client";
+import BlogClient from "./page-client";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
