@@ -20,6 +20,7 @@ import {
 import TextLink from "@/components/utilities/text-link";
 import ImageContainer from "@/components/utilities/image-container";
 import { articleDateTime } from "@/lib/utils";
+import { ArticleAuthors } from "@/components/article-authors";
 
 const components = {
   h1: (props) => <H1 {...props} />,
@@ -54,18 +55,25 @@ export default async function PostPage({ params }) {
   const fileCreatedAt = stats.birthtime;
 
   return (
-    <article>
+    <main>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
-      <SectionContainer accented>
-        <MDXRemote source={content} components={components} />
-      </SectionContainer>
+      <article>
+        <SectionContainer accented className="mt-4">
+          <MDXRemote source={content} components={components} />
+        </SectionContainer>
+      </article>
       <SectionContainer>
-        <P className="mt-0 italic font-sans dyslexic:font-dyslexic">
+        <H4 className="w-full mb-2 font-semibold">
+          Author{data.authorIds?.length > 1 ? "s" : ""}
+        </H4>
+        <ArticleAuthors ids={data.authorIds ?? []} className="w-full" />
+        <H4 className="w-full mb-2 mt-4 font-semibold">Created at</H4>
+        <p className="mt-0 w-full italic font-sans dyslexic:font-dyslexic">
           <time dateTime={fileCreatedAt.toISOString()}>
             {articleDateTime(fileCreatedAt)}
           </time>
-        </P>
+        </p>
       </SectionContainer>
-    </article>
+    </main>
   );
 }
