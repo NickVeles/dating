@@ -34,7 +34,7 @@ export const ArticleAuthors: React.FC<WriterAvatarsProps> = ({ ids, className })
           </Avatar>
         ))}
       </div>
-      <div className="text-sm font-sans dyslexic:dont-dyslexic dyslexic:text-xs text-muted-foreground">
+      <div className="font-sans dyslexic:dont-dyslexic dyslexic:text-sm text-muted-foreground">
         {filteredWriters.map((writer) => writer.name).join(", ")}
       </div>
     </div>

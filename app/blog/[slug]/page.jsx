@@ -87,7 +87,7 @@ export default async function PostPage({ params }) {
         {data.updatedAt && (
           <div className="w-full">
             <H4 className="w-full mb-2 font-semibold">Edited at</H4>
-            <p className="mt-0 w-full font-sans dyslexic:font-dyslexic text-wrap">
+            <p className="mt-0 w-full font-sans dyslexic:font-dyslexic text-wrap text-muted-foreground">
             <time dateTime={data.updatedAt}>
               {articleDateTime(data.updatedAt)}
             </time>
@@ -97,7 +97,7 @@ export default async function PostPage({ params }) {
         {data.createdAt && (
           <div className="w-full">
             <H4 className="w-full mb-2 font-semibold">Created at</H4>
-            <p className="mt-0 w-full font-sans dyslexic:font-dyslexic text-wrap">
+            <p className="mt-0 w-full font-sans dyslexic:font-dyslexic text-wrap text-muted-foreground">
               <time dateTime={data.createdAt}>
                 {articleDateTime(data.createdAt)}
               </time>
