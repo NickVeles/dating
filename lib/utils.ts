@@ -6,7 +6,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function articleDateTime(date: string | Date): string | null {
-  console.log()
   const d = typeof date === "string" ? new Date(date) : date;
 
   if (!(d instanceof Date) || isNaN(d.getTime())) {
