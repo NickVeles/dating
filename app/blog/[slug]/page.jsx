@@ -21,13 +21,30 @@ import TextLink from "@/components/utilities/text-link";
 import ImageContainer from "@/components/utilities/image-container";
 import { articleDateTime } from "@/lib/utils";
 import { ArticleAuthors } from "@/components/article-authors";
+import React from "react";
 
 const components = {
   h1: (props) => <H1 {...props} />,
   h2: (props) => <H2 {...props} />,
   h3: (props) => <H3 {...props} />,
   h4: (props) => <H4 {...props} />,
-  p: (props) => <P {...props} />,
+  p: (props) => {
+    const { children } = props;
+
+    // Exclude images (children with 'src' prop)
+    // imma be real i could check for children.type,
+    // but I have no idea what type [Function: img] is.
+    // `children.type === '[Function: img]'` is always false.
+    if (
+      React.isValidElement(children) &&
+      children.props &&
+      "src" in children.props
+    ) {
+      return children;
+    }
+
+    return <P {...props} />;
+  },
   blockquote: (props) => <Blockquote {...props} />,
   ul: (props) => <Ul {...props} />,
   code: (props) => <Code {...props} />,
