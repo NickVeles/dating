@@ -63,11 +63,15 @@ export default async function PostPage({ params }) {
         </SectionContainer>
       </article>
       <SectionContainer>
-        <H4 className="w-full mb-2 font-semibold">
-          Author{data.authorIds?.length > 1 ? "s" : ""}
-        </H4>
-        <ArticleAuthors ids={data.authorIds ?? []} className="w-full" />
-        <H4 className="w-full mb-2 mt-4 font-semibold">Created at</H4>
+        {data.authorIds && (
+          <div className="w-full mb-4">
+            <H4 className="w-full mb-2 font-semibold">
+              Author{data.authorIds?.length > 1 ? "s" : ""}
+            </H4>
+            <ArticleAuthors ids={data.authorIds} className="w-full" />
+          </div>
+        )}
+        <H4 className="w-full mb-2 font-semibold">Created at</H4>
         <p className="mt-0 w-full italic font-sans dyslexic:font-dyslexic">
           <time dateTime={fileCreatedAt.toISOString()}>
             {articleDateTime(fileCreatedAt)}
