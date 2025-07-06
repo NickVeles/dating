@@ -67,10 +67,6 @@ export default async function PostPage({ params }) {
   const source = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(source);
 
-  // Get file stats
-  const stats = fs.statSync(fullPath);
-  const fileCreatedAt = stats.birthtime;
-
   return (
     <main>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
@@ -79,21 +75,35 @@ export default async function PostPage({ params }) {
           <MDXRemote source={content} components={components} />
         </SectionContainer>
       </article>
-      <SectionContainer>
+      <SectionContainer className="gap-6">
         {data.authorIds && (
-          <div className="w-full mb-4">
+          <div className="w-full">
             <H4 className="w-full mb-2 font-semibold">
               Author{data.authorIds?.length > 1 ? "s" : ""}
             </H4>
             <ArticleAuthors ids={data.authorIds} className="w-full" />
           </div>
         )}
-        <H4 className="w-full mb-2 font-semibold">Created at</H4>
-        <p className="mt-0 w-full italic font-sans dyslexic:font-dyslexic">
-          <time dateTime={fileCreatedAt.toISOString()}>
-            {articleDateTime(fileCreatedAt)}
-          </time>
-        </p>
+        {data.updatedAt && (
+          <div className="w-full">
+            <H4 className="w-full mb-2 font-semibold">Edited at</H4>
+            <p className="mt-0 w-full font-sans dyslexic:font-dyslexic text-wrap">
+            <time dateTime={data.updatedAt}>
+              {articleDateTime(data.updatedAt)}
+            </time>
+            </p>
+          </div>
+        )}
+        {data.createdAt && (
+          <div className="w-full">
+            <H4 className="w-full mb-2 font-semibold">Created at</H4>
+            <p className="mt-0 w-full font-sans dyslexic:font-dyslexic text-wrap">
+              <time dateTime={data.createdAt}>
+                {articleDateTime(data.createdAt)}
+              </time>
+            </p>
+          </div>
+        )}
       </SectionContainer>
     </main>
   );
