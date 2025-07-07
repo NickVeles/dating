@@ -33,8 +33,8 @@ const notoColorEmoji = Noto_Color_Emoji({
 });
 
 export const metadata: Metadata = {
-  title: "Dating Made Simple by Nick",
-  description: "Discover practical online dating tips, in-depth relationship advice, and honest guides for modern singles. Dating Made Simple by Nick is your go-to blog for building meaningful connections, improving your dating profile, and navigating the world of digital romance with confidence.",
+  title: "Dating Simplified",
+  description: "Discover practical online dating tips, in-depth relationship advice, and honest guides for modern singles. Dating Simplified is your go-to blog for building meaningful connections, improving your dating profile, and navigating the world of digital romance with confidence.",
 };
 
 export default function RootLayout({
