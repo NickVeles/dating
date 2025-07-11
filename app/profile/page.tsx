@@ -475,7 +475,7 @@ export default function Profile() {
                 <Italic>Note:</Italic> if I get a full-time job offer in one of
                 those countries (most likely Canada, as it's the country I'm
                 currently defaulting to), there is no way I will be moving from
-                there anytime soon!
+                there anytime soon, <Bold>so message me now!</Bold>
               </P>
               <ImageContainer
                 src="/images/map.jpg"
