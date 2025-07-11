@@ -21,7 +21,7 @@ export default function BlogIndex() {
     return {
       slug: filename.replace(/\.mdx$/, ""),
       title: data.title as string,
-      date: data.date as string,
+      date: data.createdAt as string,
     };
   });
 
