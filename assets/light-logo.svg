@@ -42,15 +42,21 @@
      transform="translate(-68.580827,-110.23431)">
     <text
        xml:space="preserve"
-       style="font-weight:600;font-size:6.47477px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Semi-Bold';text-align:start;letter-spacing:0.294307px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#be185d;fill-opacity:1;stroke-width:4.23333;stroke-linejoin:bevel;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+       style="font-weight:600;font-size:6.47477px;font-family:Urbanist;-inkscape-font-specification:'Urbanist Semi-Bold';text-align:start;letter-spacing:0.294307px;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:none;fill:#be185d;fill-opacity:1;stroke-width:4.23333;stroke-linejoin:bevel;stroke-miterlimit:4.5;paint-order:markers stroke fill"
        x="73.421623"
        y="118.36531"
-       id="text2"><tspan
+       id="text2"
+       inkscape:label="text2-edit"><tspan
          sodipodi:role="line"
          id="tspan1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.47477px;font-family:Urbanist;-inkscape-font-specification:Urbanist;fill:#be185d;fill-opacity:1;stroke-width:4.23333"
          x="73.421623"
          y="118.36531">S</tspan></text>
+    <path
+       style="font-size:6.47477px;font-family:Urbanist;-inkscape-font-specification:Urbanist;letter-spacing:0.294307px;fill:#be185d;stroke-width:4.23333;stroke-linejoin:bevel;stroke-miterlimit:4.5;paint-order:markers stroke fill"
+       d="m 75.393191,118.44948 q -0.362587,0 -0.702513,-0.11331 -0.336688,-0.1133 -0.589204,-0.32373 -0.252516,-0.21043 -0.356112,-0.5018 l 0.424097,-0.15863 q 0.07122,0.20072 0.258991,0.3464 0.191006,0.14244 0.443522,0.22014 0.255753,0.0777 0.521219,0.0777 0.310789,0 0.579492,-0.1036 0.268703,-0.10359 0.433809,-0.28812 0.165107,-0.18777 0.165107,-0.44029 0,-0.25575 -0.171582,-0.42086 -0.171581,-0.16511 -0.443521,-0.25899 -0.268703,-0.0971 -0.563305,-0.14892 -0.462946,-0.0809 -0.832008,-0.22014 -0.365825,-0.13921 -0.579492,-0.39173 -0.213668,-0.25575 -0.213668,-0.67337 0,-0.39173 0.226617,-0.67985 0.226617,-0.28813 0.595679,-0.44676 0.3723,-0.15863 0.802872,-0.15863 0.352875,0 0.689563,0.11007 0.336688,0.11007 0.592441,0.3205 0.258991,0.21043 0.372299,0.51474 l -0.430572,0.1554 q -0.07122,-0.20396 -0.262228,-0.3464 -0.187768,-0.14569 -0.440284,-0.22014 -0.252516,-0.0777 -0.521219,-0.0777 -0.307552,-0.003 -0.576255,0.10359 -0.265465,0.1036 -0.430572,0.29137 -0.165107,0.18453 -0.165107,0.43381 0,0.29136 0.152157,0.44999 0.155395,0.1554 0.42086,0.2331 0.265466,0.0777 0.598917,0.1392 0.433809,0.0745 0.806109,0.2331 0.372299,0.15539 0.598916,0.41762 0.226617,0.25899 0.226617,0.641 0,0.38849 -0.226617,0.67985 -0.226617,0.28813 -0.598916,0.44676 -0.369062,0.15863 -0.806109,0.15863 z"
+       id="text4"
+       aria-label="S" />
     <path
        id="text3"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.40833px;font-family:Parisienne;-inkscape-font-specification:'Parisienne Bold';text-align:start;letter-spacing:0.264583px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:4.23333;stroke-linejoin:bevel;stroke-miterlimit:4.5;paint-order:markers stroke fill"
