@@ -1,4 +1,4 @@
-# Dating Made Simple by Nick
+# Dating Simplified
 
 [Portfolio Project]
 
