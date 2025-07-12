@@ -34,8 +34,6 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => setMounted(true), []);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -45,6 +43,8 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Ensure theme is loaded before rendering
+  useEffect(() => setMounted(true), []);
   if (!mounted) {
     return null;
   }

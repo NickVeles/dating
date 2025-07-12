@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { UserCircle, Cake } from "phosphor-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Carousel,
@@ -163,6 +163,7 @@ export default function Profile() {
   const { theme } = useTheme();
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
+  const [mounted, setMounted] = useState(false);
 
   // Reference for the attribute content section to scroll into view
   const attributeSectionRef = useRef<HTMLDivElement>(null);
@@ -180,7 +181,10 @@ export default function Profile() {
   const isBirthday = today.getMonth() === 2 && today.getDate() === 21;
 
   // Ensure theme is loaded before rendering
-  if (typeof theme === "undefined") return null;
+  useEffect(() => setMounted(true), []);
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <main className="flex flex-col flex-1 gap-4">
