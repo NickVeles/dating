@@ -5,12 +5,13 @@ import { HeartStraight, MagnifyingGlass } from "phosphor-react";
 import TitleContainer from "@/components/utilities/title-container";
 import SectionContainer from "@/components/utilities/section-container";
 import Image from "next/image";
-import { Bold, H4, P } from "@/components/utilities/typography";
+import { Bold, H4 } from "@/components/utilities/typography";
 import { Badge } from "@/components/ui/badge";
 import { chunkArray } from "@/lib/utils";
 import {
   ReadonlyURLSearchParams,
   redirect,
+  useRouter,
   useSearchParams,
 } from "next/navigation";
 import {
@@ -33,7 +34,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Ref, useRef, useState } from "react";
+import { useState } from "react";
 
 const DefaultImage =
   "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -119,6 +120,7 @@ function sortPostsByDate(posts: Post[], desc: boolean = false): Post[] {
 }
 
 export default function BlogClient({ posts }: BlogClientProps) {
+  const router = useRouter();
   const searchParams = useSearchParams();
 
   // Check search query
@@ -157,7 +159,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
               onChange={(e) => setSearchText(e.target.value ?? "")}
               onKeyDown={(e) => {
                 if (e.key === "Enter")
-                  redirect(
+                  router.push(
                     createPageURL(page, createdAtOrder, searchText ?? "")
                   );
               }}
@@ -167,7 +169,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
               variant="outline"
               className="hover:cursor-pointer rounded-none rounded-r-md border-l-0"
               onClick={() =>
-                redirect(createPageURL(page, createdAtOrder, searchText ?? ""))
+                router.push(createPageURL(page, createdAtOrder, searchText ?? ""))
               }
             >
               <MagnifyingGlass />
@@ -175,7 +177,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
           </div>
           <Select
             onValueChange={(value: "asc" | "desc") =>
-              redirect(createPageURL(page, createdAtOrder, searchText ?? ""))
+              router.push(createPageURL(page, value, searchText ?? ""))
             }
             defaultValue={createdAtOrder}
           >
