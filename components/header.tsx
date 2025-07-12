@@ -2,7 +2,6 @@
 
 //TODO: Add "skip to content"
 //TODO: Add "back to top" button
-//TODO: Fix - header should appear when selecting its content with tab (Accessibility)
 
 import Image from "next/image";
 import { List, House, HeartStraight, User } from "phosphor-react";
@@ -18,7 +17,6 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { useScrollDirection } from "@/lib/use-scroll-direction";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import DarkLogo from "@/assets/dark-logo.svg";
@@ -34,9 +32,18 @@ const pages = [
 export function Header() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const scrollDirection = useScrollDirection();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (!mounted) {
     return null;
@@ -45,8 +52,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-transform duration-300 shadow flex items-center justify-between w-full py-2 px-4 border-b bg-background",
-        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+        "sticky top-0 z-50 duration-300 h-(--header-height) transition-shadow flex items-center justify-between w-full py-2 px-4 bg-background",
+        scrolled ? "shadow-md" : ""
       )}
     >
       {/* Left: Burger menu */}

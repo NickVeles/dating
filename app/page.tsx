@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-1">
       <div
-        className="relative h-screen w-screen flex items-center justify-center"
+        className="relative h-(--header-screen-height) w-screen flex items-center justify-center"
         style={{
           backgroundImage: `url(${
             theme === "dark"
