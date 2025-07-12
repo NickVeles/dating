@@ -5,14 +5,6 @@ import BlogClient from "./page-client";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-type Post = {
-  slug: string;
-  title: string;
-  createdAt: string;
-  description?: string;
-  thumbnail?: string;
-};
-
 export default function BlogIndex() {
   const filenames = fs.readdirSync(postsDirectory);
 
