@@ -14,9 +14,9 @@ const DefaultImage =
 type Post = {
   slug: string;
   title: string;
-  date: string;
+  createdAt: string;
   description?: string;
-  image?: string;
+  thumbnail?: string;
 };
 
 interface BlogClientProps {
@@ -24,12 +24,14 @@ interface BlogClientProps {
 }
 
 export default function BlogClient({ posts }: BlogClientProps) {
+  
+
   return (
     <main className="flex flex-col flex-1 gap-4">
       <TitleContainer Icon={HeartStraight}>Guide Blog</TitleContainer>
       <SectionContainer accented>
         <ul className="flex flex-col w-full gap-4">
-          {posts.map(({ slug, title, date, description, image }) => (
+          {posts.map(({ slug, title, createdAt, description, thumbnail }) => (
             <li key={slug} className="w-full">
               <Link
                 href={`/blog/${slug}`}
@@ -37,7 +39,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
               >
                 <div className="relative lg:w-[33%]">
                   <Image
-                    src={image ?? DefaultImage}
+                    src={thumbnail ?? DefaultImage}
                     alt={title}
                     width={800}
                     height={480}
@@ -48,7 +50,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                       variant="secondary"
                       className="p-1 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs shadow"
                     >
-                      {new Date(date).toLocaleDateString("en-US", {
+                      {new Date(createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",

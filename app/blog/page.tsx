@@ -8,7 +8,9 @@ const postsDirectory = path.join(process.cwd(), "posts");
 type Post = {
   slug: string;
   title: string;
-  date: string;
+  createdAt: string;
+  description?: string;
+  thumbnail?: string;
 };
 
 export default function BlogIndex() {
@@ -21,7 +23,9 @@ export default function BlogIndex() {
     return {
       slug: filename.replace(/\.mdx$/, ""),
       title: data.title as string,
-      date: data.createdAt as string,
+      createdAt: data.createdAt as string,
+      description: data.description as string,
+      thumbnail: data.thumbnail as string,
     };
   });
 
