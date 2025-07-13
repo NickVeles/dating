@@ -89,7 +89,7 @@ export default function Gallery() {
                   fill
                   className={cn(
                     "object-cover rounded-lg transition-all ease-out",
-                    revealed ? "blue-0" : "blur-sm brightness-75"
+                    revealed ? "blur-0" : "blur-sm brightness-75"
                   )}
                   sizes="(max-width: 640px) 100vw, 600px"
                   priority={index === 0}
