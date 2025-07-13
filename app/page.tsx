@@ -8,12 +8,17 @@ import Image from "next/image";
 
 import DarkLogoFull from "@/assets/dark-logo-full.svg";
 import LightLogoFull from "@/assets/light-logo-full.svg";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   // Ensure theme is loaded before rendering
-  if (typeof theme === "undefined") return null;
+  useEffect(() => setMounted(true), []);
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <main className="flex flex-col flex-1">
