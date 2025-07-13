@@ -2,11 +2,11 @@ import GamesList from "./games-list";
 import Banner from "../utilities/banner";
 
 // Icons
-import BookOpenTextIcon from "@/assets/icons/book-open-text.svg"
-import FilmSlateIcon from "@/assets/icons/film-slate.svg"
-import CodeIcon from "@/assets/icons/code.svg"
-import BarbellIcon from "@/assets/icons/barbell.svg"
-import JoystickIcon from "@/assets/icons/joystick.svg"
+import BookOpenTextIcon from "@/assets/icons/book-open-text.svg";
+import FilmSlateIcon from "@/assets/icons/film-slate.svg";
+import CodeIcon from "@/assets/icons/code.svg";
+import BarbellIcon from "@/assets/icons/barbell.svg";
+import JoystickIcon from "@/assets/icons/joystick.svg";
 
 const hobbies = [
   {
@@ -42,7 +42,6 @@ const hobbies = [
     banner:
       "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Gaming",
-    items: ["CO-OP", "Horror", "RPG"],
     other: <GamesList />,
   },
 ];
@@ -66,7 +65,7 @@ export default function Interests() {
 
           <div className="md:mt-0 font-serif dyslexic:font-dyslexic flex justify-center text-center w-full text-gray-700 dark:text-gray-300">
             <span className="block md:hidden">
-              {hobby.items.map((item, idx) => (
+              {hobby.items?.map((item, idx) => (
                 <span key={idx}>
                   {item}
                   {idx < hobby.items.length - 1 && ", "}
@@ -74,12 +73,14 @@ export default function Interests() {
               ))}
               {hobby.other}
             </span>
-            <ul className="hidden md:flex flex-col justify-center items-center gap-1">
-              {hobby.items.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-              {hobby.other && <li key="extra">{hobby.other}</li>}
-            </ul>
+            <div className="hidden md:flex">
+              <ul className="flex flex-col justify-center items-center gap-1">
+                {hobby.items?.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              {hobby.other}
+            </div>
           </div>
         </div>
       ))}
