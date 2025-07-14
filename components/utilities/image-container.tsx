@@ -6,22 +6,25 @@ import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "../ui/dialog"
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Badge } from "../ui/badge";
 import { CornersOutIcon } from "@phosphor-icons/react";
+import { AspectRatio } from "../ui/aspect-ratio";
 
 type ImageProps = {
   src: string;
   alt?: string;
+  aspectRatio?: number;
   className?: string;
 };
 
 export default function ImageContainer({
   src,
   alt,
+  aspectRatio,
   className,
 }: ImageProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div
+        <AspectRatio ratio={aspectRatio ?? 16 / 9}
           className={cn(
             "w-full h-full relative justify-center items-center px-2 py-6 hover:cursor-pointer",
             className
@@ -30,16 +33,15 @@ export default function ImageContainer({
           <Image
             src={src}
             alt={alt || "Image"}
-            width={1000}
-            height={1000}
-            className="object-cover rounded-lg max-h-[440px] shadow dark:shadow-white"
+            fill
+            className="object-cover rounded-lg shadow dark:shadow-white"
           />
-          <div className="absolute bottom-7 right-3">
+          <div className="absolute bottom-1 right-1">
             <Badge variant="secondary" className="p-1">
               <CornersOutIcon className="inline align-text-top" />
             </Badge>
           </div>
-        </div>
+        </AspectRatio>
       </DialogTrigger>
       <DialogContent className="w-screen h-screen max-w-none rounded-none gap-0 pt-14 pb-0 px-0 bg-black text-white">
         <DialogTitle className="sr-only">{alt || "Image"}</DialogTitle>
