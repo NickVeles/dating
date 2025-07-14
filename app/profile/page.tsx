@@ -161,7 +161,6 @@ const countries = [
 ];
 
 export default function Profile() {
-  const { theme } = useTheme();
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
   const [mounted, setMounted] = useState(false);
