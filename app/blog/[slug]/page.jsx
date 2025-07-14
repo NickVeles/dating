@@ -70,7 +70,7 @@ export default async function PostPage({ params }) {
 
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <SectionContainer className="py-4">
+      <SectionContainer className="py-4 lg:px-16">
         <ImageContainer src={data.thumbnail ?? DefaultThumbnail} alt="Post thumbnail" aspectRatio={7 / 2}  />
       </SectionContainer>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
