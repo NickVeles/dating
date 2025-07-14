@@ -99,7 +99,7 @@ export function Code({ children, className }: TypographyProps) {
   return (
     <code
       className={cn(
-        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
+        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono dyslexic:font-dyslexic-mono text-sm font-semibold",
         className
       )}
     >
@@ -112,7 +112,7 @@ export function CodeBlock({ children, className }: TypographyProps) {
   return (
     <pre
       className={cn(
-        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
+        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono dyslexic:font-dyslexic-mono text-sm font-semibold",
         className
       )}
     >
