@@ -257,8 +257,8 @@ export default function HomeClient({ latestPosts }: HomeProps) {
             <AccordionContent>
               <P>
                 The contact links are right below this FAQ. Be welcome to
-                message the site's creator at any time. I'll try to respond as
-                quickly as possible!
+                message me at any time. I'll try to respond as quickly as
+                possible!
               </P>
             </AccordionContent>
           </AccordionItem>
