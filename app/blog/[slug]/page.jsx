@@ -22,6 +22,7 @@ import ImageContainer from "@/components/utilities/image-container";
 import { articleDateTime } from "@/lib/utils";
 import { ArticleAuthors } from "@/components/article-authors";
 import React from "react";
+import { DefaultThumbnail } from "@/constants/default-thumbnail";
 
 const components = {
   h1: (props) => <H1 {...props} />,
@@ -68,7 +69,10 @@ export default async function PostPage({ params }) {
   const { data, content } = matter(source);
 
   return (
-    <main>
+    <main className="flex flex-col flex-1 gap-4">
+      <SectionContainer className="py-4">
+        <ImageContainer src={data.thumbnail ?? DefaultThumbnail} alt="Post thumbnail" aspectRatio={7 / 2}  />
+      </SectionContainer>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
       <article>
         <SectionContainer accented className="mt-4">
