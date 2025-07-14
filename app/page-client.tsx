@@ -1,7 +1,7 @@
 "use client";
 
 import SectionContainer from "@/components/utilities/section-container";
-import { H2, H3, H4 } from "@/components/utilities/typography";
+import { H2, H3, H4, P, Ul } from "@/components/utilities/typography";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -11,7 +11,13 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Accordion, AccordionContent, AccordionTrigger, AccordionItem } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionTrigger,
+  AccordionItem,
+} from "@/components/ui/accordion";
+import TextLink from "@/components/utilities/text-link";
 
 const DefaultImage =
   "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -173,7 +179,90 @@ export default function HomeClient({ latestPosts }: HomeProps) {
             <AccordionTrigger>
               <H4>Why did you make this website?</H4>
             </AccordionTrigger>
-            <AccordionContent>{/*  */}</AccordionContent>
+            <AccordionContent>
+              <P>There are a few reasons why I created this website:</P>
+              <Ul>
+                <li>
+                  As a portfolio project to showcase my web development skills.
+                </li>
+                <li>I've always wanted to start a blog of some kind.</li>
+                <li>
+                  This year, I’ve spent a lot of time learning about dating and
+                  searching for "the one."
+                </li>
+              </Ul>
+              <P forceFirst>
+                Putting all those pieces together, creating a dating guide blog
+                just made perfect sense.
+              </P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* Can I trust this guide? */}
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              <H4>Can I trust this website?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P>
+                It’s important to remember that there’s no one-size-fits-all
+                approach to dating. Everyone’s journey is unique, and what works
+                for one person might not work for another. By trusting this
+                site, you're essentially trusting that the advice and insights
+                that have worked for us might work for you too.
+              </P>
+              <P>
+                That said, all of our contributors are expected to have a solid
+                level of dating experience&mdash;and a good understanding of the
+                do’s and don’ts of meaningful communication.
+              </P>
+              <P>
+                If you consider yourself experienced in the dating world and
+                have something valuable to share, we’d love to hear from you.
+                You're always welcome to{" "}
+                <TextLink href="/contribute">contribute</TextLink>.
+              </P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* Who is this website for? */}
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              <H4>Who is this website for?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P>
+                This website is for anyone looking to improve their dating
+                life—whether you're just starting out, getting back into the
+                game, or looking to level up your relationship skills.
+              </P>
+              <P>
+                We write for people who are genuinely interested in building
+                better connections, understanding the dating landscape, and
+                becoming more confident in who they are. If you're tired of
+                shallow advice and want real, practical insights based on
+                experience, you’re in the right place.
+              </P>
+              <P>
+                Whether you're swiping on apps, navigating first dates, or
+                wondering how to keep things exciting long-term, there’s
+                something here for you.
+              </P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* I have more questions */}
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              <H4>I have more questions!</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P>
+                The contact links are right below this FAQ. Be welcome to
+                message the site's creator at any time. I'll try to respond as
+                quickly as possible!
+              </P>
+            </AccordionContent>
           </AccordionItem>
         </Accordion>
       </SectionContainer>
