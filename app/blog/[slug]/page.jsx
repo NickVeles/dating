@@ -57,10 +57,8 @@ export default async function PostPage({ params }) {
   const { content } = matter(source);
 
   return (
-    <Suspense fallback={<Loading />}>
-      <PostPageClient source={source}>
-        <MDXRemote source={content} components={components} />
-      </PostPageClient>
-    </Suspense>
+    <PostPageClient source={source}>
+      <MDXRemote source={content} components={components} />
+    </PostPageClient>
   );
 }

@@ -3,10 +3,13 @@ import { H4 } from "./typography";
 import { XLogoIcon } from "@phosphor-icons/react";
 import { TooltipContent, Tooltip, TooltipTrigger } from "../ui/tooltip";
 import { getRandomItem } from "@/lib/utils";
+import { useEffect, useState } from "react";
+import Loading from "./loading";
 
 interface ShareProps {
   url: string;
   children?: string;
+  excludeTitle?: boolean;
 }
 
 const defaultTwitterMessages = [
@@ -25,22 +28,42 @@ const defaultFacebookMessages = [
   "Want to make dating fun and less stressful? This blog post offers simple but powerful tips to help you on your journey. #HealthyRelationships #DatingSimplified",
 ];
 
-export default function Share({ url, children }: ShareProps) {
+const defaultWhatsappMessages = [
+  "Just read this awesome dating guide! 💕 Check it out for tips on finding meaningful connections. #DatingSimplified #Love",
+  "Struggling with dating? This guide helped me understand what really matters! Worth a read. #DatingSimplified #FindLove",
+  "Ready to level up your dating game? Here’s a must-read guide with practical tips! #DatingSimplified #RelationshipGoals",
+  "Dating doesn’t have to be confusing. This guide breaks it down simply and clearly! #DatingSimplified #LoveLife",
+  "Want better dates and stronger connections? This blog post is packed with solid advice! #DatingSimplified #HealthyRelationships",
+];
+
+export default function Share({
+  url,
+  children,
+  excludeTitle = false,
+}: ShareProps) {
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = children ? encodeURIComponent(children) : null;
+  const [mounted, setMounted] = useState(false);
 
   const places = [
     {
       icon: XLogoIcon,
-      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle ?? getRandomItem(defaultTwitterMessages)}`,
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${
+        encodedTitle ?? getRandomItem(defaultTwitterMessages)
+      }`,
       alt: "Twitter",
     },
   ];
+  
+  // Ensure everything is loaded before rendering
+  useEffect(() => setMounted(true), []);
+  if (!mounted) {
+    return <Loading />;
+  }
 
   return (
     <div className="w-full">
-      <H4 className="w-full mb-2 font-semibold">Share</H4>
-
+      {!excludeTitle && <H4 className="w-full mb-2 font-semibold">Share</H4>}
       <div className="flex gap-2">
         {places.map((place) => (
           <Tooltip key={place.alt}>
@@ -49,12 +72,12 @@ export default function Share({ url, children }: ShareProps) {
                 href={place.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="size-8 hover:cursor-pointer"
+                className="text-2xl hover:cursor-pointer"
               >
-                <place.icon alt={place.alt} />
+                <place.icon alt={`Share on ${place.alt}`} />
               </Link>
             </TooltipTrigger>
-            <TooltipContent></TooltipContent>
+            <TooltipContent>{`Share on ${place.alt}`}</TooltipContent>
           </Tooltip>
         ))}
       </div>
