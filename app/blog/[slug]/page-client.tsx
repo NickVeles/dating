@@ -39,7 +39,7 @@ export default function PostPageClient({ source, children }: PostPageProps) {
       </SectionContainer>
       <TitleContainer>{data.title ?? ""}</TitleContainer>
       <article>
-        <SectionContainer accented className="mt-4">
+        <SectionContainer accented className="flex flex-col gap-5 mt-4">
           <Share url={fullUrl} smallTitle className="self-end"/>
           {children}
         </SectionContainer>
