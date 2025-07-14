@@ -1,7 +1,7 @@
 export const games = [
   {
     file: "minecraft",
-    name: "Minectaft",
+    name: "Minecraft",
   },
   {
     file: "vintage-story",
