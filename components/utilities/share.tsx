@@ -2,14 +2,15 @@ import Link from "next/link";
 import { H4 } from "./typography";
 import { XLogoIcon } from "@phosphor-icons/react";
 import { TooltipContent, Tooltip, TooltipTrigger } from "../ui/tooltip";
-import { getRandomItem } from "@/lib/utils";
+import { cn, getRandomItem } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import Loading from "./loading";
 
 interface ShareProps {
   url: string;
   children?: string;
-  excludeTitle?: boolean;
+  smallTitle?: boolean;
+  className?: string;
 }
 
 const defaultTwitterMessages = [
@@ -44,7 +45,8 @@ const defaultWhatsappMessages = [
 export default function Share({
   url,
   children,
-  excludeTitle = false,
+  smallTitle = false,
+  className,
 }: ShareProps) {
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = children ? encodeURIComponent(children) : null;
@@ -59,7 +61,7 @@ export default function Share({
       alt: "Twitter",
     },
   ];
-  
+
   // Ensure everything is loaded before rendering
   useEffect(() => setMounted(true), []);
   if (!mounted) {
@@ -67,8 +69,15 @@ export default function Share({
   }
 
   return (
-    <div className="w-full">
-      {!excludeTitle && <H4 className="w-full mb-2 font-semibold">Share</H4>}
+    <div className={className}>
+      <H4
+        className={cn(
+          "w-full font-mono dyslexic:font-dyslexic-mono font-bold",
+          smallTitle ? "text-end text-sm mb-1 uppercase" : "w-full mb-2"
+        )}
+      >
+        Share
+      </H4>
       <div className="flex gap-2">
         {places.map((place) => (
           <Tooltip key={place.alt}>
