@@ -23,7 +23,6 @@ import {
   Ul,
 } from "@/components/utilities/typography";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import {
   UserCircleIcon,
