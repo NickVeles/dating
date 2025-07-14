@@ -477,6 +477,7 @@ export default function Profile() {
               <ImageContainer
                 src="/images/map.jpg"
                 alt="Map of countries I could move to"
+                aspectRatio={6460 / 3403}
               />
             </AccordionContent>
           </AccordionItem>
