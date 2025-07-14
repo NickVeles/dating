@@ -18,9 +18,7 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import TextLink from "@/components/utilities/text-link";
-
-const DefaultImage =
-  "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+import { DefaultThumbnail } from "@/constants/default-thumbnail";
 
 interface HomeProps {
   latestPosts: Post[];
@@ -102,7 +100,7 @@ export default function HomeClient({ latestPosts }: HomeProps) {
                 className="flex flex-1 flex-col min-w-full p-2 gap-4 bg-background border border-black/20 dark:border-white/20 rounded-lg"
               >
                 <Image
-                  src={thumbnail ?? DefaultImage}
+                  src={thumbnail ?? DefaultThumbnail}
                   alt={title}
                   width={800}
                   height={480}
