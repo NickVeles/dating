@@ -25,7 +25,14 @@ import {
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { UserCircleIcon, CakeIcon } from "@phosphor-icons/react";
+import {
+  UserCircleIcon,
+  CakeIcon,
+  GameControllerIcon,
+  TargetIcon,
+  SmileyIcon,
+  FlagPennantIcon,
+} from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -45,12 +52,6 @@ import {
 import TextLink from "@/components/utilities/text-link";
 import ImageContainer from "@/components/utilities/image-container";
 import { chips } from "@/constants/chips";
-
-// Icons
-import GameControllerIcon from "@/assets/icons/game-controller.svg";
-import TargetIcon from "@/assets/icons/target.svg";
-import SmileyIcon from "@/assets/icons/smiley.svg";
-import FlagPennantIcon from "@/assets/icons/flag-pennant.svg";
 
 import AriesIcon from "@/assets/icons/aries.svg";
 import StrategyIcon from "@/assets/icons/strategy.svg";
@@ -276,13 +277,7 @@ export default function Profile() {
               )}
               aria-pressed={currentAttribute === btn.key}
             >
-              <Image
-                src={btn.icon}
-                alt={btn.label}
-                width={32}
-                height={32}
-                className="dark:invert"
-              />
+              <btn.icon alt={btn.label} className="size-8 dark:invert" />
               <span className="text-xl dyslexic:text-lg uppercase font-medium font-serif dyslexic:font-dyslexic">
                 {btn.label}
               </span>
