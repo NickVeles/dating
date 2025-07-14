@@ -3,10 +3,14 @@
 import { cn } from "@/lib/utils";
 import { QuotesIcon } from "@phosphor-icons/react";
 
-type TypographyProps = {
+interface TypographyProps {
   children?: React.ReactNode;
   className?: string;
 };
+
+interface ParagraphProps extends TypographyProps {
+  forceFirst?: boolean;
+}
 
 export function H1({ children, className }: TypographyProps) {
   return (
@@ -60,11 +64,12 @@ export function H4({ children, className }: TypographyProps) {
   );
 }
 
-export function P({ children, className }: TypographyProps) {
+export function P({ children, className, forceFirst = false }: ParagraphProps) {
   return (
     <p
       className={cn(
-        "leading-7 w-full [&:not(:first-child)]:mt-6 font-serif dyslexic:font-dyslexic dyslexic:text-sm text-justify",
+        "leading-7 w-full font-serif dyslexic:font-dyslexic dyslexic:text-sm text-justify",
+        forceFirst ? "" : "[&:not(:first-child)]:mt-6",
         className
       )}
     >
@@ -86,7 +91,7 @@ export function Ul({ children, className }: TypographyProps) {
   return (
     <ul
       className={cn(
-        "py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>li]:mt-2",
+        "py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mt-2",
         className
       )}
     >
