@@ -18,7 +18,7 @@ const SectionContainer = React.forwardRef<HTMLDivElement, SectionContainerProps>
       >
         <div
           className={cn(
-            "sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center",
+            "sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-4 py-8 flex flex-col items-center justify-center",
             className
           )}
         >
