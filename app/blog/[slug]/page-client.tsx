@@ -40,11 +40,12 @@ export default function PostPageClient({ source, children }: PostPageProps) {
       <TitleContainer>{data.title ?? ""}</TitleContainer>
       <article>
         <SectionContainer accented className="mt-4">
+          <Share url={fullUrl} smallTitle className="self-end"/>
           {children}
         </SectionContainer>
       </article>
       <SectionContainer className="gap-6">
-        <Share url={fullUrl} />
+        <Share url={fullUrl} className="w-full" />
         {data.authorIds && (
           <div className="w-full">
             <H4 className="w-full mb-2 font-semibold">
