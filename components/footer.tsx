@@ -1,43 +1,44 @@
 "use client";
 
-import Image from "next/image";
-import { ArrowSquareOut, CopySimple, X } from "phosphor-react";
+import {
+  ArrowSquareOutIcon,
+  CopySimpleIcon,
+  XIcon,
+  InstagramLogoIcon,
+  XLogoIcon,
+  LinkedinLogoIcon,
+  GithubLogoIcon,
+  GoogleLogoIcon,
+  DiscordLogoIcon,
+} from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { Toaster } from "./ui/sonner";
 import TextLink from "./utilities/text-link";
 import Link from "next/link";
 
-// Icons
-import DiscordIcon from "@/assets/icons/discord-logo.svg";
-import InstagramIcon from "@/assets/icons/instagram-logo.svg"
-import XIcon from "@/assets/icons/x-logo.svg"
-import LinkedInIcon from "@/assets/icons/linkedin-logo.svg"
-import GitHubIcon from "@/assets/icons/github-logo.svg"
-import GoogleIcon from "@/assets/icons/google-logo.svg"
-
 const links = [
   {
-    icon: InstagramIcon,
+    icon: InstagramLogoIcon,
     name: "Instagram",
     href: "https://www.instagram.com/nick.veles/",
   },
   {
-    icon: XIcon,
+    icon: XLogoIcon,
     name: "Twitter",
     href: "https://x.com/nickveles",
   },
   {
-    icon: LinkedInIcon,
+    icon: LinkedinLogoIcon,
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/nickveles/",
   },
   {
-    icon: GitHubIcon,
+    icon: GithubLogoIcon,
     name: "GitHub",
     href: "https://github.com/nickveles/",
   },
   {
-    icon: GoogleIcon,
+    icon: GoogleLogoIcon,
     name: "Google Forms",
     href: "https://forms.gle/4YNLofEUcJ6YVA3a9",
   },
@@ -48,12 +49,12 @@ export function Footer() {
     try {
       await navigator.clipboard.writeText(username);
       toast("Nickname copied successfully!", {
-        action: { label: <X />, onClick: () => {} },
+        action: { label: <XIcon />, onClick: () => {} },
       });
     } catch (err) {
       toast("Oops!", {
         description: JSON.stringify(err),
-        action: { label: <X />, onClick: () => {} },
+        action: { label: <XIcon />, onClick: () => {} },
       });
       console.error(err);
     }
@@ -71,16 +72,13 @@ export function Footer() {
               onClick={() => handleDiscordCopy("nickveles")}
               className="flex items-center gap-2 hover:cursor-pointer hover:underline"
             >
-              <Image
-                src={DiscordIcon}
-                alt="Discord logo"
-                width={0}
-                height={0}
+              <DiscordLogoIcon
+                alt="Discord Icon"
                 className="size-6 align-middle dark:invert"
               />
               <span className="flex flex-1 truncate">
                 discord
-                <CopySimple className="inline align-top size-4" />
+                <CopySimpleIcon className="inline align-top size-4" />
               </span>
             </span>
           </li>
@@ -92,16 +90,13 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:underline"
               >
-                <Image
-                  src={link.icon}
-                  alt={`${link.name} logo`}
-                  width={0}
-                  height={0}
+                <link.icon
+                  alt={`${link.name} Icon`}
                   className="size-6 align-middle dark:invert"
                 />
                 <span className="flex flex-1 truncate">
                   {link.name}
-                  <ArrowSquareOut className="inline align-top size-4" />
+                  <ArrowSquareOutIcon className="inline align-top size-4" />
                 </span>
               </Link>
             </li>

@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from "phosphor-react";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import { JSX, ReactNode } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
@@ -18,7 +18,7 @@ export function TextLookup({
       <TooltipContent>{children}</TooltipContent>
       <TooltipTrigger className={`inline underline hover:cursor-pointer ${className}`}>
         {text}
-        <MagnifyingGlass className="inline align-text-top size-4" />
+        <MagnifyingGlassIcon className="inline align-text-top size-4" />
       </TooltipTrigger>
     </Tooltip>
   );

@@ -25,7 +25,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { UserCircle, Cake } from "phosphor-react";
+import { UserCircleIcon, CakeIcon } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -188,7 +188,7 @@ export default function Profile() {
 
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <TitleContainer Icon={UserCircle}>Dating Profile</TitleContainer>
+      <TitleContainer Icon={UserCircleIcon}>Dating Profile</TitleContainer>
 
       {/* Gallery section */}
       <SectionContainer className="gap-8 relative">
@@ -203,7 +203,7 @@ export default function Profile() {
             <div className="bg-gradient-to-r from-pink-400 to-purple-500 text-white px-4 py-3 rounded-lg shadow-lg border-4 border-white">
               <p className="flex items-center gap-2 font-bold text-sm whitespace-nowrap">
                 HAPPY BIRTHDAY ME!{" "}
-                <Cake alt="Birthday cake" className="text-2xl" />
+                <CakeIcon alt="Birthday cake" className="text-2xl" />
               </p>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function Profile() {
         <div className="flex flex-col gap-2 items-center justify-center">
           <H2 className="mt-4 border-none pb-0">Nick, {age}</H2>
           <p className="flex items-center justify-center mt-0">
-            <Cake alt="Birthday cake" className="size-5 mr-1" />
+            <CakeIcon alt="Birthday cake" className="size-5 mr-1" />
             March 21st, 2003
           </p>
         </div>

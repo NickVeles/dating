@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "../ui/dialog";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Badge } from "../ui/badge";
-import { CornersOut } from "phosphor-react";
+import { CornersOutIcon } from "@phosphor-icons/react";
 
 type ImageProps = {
   src: string;
@@ -36,7 +36,7 @@ export default function ImageContainer({
           />
           <div className="absolute bottom-7 right-3">
             <Badge variant="secondary" className="p-1">
-              <CornersOut className="inline align-text-top" />
+              <CornersOutIcon className="inline align-text-top" />
             </Badge>
           </div>
         </div>

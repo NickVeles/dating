@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useRef, useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Eye } from "phosphor-react";
+import { EyeIcon } from "@phosphor-icons/react";
 
 const images: string[] = Array.from(
   { length: 7 },
@@ -96,7 +96,7 @@ export default function Gallery() {
                 />
                 {!revealed && (
                   <div className="absolute object-cover rounded-lg inset-0 flex flex-col items-center justify-center text-white text-center text-2xl font-semibold bg-black/30 pb-20 transition-all ease-out">
-                    <Eye className="size-20" />
+                    <EyeIcon className="size-20" />
                     CLICK TO REVEAL
                   </div>
                 )}

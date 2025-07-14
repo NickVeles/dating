@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { ArrowSquareOut } from "phosphor-react";
+import { ArrowSquareOutIcon } from "@phosphor-icons/react";
 
 interface TextLinkProps {
   href: string;
@@ -24,7 +24,7 @@ export function TextLink({
       className={className}
     >
       {children}
-      {blank && <ArrowSquareOut className="inline align-text-top size-4" />}
+      {blank && <ArrowSquareOutIcon className="inline align-text-top size-4" />}
     </Link>
   );
 }

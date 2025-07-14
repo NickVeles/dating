@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils";
-import { Quotes } from "phosphor-react";
+import { QuotesIcon } from "@phosphor-icons/react";
 
 type TypographyProps = {
   children?: React.ReactNode;
@@ -71,7 +71,7 @@ export function P({ children, className }: TypographyProps) {
 export function Blockquote({ children, className }: TypographyProps) {
   return (
     <blockquote className={cn("mt-6 border-l-2 pl-6 italic flex", className)}>
-      <Quotes className="size-4 text-muted-foreground" />
+      <QuotesIcon className="size-4 text-muted-foreground" />
       {children}
     </blockquote>
   );

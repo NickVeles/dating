@@ -4,7 +4,7 @@
 //TODO: Add "back to top" button
 
 import Image from "next/image";
-import { List, House, HeartStraight, User } from "phosphor-react";
+import { ListIcon, HouseIcon, HeartIcon, HandHeartIcon, UserIcon } from "@phosphor-icons/react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { FontToggle } from "@/components/font-toggle";
 import { Button } from "@/components/ui/button";
@@ -24,9 +24,10 @@ import LightLogo from "@/assets/light-logo.svg";
 import { useEffect, useState } from "react";
 
 const pages = [
-  { icon: House, name: "Home", href: "/" },
-  { icon: HeartStraight, name: "Guide Blog", href: "/blog" },
-  { icon: User, name: "Dating Profile", href: "/profile" },
+  { icon: HouseIcon, name: "Home", href: "/" },
+  { icon: HeartIcon, name: "Guide Blog", href: "/blog" },
+  { icon: UserIcon, name: "Dating Profile", href: "/profile" },
+  { icon: HandHeartIcon, name: "Contribute", href: "/contribute" },
 ];
 
 export function Header() {
@@ -66,7 +67,7 @@ export function Header() {
               aria-label="Open navigation menu"
               className="hover:cursor-pointer"
             >
-              <List className="size-7" />
+              <ListIcon className="size-7" />
             </Button>
           </SheetTrigger>
           <SheetContent

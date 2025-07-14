@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { HeartStraight, MagnifyingGlass } from "phosphor-react";
+import { HeartIcon, MagnifyingGlassIcon } from "@phosphor-icons/react";
 import TitleContainer from "@/components/utilities/title-container";
 import SectionContainer from "@/components/utilities/section-container";
 import Image from "next/image";
@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge";
 import { filterPostsBySearch, sortPostsByDate, chunkArray } from "@/lib/utils";
 import {
   ReadonlyURLSearchParams,
-  redirect,
   useRouter,
   useSearchParams,
 } from "next/navigation";
@@ -116,7 +115,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
 
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <TitleContainer Icon={HeartStraight}>Guide Blog</TitleContainer>
+      <TitleContainer Icon={HeartIcon}>Guide Blog</TitleContainer>
       <SectionContainer accented className="gap-6">
         {/* Search filters */}
         <div className="flex w-full flex-col lg:flex-row gap-2">
@@ -142,7 +141,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                 router.push(createPageURL(page, createdAtOrder, searchText ?? ""))
               }
             >
-              <MagnifyingGlass />
+              <MagnifyingGlassIcon />
             </Button>
           </div>
           <Select

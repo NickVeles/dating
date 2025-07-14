@@ -5,11 +5,11 @@ import { H4 } from "./utilities/typography";
 import { Skeleton } from "./ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import {
-  ArrowSquareOut,
-  WarningCircle,
-  ClockCounterClockwise,
-  MusicNotes,
-} from "phosphor-react";
+  ArrowSquareOutIcon,
+  WarningCircleIcon,
+  ClockCounterClockwiseIcon,
+  MusicNotesIcon,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -107,7 +107,7 @@ export default function SpotifyHighlights({
         )}
         {error && (
           <Alert variant="destructive">
-            <WarningCircle />
+            <WarningCircleIcon />
             <AlertTitle>Error while fetching the recent track.</AlertTitle>
             <AlertDescription>{error}</AlertDescription>
           </Alert>
@@ -132,9 +132,9 @@ export default function SpotifyHighlights({
                   <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
                     <Badge variant="secondary" className="p-1">
                       {track.isCurrentlyPlaying ? (
-                        <MusicNotes className="size-5" />
+                        <MusicNotesIcon className="size-5" />
                       ) : (
-                        <ClockCounterClockwise className="size-5" />
+                        <ClockCounterClockwiseIcon className="size-5" />
                       )}
                     </Badge>
                   </div>
@@ -143,7 +143,7 @@ export default function SpotifyHighlights({
                   <h5 className="text-xl font-bold hover:underline mr-2">
                     <span className="inline font-serif dyslexic:font-dyslexic">
                       {track.name}
-                      <ArrowSquareOut className="inline align-text-top size-4" />
+                      <ArrowSquareOutIcon className="inline align-text-top size-4" />
                     </span>
                   </h5>
                   <p className="text-gray-600 dark:text-gray-400">
@@ -178,7 +178,7 @@ export default function SpotifyHighlights({
                   />
                   <div className="absolute inset-0 flex justify-end items-end bottom-1 right-1">
                     <Badge variant="secondary" className="p-1">
-                      <ArrowSquareOut className="size-5" />
+                      <ArrowSquareOutIcon className="size-5" />
                     </Badge>
                   </div>
                 </div>
