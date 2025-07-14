@@ -8,7 +8,7 @@ export default function BlogIndex() {
 
   return (
     <Suspense fallback={<Loading />}>
-      <BlogClient posts={posts} />;
+      <BlogClient posts={posts} />
     </Suspense>
   );
 }
