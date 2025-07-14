@@ -455,7 +455,7 @@ export default function Profile() {
                   </li>
                 ))}
               </Ul>
-              <P>
+              <P forceFirst>
                 <Bold>Why?</Bold> There are two core reasons: I like these
                 countries culturally and I can see myself working there without
                 much issue; and these regions are really generous with their
