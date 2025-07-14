@@ -29,11 +29,16 @@ const defaultFacebookMessages = [
 ];
 
 const defaultWhatsappMessages = [
-  "Just read this awesome dating guide! 💕 Check it out for tips on finding meaningful connections. #DatingSimplified #Love",
-  "Struggling with dating? This guide helped me understand what really matters! Worth a read. #DatingSimplified #FindLove",
-  "Ready to level up your dating game? Here’s a must-read guide with practical tips! #DatingSimplified #RelationshipGoals",
-  "Dating doesn’t have to be confusing. This guide breaks it down simply and clearly! #DatingSimplified #LoveLife",
-  "Want better dates and stronger connections? This blog post is packed with solid advice! #DatingSimplified #HealthyRelationships",
+  "Hey! Just read this really helpful dating guide. It has great tips if you're trying to figure out modern dating. Thought of you!",
+  "This blog post made so much sense about dating and relationships. Worth a read if you're looking for something real.",
+  "If you're dating (or thinking about it), you HAVE to check this out. Clear, real advice that actually helps.",
+  "Sharing this dating guide I found. Super useful and honest tips. Might help you or someone you know!",
+  "I didn’t think I’d find good dating advice online... but this guide surprised me. Sharing in case it helps you too.",
+  "Sending you this because it actually changed how I see dating. Super clear and smart advice.",
+  "Read this dating guide today and it really hit home. If you're navigating relationships or apps, give it a look!",
+  "Practical, no-nonsense dating tips in this guide. Could be useful if you're back on the apps or just exploring love again!",
+  "This dating blog breaks it down so well. Sharing in case you're in the same boat.",
+  "Sending this your way. Felt seen reading this dating advice. Maybe it’ll speak to you too.",
 ];
 
 export default function Share({
