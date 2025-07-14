@@ -14,7 +14,7 @@ import { H4 } from "@/components/utilities/typography";
 
 interface PostPageProps {
   source: string;
-  children: any;
+  children: any; // mdx component
 }
 
 export default function PostPageClient({ source, children }: PostPageProps) {
