@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { cn } from "@/lib/utils";
 import { QuotesIcon } from "@phosphor-icons/react";
@@ -62,7 +62,12 @@ export function H4({ children, className }: TypographyProps) {
 
 export function P({ children, className }: TypographyProps) {
   return (
-    <p className={cn("leading-7 w-full [&:not(:first-child)]:mt-6 font-serif dyslexic:font-dyslexic dyslexic:text-sm text-justify", className)}>
+    <p
+      className={cn(
+        "leading-7 w-full [&:not(:first-child)]:mt-6 font-serif dyslexic:font-dyslexic dyslexic:text-sm text-justify",
+        className
+      )}
+    >
       {children}
     </p>
   );
@@ -79,7 +84,12 @@ export function Blockquote({ children, className }: TypographyProps) {
 
 export function Ul({ children, className }: TypographyProps) {
   return (
-    <ul className={cn("py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>li]:mt-2", className)}>
+    <ul
+      className={cn(
+        "py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>li]:mt-2",
+        className
+      )}
+    >
       {children}
     </ul>
   );
@@ -98,14 +108,22 @@ export function Code({ children, className }: TypographyProps) {
   );
 }
 
-export function Bold({ children, className }: TypographyProps) {
+export function CodeBlock({ children, className }: TypographyProps) {
   return (
-    <span
+    <pre
       className={cn(
-        "dyslexic:font-dyslexic font-bold",
+        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
         className
       )}
     >
+      <code>{children}</code>
+    </pre>
+  );
+}
+
+export function Bold({ children, className }: TypographyProps) {
+  return (
+    <span className={cn("dyslexic:font-dyslexic font-bold", className)}>
       {children}
     </span>
   );
@@ -113,12 +131,7 @@ export function Bold({ children, className }: TypographyProps) {
 
 export function Italic({ children, className }: TypographyProps) {
   return (
-    <span
-      className={cn(
-        "dyslexic:font-dyslexic italic",
-        className
-      )}
-    >
+    <span className={cn("dyslexic:font-dyslexic italic", className)}>
       {children}
     </span>
   );
@@ -126,26 +139,12 @@ export function Italic({ children, className }: TypographyProps) {
 
 export function BoldItalic({ children, className }: TypographyProps) {
   return (
-    <span
-      className={cn(
-        "dyslexic:font-dyslexic font-bold italic",
-        className
-      )}
-    >
+    <span className={cn("dyslexic:font-dyslexic font-bold italic", className)}>
       {children}
     </span>
   );
 }
 
 export function Emoji({ children, className }: TypographyProps) {
-  return (
-    <span
-      className={cn(
-        "font-emoji",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
+  return <span className={cn("font-emoji", className)}>{children}</span>;
 }
