@@ -74,7 +74,7 @@ export function Footer() {
             >
               <DiscordLogoIcon
                 alt="Discord Icon"
-                className="size-6 align-middle dark:invert"
+                className="size-6 align-middle"
               />
               <span className="flex flex-1 truncate">
                 discord
@@ -92,7 +92,7 @@ export function Footer() {
               >
                 <link.icon
                   alt={`${link.name} Icon`}
-                  className="size-6 align-middle dark:invert"
+                  className="size-6 align-middle"
                 />
                 <span className="flex flex-1 truncate">
                   {link.name}

@@ -275,7 +275,7 @@ export default function Profile() {
               )}
               aria-pressed={currentAttribute === btn.key}
             >
-              <btn.icon alt={btn.label} className="size-8 dark:invert" />
+              <btn.icon alt={btn.label} className="size-8" />
               <span className="text-xl dyslexic:text-lg uppercase font-medium font-serif dyslexic:font-dyslexic">
                 {btn.label}
               </span>
