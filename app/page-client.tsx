@@ -126,7 +126,7 @@ export default function HomeClient({ latestPosts }: HomeProps) {
             />
           </div>
           <div className="flex flex-col w-full lg:w-[60%] text-center text-wrap justify-center gap-5 mb-2">
-            <H2>About Me</H2>
+            <H2>Meet The Creator</H2>
             <p className="text-center font-serif dyslexic:font-dyslexic">
               Staying in theme of dating, inspired by websites like Carrd, I
               decided to create my own centralized dating profile!
