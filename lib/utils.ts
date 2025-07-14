@@ -59,3 +59,7 @@ export function chunkArray<T>(array: T[], chunkSize: number = 10): T[][] {
   }
   return result;
 }
+
+export function getRandomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
