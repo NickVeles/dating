@@ -24,9 +24,10 @@ export default function ImageContainer({
   return (
     <Dialog>
       <DialogTrigger asChild>
+        <div className="w-full px-2 py-6">
         <AspectRatio ratio={aspectRatio ?? 16 / 9}
           className={cn(
-            "w-full h-full relative justify-center items-center px-2 py-6 hover:cursor-pointer",
+            "w-full h-full relative justify-center items-center hover:cursor-pointer",
             className
           )}
         >
@@ -42,6 +43,7 @@ export default function ImageContainer({
             </Badge>
           </div>
         </AspectRatio>
+        </div>
       </DialogTrigger>
       <DialogContent className="w-screen h-screen max-w-none rounded-none gap-0 pt-14 pb-0 px-0 bg-black text-white">
         <DialogTitle className="sr-only">{alt || "Image"}</DialogTitle>

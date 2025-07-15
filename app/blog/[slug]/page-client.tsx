@@ -30,7 +30,7 @@ export default function PostPageClient({ source, children }: PostPageProps) {
 
   return (
     <main className="flex flex-col flex-1 gap-4">
-      <SectionContainer className="py-4 lg:px-16">
+      <SectionContainer className="py-0">
         <ImageContainer
           src={data.thumbnail ?? DefaultThumbnail}
           alt="Post thumbnail"
