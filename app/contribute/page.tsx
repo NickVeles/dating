@@ -98,8 +98,8 @@ export default function Contribute() {
             link
           </Bold>
           &mdash;in any readable file format. However, I'd very much appreciate
-          if you did so in the <Bold>Markdown</Bold> (.md or .mdx) file format, as it's
-          used for all the posts on here!
+          if you did so in the <Bold>Markdown</Bold> (.md or .mdx) file format,
+          as it's used for all the posts on here!
         </P>
         <P>
           You can contact me through one of the contact options at the bottom of
@@ -120,7 +120,10 @@ export default function Contribute() {
           <p>updatedAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)</p>
           <p>authorsIds: [1, 2, 3] (authors' Ids - leave empty)</p>
           <p>editorsIds: [1, 2, 3] (editors' Ids - leave empty)</p>
-          <p>thumbnail: "http://example.com/photo.jpg" (post thumbnail - optional)</p>
+          <p>
+            thumbnail: "http://example.com/photo.jpg" (post thumbnail -
+            optional)
+          </p>
           <p>---</p>
           <br />
           <p># H1 tag</p>
@@ -166,17 +169,18 @@ export default function Contribute() {
           <p>![image alternative text](https://example.com/photo.jpg)</p>
         </CodeBlock>
         <P>
-          If you want to use a custom image that isn't hosted online, you need to send it to me as well!
+          If you want to use a custom image that isn't hosted online, you need
+          to send it to me as well!
         </P>
 
         {/* Contact */}
         <H3 className="w-full mt-6">Conclusion</H3>
         <P>
           Once I decide your post makes sense and doesn't break any rules, it
-          will be integrated into the site with correct attribution shortly
-          after (you can also choose to appear as an anonymous author in case
-          you want to stay unnoticed). I will respond to your message, even if
-          it does not meet the site's post criteria.
+          will be integrated shortly after into the site with correct
+          attribution (you can also choose to appear as an anonymous author in
+          case you want to stay unnoticed). I will respond to your message, even
+          if it does not meet the site's post criteria.
         </P>
         <P>Thank you for considering to post on our website!</P>
       </SectionContainer>
