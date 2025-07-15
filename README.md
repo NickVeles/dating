@@ -63,13 +63,14 @@ A modern, accessible, and honest guide blog and dating profile built with [Next.
 
 ## Project Structure
 
-- `app/` — Next.js app directory (pages, layouts, blog, profile, etc.)
-- `components/` — Reusable UI and utility components
-- `constants/` — Static data (e.g., chips for profile)
-- `lib/` — Utility functions and hooks
-- `posts/` — Blog posts in MDX format
-- `public/` — Static assets (fonts, images)
-- `styles/` — Global and component styles
+- `app/` - Next.js app directory (pages, layouts, blog, profile, etc.)
+- `assets/` - assets used within the app (mostly images and icons)
+- `components/` - Reusable UI and utility components
+- `constants/` - Static data (e.g., chips for profile)
+- `lib/` - Utility functions and hooks
+- `posts/` - Blog posts in MDX format
+- `public/` - Static assets (fonts, images)
+- `types/` - Common TypeScript types
 
 ---
 
@@ -80,13 +81,70 @@ Blog posts are written in MDX and stored in the posts directory. Each post requi
 Example:
 ```mdx
 ---
-title: "My First Post"
-date: "2025-06-30"
+
+title: "Your post's title" (required)
+
+createdAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)
+
+updatedAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)
+
+authorsIds: [1, 2, 3] (authors' Ids - leave empty)
+
+editorsIds: [1, 2, 3] (editors' Ids - leave empty)
+
+thumbnail: "http://example.com/photo.jpg" (post thumbnail - optional)
+
 ---
 
-# Hello World
+# H1 tag
 
-This is my first blog post written in MDX!
+## H2 tag
+
+### H3 tag
+
+#### H4 tag
+
+Paragraph text
+
+Still the same paragraph
+
+New paragraph
+
+> Block quote
+
+> Still the same block quote
+
+> New block quote
+
+- Unorganized list item #1
+
+- Unorganized list item #2
+
+- Unorganized list item #3
+
+1. Organized list item #1
+
+2. Organized list item #2
+
+3. Organized list item #3
+
+\`inline code - I don't know why you'd use it, but it's there!\`
+
+\`\`\`
+
+code block - also not sure why you'd use it
+
+\`\`\`
+
+*italic text*
+
+**bold text**
+
+***italic bold text***
+
+[link text](https://example.com)
+
+![image alternative text](https://example.com/photo.jpg)
 ```
 
 ---
@@ -117,6 +175,7 @@ OpenDyslexic font is licensed under the SIL Open Font License 1.1.
 
 For questions, suggestions, or to reach out:
 
+- [GitHub](https:/www/github.com/NickVeles/)
 - [LinkedIn](https://www.linkedin.com/in/nickveles/)
 
 ---
