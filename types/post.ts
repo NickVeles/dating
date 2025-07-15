@@ -4,4 +4,6 @@ type Post = {
   createdAt: string;
   description?: string;
   thumbnail?: string;
+  authorIds?: number[];
+  editorIds?: number[];
 };
