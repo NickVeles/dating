@@ -132,11 +132,12 @@ export function Code({ children, className }: TypographyProps) {
   );
 }
 
-export function CodeBlock({ children, className }: TypographyProps) {
+export function CodeBlock({ children, className, forceFirst }: ParagraphProps) {
   return (
     <pre
       className={cn(
-        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono dyslexic:font-dyslexic-mono text-sm font-semibold w-full mt-6",
+        "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono dyslexic:font-dyslexic-mono text-sm font-semibold w-full text-wrap",
+        forceFirst ? "" : "[&:not(:first-child)]:mt-6",
         className
       )}
     >
