@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import ImageContainer from "@/components/utilities/image-container";
 import TextLink from "@/components/utilities/text-link";
 import PostPageClient from "./page-client";
-import React, { Suspense } from "react";
+import React from "react";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { H1, H2, H3, H4, P, Blockquote, Ol, Ul, Code, Italic, Bold, CodeBlock } from "@/components/utilities/typography"
