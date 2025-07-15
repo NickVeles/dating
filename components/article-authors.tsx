@@ -27,7 +27,7 @@ export const ArticleAuthors: React.FC<WriterAvatarsProps> = ({ ids, className })
         {filteredWriters.map((writer) => (
           <Avatar key={writer.id}>
             <AvatarImage
-              src={`https://github.com/${writer.github}.png`}
+              src={writer.github ? `https://github.com/${writer.github}.png` : "/images/anonymous.svg"}
               alt={`@${writer.github}`}
             />
             <AvatarFallback>{getInitials(writer.name)}</AvatarFallback>
