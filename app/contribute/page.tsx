@@ -106,7 +106,7 @@ export default function Contribute() {
         <P>
           You can contact me through one of the contact options at the bottom of
           this page! If you want, you can also send your post to the e-mail:{" "}
-          <Code>nickveles.pro@gmail.com</Code> with a message title{" "}
+          <Code>nickveles.pro@gmail.com</Code> with the message title{" "}
           <Code>DatingSimplified - [your post title]</Code>.
         </P>
 
@@ -228,6 +228,7 @@ export default function Contribute() {
       {/* Other Contribution */}
       <SectionContainer>
         <H2>Other Contribution</H2>
+        <P>If you want to contribute </P>
       </SectionContainer>
     </main>
   );
