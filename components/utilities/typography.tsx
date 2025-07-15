@@ -100,6 +100,19 @@ export function Ul({ children, className }: TypographyProps) {
   );
 }
 
+export function Ol({ children, className }: TypographyProps) {
+  return (
+    <ul
+      className={cn(
+        "py-6 pl-6 list-decimal w-full font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mt-2",
+        className
+      )}
+    >
+      {children}
+    </ul>
+  );
+}
+
 export function Code({ children, className }: TypographyProps) {
   return (
     <code
