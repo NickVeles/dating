@@ -18,6 +18,8 @@ export default function Contribute() {
   return (
     <main className="flex flex-col flex-1 gap-4">
       <TitleContainer Icon={HandHeartIcon}>How To Contribute</TitleContainer>
+
+      {/* Post Contribution */}
       <SectionContainer>
         <H2>Post Contribution</H2>
 
@@ -184,8 +186,48 @@ export default function Contribute() {
         </P>
         <P>Thank you for considering to post on our website!</P>
       </SectionContainer>
+
+      {/* Code Contribution */}
       <SectionContainer accented>
         <H2>Code Contribution</H2>
+        <P>
+          Even though it's an open source project, it's also part of my
+          portfolio, and I am very strict on any code changes, since this
+          project is meant to reflect my skills.
+        </P>
+        <P>
+          However, you're always welcome to contribute any typo fixes and post
+          edits. Remember to uphold the common GitHub etiquette, as well as
+          appending yourself to the list of editors at the top of the post file
+          (<Code className="bg-background">editorsIds</Code> property &ndash;
+          you can use the Id value of <Code className="bg-background">0</Code>{" "}
+          to stay anonymous), as well as the list of writers (in{" "}
+          <Code className="bg-background">constants/writers.ts</Code>) if you're
+          not already there.
+        </P>
+        <P>
+          If you want to make any major code changes, I'd appreciate if you
+          provided me with your reasoning at the very least! I'm still a junior
+          programmer, and I want to learn as much as possible! Any guidance,
+          even verbal, is more than you could imagine!
+        </P>
+        <P>
+          You're also always welcome to fork this project if you want to give it
+          your own unique spin! Though please remember that it's licensed under
+          the{" "}
+          <TextLink
+            href="https://www.apache.org/licenses/LICENSE-2.0.txt"
+            blank
+          >
+            Apache License 2.0
+          </TextLink>
+          .
+        </P>
+      </SectionContainer>
+
+      {/* Other Contribution */}
+      <SectionContainer>
+        <H2>Other Contribution</H2>
       </SectionContainer>
     </main>
   );
