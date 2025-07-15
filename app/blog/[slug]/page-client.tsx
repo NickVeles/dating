@@ -37,10 +37,10 @@ export default function PostPageClient({ source, children }: PostPageProps) {
           aspectRatio={7 / 2}
         />
       </SectionContainer>
-      <TitleContainer>{data.title ?? ""}</TitleContainer>
       <div className="flex items-center justify-center">
         <Share url={fullUrl} smallTitle/>
       </div>
+      <TitleContainer>{data.title ?? ""}</TitleContainer>
       <article>
         <SectionContainer accented className="flex flex-col gap-5 mt-4">
           {children}
