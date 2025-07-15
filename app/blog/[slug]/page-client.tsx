@@ -56,6 +56,14 @@ export default function PostPageClient({ source, children }: PostPageProps) {
             <ArticleAuthors ids={data.authorIds} className="w-full" />
           </div>
         )}
+        {data.editorIds && (
+          <div className="w-full">
+            <H4 className="w-full mb-2 font-semibold">
+              Editor{data.editorIds?.length > 1 ? "s" : ""}
+            </H4>
+            <ArticleAuthors ids={data.editorIds} className="w-full" />
+          </div>
+        )}
         {data.updatedAt && (
           <div className="w-full">
             <H4 className="w-full mb-2 font-semibold">Edited at</H4>
