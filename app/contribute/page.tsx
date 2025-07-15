@@ -12,7 +12,7 @@ import {
   Ol,
   P,
 } from "@/components/utilities/typography";
-import { HandHeartIcon, WarningIcon } from "@phosphor-icons/react";
+import { HandHeartIcon, HeartIcon, WarningIcon } from "@phosphor-icons/react";
 
 export default function Contribute() {
   return (
@@ -228,7 +228,21 @@ export default function Contribute() {
       {/* Other Contribution */}
       <SectionContainer>
         <H2>Other Contribution</H2>
-        <P>If you want to contribute </P>
+        <P>
+          If you want to contribute in any other way, please contact me through
+          any other contact method at the bottom of this page.
+        </P>
+        <P>
+          <HeartIcon className="inline mr-2 text-xl" />
+          If you like what I do as a developer, you might also consider
+          contributing to all my work in general by{" "}
+          <TextLink href="" blank>
+            buying me a coffee
+          </TextLink>
+          ! If you mention coming from this project, it'll also grand you a
+          space in the "Thank You" section on the Home page!
+        </P>
+        <P>Thank you for all your contributions!</P>
       </SectionContainer>
     </main>
   );
