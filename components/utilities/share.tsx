@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { H4 } from "./typography";
-import { XLogoIcon } from "@phosphor-icons/react";
+import {
+  FacebookLogoIcon,
+  RedditLogoIcon,
+  WhatsappLogoIcon,
+  XLogoIcon,
+} from "@phosphor-icons/react";
 import { TooltipContent, Tooltip, TooltipTrigger } from "../ui/tooltip";
 import { cn, getRandomItem } from "@/lib/utils";
 import { useEffect, useState } from "react";
@@ -21,14 +26,6 @@ const defaultTwitterMessages = [
   "Want better dates and stronger connections? This blog post is packed with solid advice! #DatingSimplified #HealthyRelationships",
 ];
 
-const defaultFacebookMessages = [
-  "Just discovered this amazing dating guide packed with practical tips to help you find meaningful relationships. If you’re dating or thinking about it, give it a read! #DatingSimplified #LoveJourney",
-  "Dating can be confusing, but this guide makes it so much easier to understand what really matters. Highly recommend it for anyone looking to improve their love life! #DatingSimplified #FindLove",
-  "If you’re tired of bad dates and want to attract the right person, this dating guide is a game-changer. Easy to read and full of useful advice! #DatingSimplified #RelationshipGoals",
-  "Whether you’re new to dating or getting back out there, this guide will help you approach it with confidence and clarity. Check it out! #DatingSimplified #LoveLife",
-  "Want to make dating fun and less stressful? This blog post offers simple but powerful tips to help you on your journey. #HealthyRelationships #DatingSimplified",
-];
-
 const defaultWhatsappMessages = [
   "Hey! Just read this really helpful dating guide. It has great tips if you're trying to figure out modern dating. Thought of you!",
   "This blog post made so much sense about dating and relationships. Worth a read if you're looking for something real.",
@@ -40,6 +37,14 @@ const defaultWhatsappMessages = [
   "Practical, no-nonsense dating tips in this guide. Could be useful if you're back on the apps or just exploring love again!",
   "This dating blog breaks it down so well. Sharing in case you're in the same boat.",
   "Sending this your way. Felt seen reading this dating advice. Maybe it’ll speak to you too.",
+];
+
+const defaultRedditMessages = [
+  "This dating guide actually made sense - thought I’d share it",
+  "A practical guide to modern dating that doesn’t suck",
+  "Finally found a dating blog that gives real, no-BS advice",
+  "If you're lost in the dating world, this guide might help",
+  "This post helped me rethink how I approach dating",
 ];
 
 export default function Share({
@@ -60,6 +65,25 @@ export default function Share({
       }`,
       alt: "Twitter",
     },
+    {
+      icon: FacebookLogoIcon,
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      alt: "Facebook",
+    },
+    {
+      icon: WhatsappLogoIcon,
+      href: `https://api.whatsapp.com/send?text=${
+        encodedTitle ?? getRandomItem(defaultWhatsappMessages)
+      }%20${encodedUrl}`,
+      alt: "WhatsApp",
+    },
+    {
+      icon: RedditLogoIcon,
+      href: `https://www.reddit.com/submit?url=${encodedUrl}&title=${
+        encodedTitle ?? getRandomItem(defaultRedditMessages)
+      }`,
+      alt: "Reddit",
+    },
   ];
 
   // Ensure everything is loaded before rendering
@@ -73,7 +97,7 @@ export default function Share({
       <H4
         className={cn(
           "w-full font-mono dyslexic:font-dyslexic-mono font-bold",
-          smallTitle ? "text-end text-sm mb-1 uppercase" : "w-full mb-2"
+          smallTitle ? "text-center text-sm mb-1 uppercase" : "w-full mb-2"
         )}
       >
         Share
@@ -86,7 +110,7 @@ export default function Share({
                 href={place.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-3xl hover:cursor-pointer"
+                className="text-2xl hover:cursor-pointer"
               >
                 <place.icon alt={`Share on ${place.alt}`} />
               </Link>
