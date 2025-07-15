@@ -102,7 +102,7 @@ export default function Share({
       >
         Share
       </H4>
-      <div className="flex gap-2">
+      <div className="flex gap-6 sm:gap-2">
         {places.map((place) => (
           <Tooltip key={place.alt}>
             <TooltipTrigger>
