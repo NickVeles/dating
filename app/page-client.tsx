@@ -1,7 +1,7 @@
 "use client";
 
 import SectionContainer from "@/components/utilities/section-container";
-import { H2, H3, H4, P, Ul } from "@/components/utilities/typography";
+import { Bold, H2, H3, H4, P, Ul } from "@/components/utilities/typography";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -249,8 +249,39 @@ export default function HomeClient({ latestPosts }: HomeProps) {
             </AccordionContent>
           </AccordionItem>
 
-          {/* I have more questions */}
+          {/* What do I get for contributing? */}
           <AccordionItem value="item-4">
+            <AccordionTrigger>
+              <H4>What do I get for contributing?</H4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <P>
+                This project is currently non-profit and open-source, so
+                unfortunately I cannot give you any monetary compensation for
+                any form of contribution.
+              </P>
+              <P>
+                However, there is one other remaining form of appreciation for
+                your hard work: if you decide to contribute a new post or help
+                edit an existing one,{" "}
+                <Bold>
+                  you will be written down as this post's author/editor
+                </Bold>
+                , unless otherwise requested (you can stay anonymous if you
+                want) &ndash; everyone will see your name and photo, as well as
+                a link to your GitHub account under the post. You will also
+                appear in the special "Thank You" section on this page!
+              </P>
+              <P>
+                If you're seriously considering contributing, then definitely
+                check the official{" "}
+                <TextLink href="/contribute">How To Contribute</TextLink> guide.
+              </P>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* I have more questions */}
+          <AccordionItem value="item-99">
             <AccordionTrigger>
               <H4>I have more questions!</H4>
             </AccordionTrigger>
