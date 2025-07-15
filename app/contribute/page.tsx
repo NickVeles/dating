@@ -115,12 +115,12 @@ export default function Contribute() {
         </div>
         <CodeBlock forceFirst className="w-full">
           <p>---</p>
-          <p>title: "Your post's title"</p>
+          <p>title: "Your post's title" (required)</p>
           <p>createdAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)</p>
           <p>updatedAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)</p>
           <p>authorsIds: [1, 2, 3] (authors' Ids - leave empty)</p>
           <p>editorsIds: [1, 2, 3] (editors' Ids - leave empty)</p>
-          <p>thumbnail: "http://example.com/photo.jpg" (post thumbnail)</p>
+          <p>thumbnail: "http://example.com/photo.jpg" (post thumbnail - optional)</p>
           <p>---</p>
           <br />
           <p># H1 tag</p>
