@@ -12,6 +12,10 @@ interface ParagraphProps extends TypographyProps {
   forceFirst?: boolean;
 }
 
+interface OlProps extends TypographyProps {
+  useLetters?: boolean;
+}
+
 export function H1({ children, className }: TypographyProps) {
   return (
     <h1
@@ -100,16 +104,18 @@ export function Ul({ children, className }: TypographyProps) {
   );
 }
 
-export function Ol({ children, className }: TypographyProps) {
+export function Ol({ children, className, useLetters }: OlProps) {
   return (
-    <ul
+    <ol
+      style={useLetters ? { listStyleType: 'lower-alpha' } : undefined}
       className={cn(
-        "py-6 pl-6 list-decimal w-full font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mt-2",
+        "py-6 pl-6 w-full font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mt-2",
+        useLetters ? "list-[lower-alpha]" : "list-decimal",
         className
       )}
     >
       {children}
-    </ul>
+    </ol>
   );
 }
 
