@@ -110,7 +110,7 @@ export default function Share({
                 href={place.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:cursor-pointer"
+                className="text-4xl sm:text-3xl hover:cursor-pointer"
               >
                 <place.icon alt={`Share on ${place.alt}`} />
               </Link>
