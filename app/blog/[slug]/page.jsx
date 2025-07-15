@@ -7,7 +7,7 @@ import PostPageClient from "./page-client";
 import React, { Suspense } from "react";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { H1, H2, H3, H4, P, Blockquote, Ol, Ul, Code, Italic, Bold } from "@/components/utilities/typography"
+import { H1, H2, H3, H4, P, Blockquote, Ol, Ul, Code, Italic, Bold, CodeBlock } from "@/components/utilities/typography"
 
 // React.ComponentProps<typeof MDXProvider>["components"]
 const components = {
@@ -37,6 +37,16 @@ const components = {
   ul: (props) => <Ul {...props} />,
   ol: (props) => <Ol {...props} />,
   code: (props) => <Code {...props} />,
+  pre: (props) => {
+    // MDX passes the actual <code> as props.children.props
+    const codeProps = props.children?.props || {};
+
+    return (
+      <CodeBlock
+        {...codeProps}
+      />
+    );
+  },
   em: (props) => <Italic {...props} />,
   strong: (props) => <Bold {...props} />,
   a: (props) => <TextLink {...props} />,
