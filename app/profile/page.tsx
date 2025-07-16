@@ -55,7 +55,6 @@ import { chips } from "@/constants/chips";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
