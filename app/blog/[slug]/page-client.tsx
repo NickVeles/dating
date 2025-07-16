@@ -14,7 +14,7 @@ import { H4 } from "@/components/utilities/typography";
 
 interface PostPageProps {
   source: string;
-  children: any; // mdx component
+  children: Promise<React.ReactElement<any, string | React.JSXElementConstructor<any>>>;
 }
 
 export default function PostPageClient({ source, children }: PostPageProps) {
