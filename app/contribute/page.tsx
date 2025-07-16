@@ -236,7 +236,7 @@ export default function Contribute() {
           <HeartIcon className="inline mr-2 text-xl" />
           If you like what I do as a developer, you might also consider
           contributing to all my work in general by{" "}
-          <TextLink href="" blank>
+          <TextLink href="https://coff.ee/nickveles" blank>
             buying me a coffee
           </TextLink>
           ! If you mention coming from this project, it'll also grand you a
