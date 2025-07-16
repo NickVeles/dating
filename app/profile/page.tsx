@@ -59,15 +59,15 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 import AriesIcon from "@/assets/icons/aries.svg";
 import StrategyIcon from "@/assets/icons/strategy.svg";
 import BoxingGloveIcon from "@/assets/icons/boxing-glove.svg";
 import BreadIcon from "@/assets/icons/bread.svg";
 import ColorIcon from "@/assets/icons/color.svg";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 
 const attributes: Record<string, React.ReactNode> = {
   interests: <Interests />,
@@ -192,14 +192,6 @@ export default function Profile() {
   // Check if today is March 21st
   const isBirthday = today.getMonth() === 2 && today.getDate() === 21;
 
-  // Check if dialog should open
-  useEffect(() => {
-    const skipDialog = localStorage.getItem("skipWelcomeDialog");
-    if (!skipDialog) {
-      setOpenDialog(true);
-    }
-  }, []);
-
   // Handle dialog close
   const handleCloseDialog = () => {
     if (dontShowAgainChB) {
@@ -207,6 +199,14 @@ export default function Profile() {
     }
     setOpenDialog(false);
   };
+
+  // Check if dialog should open
+  useEffect(() => {
+    const skipDialog = localStorage.getItem("skipWelcomeDialog");
+    if (!skipDialog) {
+      setOpenDialog(true);
+    }
+  }, []);
 
   // Ensure theme is loaded before rendering
   useEffect(() => setMounted(true), []);
@@ -644,16 +644,14 @@ export default function Profile() {
                 id="nopersist"
                 className="-mt-0.5"
                 checked={dontShowAgainChB}
-                onCheckedChange={(checked) =>
-                  setDontShowAgainChB(checked === true)
-                }
+                onCheckedChange={(checked: boolean | "indeterminate") => setDontShowAgainChB(checked === true)}
               />
               <Label htmlFor="nopersist">Don't show this again</Label>
             </div>
           </div>
           <DialogFooter className="flex flex-col font-sans dyslexic:font-dyslexic">
             <Button
-              onClick={() => setOpenDialog(false)}
+              onClick={() => handleCloseDialog()}
               className="text-white bg-pink-700 hover:bg-pink-600 w-auto hover:cursor-pointer"
             >
               Sure thing!
