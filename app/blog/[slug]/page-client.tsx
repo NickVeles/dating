@@ -14,7 +14,6 @@ import { H4 } from "@/components/utilities/typography";
 
 interface PostPageProps {
   source: string;
-  // @ts-ignore
   children: any;
 }
 
