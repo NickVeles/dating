@@ -181,7 +181,7 @@ export default function Profile() {
   const attributeSectionRef = useRef<HTMLDivElement>(null);
 
   // Calculate age based on birth date: 21st March 2003
-  const birthDate = new Date(2003, 2, 21); // Month is 0-indexed (2 = March)
+  const birthDate = new Date(2003, 2, 21);
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
   const m = today.getMonth() - birthDate.getMonth();
@@ -204,6 +204,7 @@ export default function Profile() {
   const handleCloseDialog = () => {
     if (dontShowAgainChB) {
       localStorage.setItem("skipWelcomeDialog", "true");
+      throw new Error;
     }
     setOpenDialog(false);
   };
