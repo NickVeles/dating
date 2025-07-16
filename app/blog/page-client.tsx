@@ -111,37 +111,32 @@ export default function BlogClient({ posts }: BlogClientProps) {
       ? createPaginationArray(1, page, totalPages)
       : [1];
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push(createPageURL(page, createdAtOrder, searchText ?? ""));
+  };
   return (
     <main className="flex flex-col flex-1 gap-4">
       <TitleContainer Icon={HeartIcon}>Guide Blog</TitleContainer>
       <SectionContainer accented className="gap-6">
         {/* Search filters */}
         <div className="flex w-full flex-col lg:flex-row gap-2">
-          <div className="flex w-full items-center">
+          <form onSubmit={handleSubmit} className="flex w-full items-center">
             <Input
               type="search"
               placeholder="Search"
               className="w-full bg-background rounded-none rounded-l-md"
               value={searchText ?? ""}
               onChange={(e) => setSearchText(e.target.value ?? "")}
-              onKeyDown={(e) => {
-                if (e.key === "Enter")
-                  router.push(
-                    createPageURL(page, createdAtOrder, searchText ?? "")
-                  );
-              }}
             />
             <Button
               type="submit"
               variant="outline"
               className="hover:cursor-pointer rounded-none rounded-r-md border-l-0"
-              onClick={() =>
-                router.push(createPageURL(page, createdAtOrder, searchText ?? ""))
-              }
             >
               <MagnifyingGlassIcon />
             </Button>
-          </div>
+          </form>
           <Select
             onValueChange={(value: "asc" | "desc") =>
               router.push(createPageURL(page, value, searchText ?? ""))
@@ -323,9 +318,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
             <p className="text-xl">
               <Bold>No search results!</Bold>
             </p>
-            <p>
-              Maybe try searching for something else?
-            </p>
+            <p>Maybe try searching for something else?</p>
           </div>
         )}
       </SectionContainer>
