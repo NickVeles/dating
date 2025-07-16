@@ -608,14 +608,14 @@ export default function Profile() {
         open={openDialog}
         onOpenChange={(val) => val === false && handleCloseDialog()}
       >
-        <DialogContent className="sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center">
+        <DialogContent className="sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl max-h-[95vh] mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center">
           <DialogHeader>
             <DialogTitle className="flex font-sans dyslexic:font-dyslexic items-center">
               <InfoIcon className="text-2xl mr-2 -mt-0.5" />
               Hi! Just a notice
             </DialogTitle>
           </DialogHeader>
-          <div className="p-2">
+          <div className="p-2 overflow-y-auto">
             <P>
               I initially made this page with intent to extend it as a reusable
               format for all users, but due to the <Bold>scope creep</Bold> and
@@ -638,16 +638,16 @@ export default function Profile() {
               For now, there's only my profile, where you can meet me more as an
               actual person. Have fun!
             </P>
+          </div>
 
-            <div className="flex items-center gap-2 mt-6 font-sans dyslexic:font-dyslexic">
-              <Checkbox
-                id="nopersist"
-                className="-mt-0.5"
-                checked={dontShowAgainChB}
-                onCheckedChange={(checked: boolean | "indeterminate") => setDontShowAgainChB(checked === true)}
-              />
-              <Label htmlFor="nopersist">Don't show this again</Label>
-            </div>
+          <div className="flex items-center gap-2 font-sans dyslexic:font-dyslexic">
+            <Checkbox
+              id="nopersist"
+              className="-mt-0.5"
+              checked={dontShowAgainChB}
+              onCheckedChange={(checked: boolean | "indeterminate") => setDontShowAgainChB(checked === true)}
+            />
+            <Label htmlFor="nopersist">Don't show this again</Label>
           </div>
           <DialogFooter className="flex flex-col font-sans dyslexic:font-dyslexic">
             <Button
