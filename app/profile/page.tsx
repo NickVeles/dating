@@ -617,26 +617,29 @@ export default function Profile() {
           </DialogHeader>
           <div className="p-2 overflow-y-auto">
             <P>
-              I initially made this page with intent to extend it as a reusable
-              format for all users, but due to the <Bold>scope creep</Bold> and
-              some <Bold>privacy concerns</Bold>, I ultimately decided to focus
-              on the blog side of this project.
+              This page originally started as a fun experiment&mdash;I wanted to
+              explore what a dating-style profile could look like as a reusable
+              format for personal websites. While scope creep and privacy
+              considerations shifted my focus more toward the blog system, I’ve
+              decided to leave this page up as a <Italic>personal touch</Italic>{" "}
+              to the project.
             </P>
             <P>
-              Either way, if you want to potentially see this as an actual
-              feature, where you could create your own profile, let me know via
-              one of the contact methods at the bottom of this page! Given
-              enough interest and feedback, I'd love to add more things,
-              including:
+              If you'd like to see this concept expanded&mdash;with features
+              like:
             </P>
             <Ul>
               <li>User accounts</li>
-              <li>Customizable dating profiles</li>
-              <li>User messages and comments</li>
+              <li>Customizable profiles</li>
+              <li>Messaging and commenting</li>
             </Ul>
             <P forceFirst>
-              For now, there's only my profile, where you can meet me more as an
-              actual person. Have fun!
+              ...feel free to reach out via the contact links below! I’d love to
+              revisit the idea if there’s interest.
+            </P>
+            <P>
+              For now, enjoy this little window into who I am&mdash;beyond just
+              the code.
             </P>
           </div>
 
@@ -645,7 +648,9 @@ export default function Profile() {
               id="nopersist"
               className="-mt-0.5"
               checked={dontShowAgainChB}
-              onCheckedChange={(checked: boolean | "indeterminate") => setDontShowAgainChB(checked === true)}
+              onCheckedChange={(checked: boolean | "indeterminate") =>
+                setDontShowAgainChB(checked === true)
+              }
             />
             <Label htmlFor="nopersist">Don't show this again</Label>
           </div>
