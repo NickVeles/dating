@@ -7,15 +7,14 @@ import { articleDateTime } from "@/lib/utils";
 import { ArticleAuthors } from "@/components/article-authors";
 import { DefaultThumbnail } from "@/constants/default-thumbnail";
 import Share from "@/components/utilities/share";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import matter from "gray-matter";
 import { usePathname } from "next/navigation";
 import { H4 } from "@/components/utilities/typography";
 
 interface PostPageProps {
   source: string;
-  // @ts-ignore
-  children: any;
+  children: ReactNode | Promise<ReactNode>;
 }
 
 export default function PostPageClient({ source, children }: PostPageProps) {
