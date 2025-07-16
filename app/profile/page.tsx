@@ -608,7 +608,7 @@ export default function Profile() {
         open={openDialog}
         onOpenChange={(val) => val === false && handleCloseDialog()}
       >
-        <DialogContent className="sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl max-h-[95vh] mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center">
+        <DialogContent className="sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl max-h-[90vh] mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center">
           <DialogHeader>
             <DialogTitle className="flex font-sans dyslexic:font-dyslexic items-center">
               <InfoIcon className="text-2xl mr-2 -mt-0.5" />
