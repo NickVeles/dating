@@ -118,6 +118,7 @@ export default function Contribute() {
         <CodeBlock forceFirst className="w-full">
           <p>---</p>
           <p>title: "Your post's title" (required)</p>
+          <p>description: "Your post's description" (required)</p>
           <p>createdAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)</p>
           <p>updatedAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)</p>
           <p>authorsIds: [1, 2, 3] (authors' Ids - leave empty)</p>

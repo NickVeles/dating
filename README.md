@@ -81,19 +81,13 @@ Blog posts are written in MDX and stored in the posts directory. Each post requi
 Example:
 ```mdx
 ---
-
 title: "Your post's title" (required)
-
+description: "Your post's description" (required)
 createdAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)
-
 updatedAt: "yyyy-MM-dd HH:mm:ss" (date - leave empty)
-
 authorsIds: [1, 2, 3] (authors' Ids - leave empty)
-
 editorsIds: [1, 2, 3] (editors' Ids - leave empty)
-
 thumbnail: "http://example.com/photo.jpg" (post thumbnail - optional)
-
 ---
 
 # H1 tag
@@ -105,7 +99,6 @@ thumbnail: "http://example.com/photo.jpg" (post thumbnail - optional)
 #### H4 tag
 
 Paragraph text
-
 Still the same paragraph
 
 New paragraph
@@ -113,27 +106,20 @@ New paragraph
 > Block quote
 
 > Still the same block quote
-
 > New block quote
 
 - Unorganized list item #1
-
 - Unorganized list item #2
-
 - Unorganized list item #3
 
 1. Organized list item #1
-
 2. Organized list item #2
-
 3. Organized list item #3
 
 \`inline code - I don't know why you'd use it, but it's there!\`
 
 \`\`\`
-
 code block - also not sure why you'd use it
-
 \`\`\`
 
 *italic text*
