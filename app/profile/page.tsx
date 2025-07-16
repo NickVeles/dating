@@ -31,6 +31,7 @@ import {
   TargetIcon,
   SmileyIcon,
   FlagPennantIcon,
+  InfoIcon,
 } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -51,12 +52,23 @@ import {
 import TextLink from "@/components/utilities/text-link";
 import ImageContainer from "@/components/utilities/image-container";
 import { chips } from "@/constants/chips";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 import AriesIcon from "@/assets/icons/aries.svg";
 import StrategyIcon from "@/assets/icons/strategy.svg";
 import BoxingGloveIcon from "@/assets/icons/boxing-glove.svg";
 import BreadIcon from "@/assets/icons/bread.svg";
 import ColorIcon from "@/assets/icons/color.svg";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 const attributes: Record<string, React.ReactNode> = {
   interests: <Interests />,
@@ -163,6 +175,8 @@ export default function Profile() {
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
   const [mounted, setMounted] = useState(false);
+  const [openDialog, setOpenDialog] = useState(true);
+  const [dontShowAgainChB, setDontShowAgainChB] = useState(false);
 
   // Reference for the attribute content section to scroll into view
   const attributeSectionRef = useRef<HTMLDivElement>(null);
@@ -178,6 +192,22 @@ export default function Profile() {
 
   // Check if today is March 21st
   const isBirthday = today.getMonth() === 2 && today.getDate() === 21;
+
+  // Check if dialog should open
+  useEffect(() => {
+    const skipDialog = localStorage.getItem("skipWelcomeDialog");
+    if (!skipDialog) {
+      setOpenDialog(true);
+    }
+  }, []);
+
+  // Handle dialog close
+  const handleCloseDialog = () => {
+    if (dontShowAgainChB) {
+      localStorage.setItem("skipWelcomeDialog", "true");
+    }
+    setOpenDialog(false);
+  };
 
   // Ensure theme is loaded before rendering
   useEffect(() => setMounted(true), []);
@@ -573,6 +603,65 @@ export default function Profile() {
           </AccordionItem>
         </Accordion>
       </SectionContainer>
+
+      {/* Info dialog */}
+      <Dialog
+        open={openDialog}
+        onOpenChange={(val) => val === false && handleCloseDialog()}
+      >
+        <DialogContent className="sm:max-w-sm md:max-w-md xl:max-w-xl 2xl:max-w-2xl mx-auto w-full px-[1rem] py-[2rem] flex flex-col items-center justify-center">
+          <DialogHeader>
+            <DialogTitle className="flex font-sans dyslexic:font-dyslexic items-center">
+              <InfoIcon className="text-2xl mr-2 -mt-0.5" />
+              Hi! Just a notice
+            </DialogTitle>
+          </DialogHeader>
+          <div className="p-2">
+            <P>
+              I initially made this page with intent to extend it as a reusable
+              format for all users, but due to the <Bold>scope creep</Bold> and
+              some <Bold>privacy concerns</Bold>, I ultimately decided to focus
+              on the blog side of this project.
+            </P>
+            <P>
+              Either way, if you want to potentially see this as an actual
+              feature, where you could create your own profile, let me know via
+              one of the contact methods at the bottom of this page! Given
+              enough interest and feedback, I'd love to add more things,
+              including:
+            </P>
+            <Ul>
+              <li>User accounts</li>
+              <li>Customizable dating profiles</li>
+              <li>User messages and comments</li>
+            </Ul>
+            <P forceFirst>
+              For now, there's only my profile, where you can meet me more as an
+              actual person. Have fun!
+            </P>
+
+            <div className="flex items-center gap-2 mt-6 font-sans dyslexic:font-dyslexic">
+              <Checkbox
+                id="nopersist"
+                className="-mt-0.5"
+                checked={dontShowAgainChB}
+                onCheckedChange={(checked) =>
+                  setDontShowAgainChB(checked === true)
+                }
+              />
+              <Label htmlFor="nopersist">Don't show this again</Label>
+            </div>
+          </div>
+          <DialogFooter className="flex flex-col font-sans dyslexic:font-dyslexic">
+            <Button
+              onClick={() => setOpenDialog(false)}
+              className="text-white bg-pink-700 hover:bg-pink-600 w-auto hover:cursor-pointer"
+            >
+              Sure thing!
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
