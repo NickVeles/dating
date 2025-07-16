@@ -115,6 +115,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
     e.preventDefault();
     router.push(createPageURL(page, createdAtOrder, searchText ?? ""));
   };
+  
   return (
     <main className="flex flex-col flex-1 gap-4">
       <TitleContainer Icon={HeartIcon}>Guide Blog</TitleContainer>
