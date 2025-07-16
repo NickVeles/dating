@@ -204,7 +204,6 @@ export default function Profile() {
   const handleCloseDialog = () => {
     if (dontShowAgainChB) {
       localStorage.setItem("skipWelcomeDialog", "true");
-      throw new Error;
     }
     setOpenDialog(false);
   };
