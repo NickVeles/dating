@@ -14,7 +14,8 @@ import { H4 } from "@/components/utilities/typography";
 
 interface PostPageProps {
   source: string;
-  children: Promise<React.ReactElement<any, string | React.JSXElementConstructor<any>>>;
+  // @ts-ignore
+  children: any;
 }
 
 export default function PostPageClient({ source, children }: PostPageProps) {
