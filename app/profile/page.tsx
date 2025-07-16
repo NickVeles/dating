@@ -174,7 +174,7 @@ export default function Profile() {
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
   const [mounted, setMounted] = useState(false);
-  const [openDialog, setOpenDialog] = useState(true);
+  const [openDialog, setOpenDialog] = useState(false);
   const [dontShowAgainChB, setDontShowAgainChB] = useState(false);
 
   // Reference for the attribute content section to scroll into view
