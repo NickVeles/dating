@@ -7,6 +7,7 @@ interface TextLinkProps {
   href: string;
   children: string;
   blank?: boolean;
+  hideIcon?: boolean;
   className?: string;
 }
 
@@ -14,6 +15,7 @@ export function TextLink({
   href,
   children,
   blank = false,
+  hideIcon = false,
   className = "text-blue-600 dark:text-blue-400 visited:text-pink-600 dark:visited:text-pink-400 hover:underline",
 }: TextLinkProps) {
   return (
@@ -24,7 +26,7 @@ export function TextLink({
       className={className}
     >
       {children}
-      {blank && <ArrowSquareOutIcon className="inline align-text-top size-4" />}
+      {blank && !hideIcon && <ArrowSquareOutIcon className="inline align-text-top size-4" />}
     </Link>
   );
 }
