@@ -197,7 +197,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                         <H4 className="font-serif dyslexic:font-dyslexic dyslexic:text-lg text-wrap font-semibold">
                           {title}
                         </H4>
-                        <p className="pt-2 font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs text-gray-700 dark:text-gray-300 px-2">
+                        <p className="font-sans dyslexic:font-dyslexic text-sm dyslexic:text-xs text-gray-700 dark:text-gray-300">
                           {description}
                         </p>
                       </div>
