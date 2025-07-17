@@ -170,6 +170,8 @@ export default function Contribute() {
           <p>[link text](https://example.com)</p>
           <br />
           <p>![image alternative text](https://example.com/photo.jpg)</p>
+          <br />
+          <p>{"<sup>superscript text</sup>"}</p>
         </CodeBlock>
         <P>
           If you want to use a custom image that isn't hosted online, you need

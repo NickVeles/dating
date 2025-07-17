@@ -131,6 +131,8 @@ code block - also not sure why you'd use it
 [link text](https://example.com)
 
 ![image alternative text](https://example.com/photo.jpg)
+
+<sup>superscript text</sup>
 ```
 
 ---

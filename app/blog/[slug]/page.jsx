@@ -51,6 +51,7 @@ const components = {
   strong: (props) => <Bold {...props} />,
   a: (props) => <TextLink {...props} />,
   img: (props) => <ImageContainer {...props} />,
+  sup: (props) => <sup className="align-super text-xs" {...props} />,
 };
 
 export default async function PostPage({ params }) {
