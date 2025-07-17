@@ -34,8 +34,8 @@ const components = {
     return <P {...props} />;
   },
   blockquote: (props) => <Blockquote {...props} />,
-  ul: (props) => <Ul {...props} />,
-  ol: (props) => <Ol {...props} />,
+  ul: (props) => <Ul className="pb-0" {...props} />,
+  ol: (props) => <Ol className="pb-0" {...props} />,
   code: (props) => <Code {...props} />,
   pre: (props) => {
     // MDX passes the actual <code> as props.children.props
