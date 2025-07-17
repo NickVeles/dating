@@ -95,7 +95,7 @@ export function Ul({ children, className }: TypographyProps) {
   return (
     <ul
       className={cn(
-        "py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mt-2",
+        "py-6 pl-6 list-disc w-full font-serif dyslexic:font-dyslexic text-justify [&>:not(:first-child)]:mt-2",
         className
       )}
     >
@@ -109,7 +109,7 @@ export function Ol({ children, className, useLetters }: OlProps) {
     <ol
       style={useLetters ? { listStyleType: 'lower-alpha' } : undefined}
       className={cn(
-        "py-6 pl-6 w-full font-serif dyslexic:font-dyslexic [&>:not(:first-child)]:mt-2",
+        "py-6 pl-6 w-full font-serif dyslexic:font-dyslexic text-justify [&>:not(:first-child)]:mt-2",
         useLetters ? "list-[lower-alpha]" : "list-decimal",
         className
       )}

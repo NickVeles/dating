@@ -12,7 +12,7 @@ import { H1, H2, H3, H4, P, Blockquote, Ol, Ul, Code, Italic, Bold, CodeBlock } 
 // React.ComponentProps<typeof MDXProvider>["components"]
 const components = {
   h1: (props) => <H1 {...props} />,
-  h2: (props) => <H2 {...props} />,
+  h2: (props) => <H2 className="mt-6 text-center" {...props} />,
   h3: (props) => <H3 {...props} />,
   h4: (props) => <H4 {...props} />,
   p: (props) => {
@@ -49,7 +49,7 @@ const components = {
   },
   em: (props) => <Italic {...props} />,
   strong: (props) => <Bold {...props} />,
-  a: (props) => <TextLink {...props} />,
+  a: (props) => <TextLink blank hideIcon {...props} />,
   img: (props) => <ImageContainer {...props} />,
   sup: (props) => <sup className="align-super text-xs" {...props} />,
 };
