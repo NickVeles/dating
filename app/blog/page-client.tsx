@@ -113,7 +113,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(createPageURL(page, createdAtOrder, searchText ?? ""));
+    router.replace(createPageURL(page, createdAtOrder, searchText ?? ""));
   };
   
   return (
@@ -140,7 +140,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
           </form>
           <Select
             onValueChange={(value: "asc" | "desc") =>
-              router.push(createPageURL(page, value, searchText ?? ""))
+              router.replace(createPageURL(page, value, searchText ?? ""))
             }
             defaultValue={createdAtOrder}
           >
