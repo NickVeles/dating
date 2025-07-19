@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ContributeClient from "./page-client";
 
 export const metadata: Metadata = {
-  title: "Contribute | DatingSimplified",
+  title: "Contribute",
   description:
     "Share your experiences, advice, or articles on dating and relationships. Join our community of contributors and help others navigate love and dating.",
   openGraph: {

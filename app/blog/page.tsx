@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { DefaultThumbnail } from "@/constants/default-thumbnail";
 
 export const metadata: Metadata = {
-  title: "Search Dating Advice Articles | DatingSimplified",
+  title: "Search Dating Advice Articles",
   description:
     "Browse expert tips, strategies, and articles on dating and relationships. Find the best dating advice tailored to your needs.",
   keywords: [
