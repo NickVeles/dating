@@ -85,12 +85,15 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
-      images: frontmatter.thumbnail ? [frontmatter.thumbnail] : [DefaultThumbnail],
+      images: frontmatter.thumbnail
+        ? [frontmatter.thumbnail]
+        : [DefaultThumbnail],
     },
     twitter: {
       card: "summary_large_image",
       title: `${frontmatter.title || "Blog Post"} | DatingSimplified`,
       description: frontmatter.description || "",
+      images: [DefaultThumbnail],
     },
   };
 }
