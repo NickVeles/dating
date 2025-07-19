@@ -7,7 +7,21 @@ import PostPageClient from "./page-client";
 import React from "react";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { H1, H2, H3, H4, P, Blockquote, Ol, Ul, Code, Italic, Bold, CodeBlock } from "@/components/utilities/typography"
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  P,
+  Blockquote,
+  Ol,
+  Ul,
+  Code,
+  Italic,
+  Bold,
+  CodeBlock,
+} from "@/components/utilities/typography";
+import { DefaultThumbnail } from "@/constants/default-thumbnail";
 
 // React.ComponentProps<typeof MDXProvider>["components"]
 const components = {
@@ -40,12 +54,7 @@ const components = {
   pre: (props) => {
     // MDX passes the actual <code> as props.children.props
     const codeProps = props.children?.props || {};
-
-    return (
-      <CodeBlock
-        {...codeProps}
-      />
-    );
+    return <CodeBlock {...codeProps} />;
   },
   em: (props) => <Italic {...props} />,
   strong: (props) => <Bold {...props} />,
@@ -54,17 +63,41 @@ const components = {
   sup: (props) => <sup className="align-super text-xs" {...props} />,
 };
 
-export default async function PostPage({ params }) {
+async function getSource(params, fallback = null) {
   const { slug } = await params;
   const postsDir = path.join(process.cwd(), "posts");
   const fullPath = path.join(postsDir, `${slug}.mdx`);
 
   if (!fs.existsSync(fullPath)) {
-    return notFound();
+    return fallback || notFound();
   }
 
+  return fs.readFileSync(fullPath, "utf8");
+}
+
+export async function generateMetadata({ params }) {
+  const source = await getSource(params, {});
+  const { data: frontmatter } = matter(source);
+
+  return {
+    title: `DatingSimplified | ${frontmatter.title || "Blog Post"}`,
+    description: frontmatter.description || "",
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      images: frontmatter.thumbnail ? [frontmatter.thumbnail] : [DefaultThumbnail],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `DatingSimplified | ${frontmatter.title || "Blog Post"}`,
+      description: frontmatter.description || "",
+    },
+  };
+}
+
+export default async function PostPage({ params }) {
+  const source = await getSource(params);
   // Read frontmatter & content
-  const source = fs.readFileSync(fullPath, "utf8");
   const { content } = matter(source);
 
   return (
