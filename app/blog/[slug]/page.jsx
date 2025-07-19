@@ -80,7 +80,7 @@ export async function generateMetadata({ params }) {
   const { data: frontmatter } = matter(source);
 
   return {
-    title: `DatingSimplified | ${frontmatter.title || "Blog Post"}`,
+    title: `${frontmatter.title || "Blog Post"} | DatingSimplified`,
     description: frontmatter.description || "",
     openGraph: {
       title: frontmatter.title,
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `DatingSimplified | ${frontmatter.title || "Blog Post"}`,
+      title: `${frontmatter.title || "Blog Post"} | DatingSimplified`,
       description: frontmatter.description || "",
     },
   };
