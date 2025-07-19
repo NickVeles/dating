@@ -170,7 +170,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                   <li key={slug} className="w-full">
                     <Link
                       href={`/blog/${slug}`}
-                      className="flex flex-col lg:flex-row min-w-full p-2 gap-4 bg-background border border-black/20 dark:border-white/20 rounded-lg"
+                      className="flex flex-col lg:flex-row justify-center items-center min-w-full p-2 gap-4 bg-background border border-black/20 dark:border-white/20 rounded-lg"
                     >
                       <div className="relative lg:w-[33%]">
                         <Image
