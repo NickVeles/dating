@@ -1,15 +1,15 @@
 # Allow major search engines
 User-agent: Googlebot
-Disallow:
+Disallow: /profile/
 
 User-agent: Bingbot
-Disallow:
+Disallow: /profile/
 
 User-agent: DuckDuckBot
-Disallow:
+Disallow: /profile/
 
 User-agent: Baiduspider
-Disallow:
+Disallow: /profile/
 
 User-agent: *
 Disallow: /
