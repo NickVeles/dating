@@ -16,7 +16,7 @@ import { EyeIcon } from "@phosphor-icons/react";
 
 const images: string[] = Array.from(
   { length: 7 },
-  (_, i) => `/gallery/00${i + 1}.jpg`
+  (_, i) => `00${i + 1}.jpg`
 );
 
 export default function Gallery() {
@@ -84,7 +84,7 @@ export default function Gallery() {
                 )}
               >
                 <Image
-                  src={src}
+                  src={`/gallery/${src}`}
                   alt={`Image ${index + 1}`}
                   fill
                   className={cn(
@@ -93,6 +93,8 @@ export default function Gallery() {
                   )}
                   sizes="(max-width: 640px) 100vw, 600px"
                   priority={index === 0}
+                  placeholder="blur"
+                  blurDataURL={`/gallery/blur/${src}`}
                 />
                 {!revealed && (
                   <div className="absolute object-cover rounded-lg inset-0 flex flex-col items-center justify-center text-white text-center text-2xl font-semibold bg-black/30 pb-20 transition-all ease-out">
