@@ -98,6 +98,7 @@ export default function HomeClient({ latestPosts }: HomeProps) {
               <Link
                 href={`/blog/${slug}`}
                 className="flex flex-1 flex-col min-w-full p-2 gap-4 bg-background border border-black/20 dark:border-white/20 rounded-lg"
+                translate="no"
               >
                 <Image
                   src={thumbnail ?? DefaultThumbnail}

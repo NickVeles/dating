@@ -24,6 +24,7 @@ export function TextLink({
       target={blank ? "_blank" : undefined}
       rel={blank ? "noopener noreferrer" : undefined}
       className={className}
+      translate="no"
     >
       {children}
       {blank && !hideIcon && <ArrowSquareOutIcon className="inline align-text-top size-4" />}
