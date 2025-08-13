@@ -114,41 +114,6 @@ const sillyStats = [
   },
 ];
 
-const countries = [
-  {
-    emoji: "🇦🇺",
-    name: "Australia",
-  },
-  {
-    emoji: "🇨🇦",
-    name: "Canada ⭐",
-  },
-  {
-    emoji: "🇩🇪",
-    name: "Germany",
-  },
-  {
-    emoji: "🇯🇵",
-    name: "Japan",
-  },
-  {
-    emoji: "🇳🇱",
-    name: "Netherlands",
-  },
-  {
-    emoji: "🇳🇿",
-    name: "New Zealand",
-  },
-  {
-    emoji: "🇰🇷",
-    name: "South Korea",
-  },
-  {
-    emoji: "🇹🇼",
-    name: "Taiwan",
-  },
-];
-
 export default function Profile() {
   const [currentAttribute, setCurrentAttribute] =
     useState<keyof typeof attributes>("interests");
