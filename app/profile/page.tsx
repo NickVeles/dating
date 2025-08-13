@@ -13,13 +13,9 @@ import SectionContainer from "@/components/utilities/section-container";
 import TitleContainer from "@/components/utilities/title-container";
 import {
   Bold,
-  Emoji,
   H2,
   H3,
-  H4,
-  Italic,
   P,
-  Ul,
 } from "@/components/utilities/typography";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -29,7 +25,6 @@ import {
   GameControllerIcon,
   TargetIcon,
   SmileyIcon,
-  FlagPennantIcon,
   InfoIcon,
 } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
@@ -42,14 +37,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SpotifyHighlights from "@/components/spotify-highlights";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import TextLink from "@/components/utilities/text-link";
-import ImageContainer from "@/components/utilities/image-container";
 import { chips } from "@/constants/chips";
 import {
   Dialog,
