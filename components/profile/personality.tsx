@@ -69,7 +69,7 @@ const traits = [
     icon: TargetIcon,
     content: (
       <span>
-        Not blunt at all, but valuing honesty and clarity. People usually know
+        Maybe somewhat blunt, but valuing honesty and clarity. People usually know
         where they stand with me&mdash;I don’t believe in playing games or
         sugarcoating things unnecessarily.
       </span>
@@ -84,7 +84,7 @@ const traits = [
       <span>
         Fun fact: my old surname loosely meant <Italic>"Yapper,"</Italic> and it
         still fits&mdash;I’m the guy who can turn any topic into an hour‑long
-        conversation. (Yes, I changed my name)
+        conversation.
       </span>
     ),
   },

@@ -1,15 +1,9 @@
 import RulerIcon from "@/assets/icons/ruler.svg";
 import FlagIcon from "@/assets/icons/flag.svg";
 import GenderMaleIcon from "@/assets/icons/gender-male.svg";
-import HeteroIcon from "@/assets/icons/hetero.svg";
 import InfinityIcon from "@/assets/icons/infinity.svg";
 import SuitcaseIcon from "@/assets/icons/suitcase.svg";
 import GraduationCapIcon from "@/assets/icons/graduation-cap.svg";
-import HandsPrayingIcon from "@/assets/icons/hands-praying.svg";
-import MonogamyIcon from "@/assets/icons/monogamy.svg";
-import LockHeartIcon from "@/assets/icons/lock-heart.svg";
-import MagnifyingGlassHeartIcon from "@/assets/icons/magnifying-glass-heart.svg";
-import BabyCarriageIcon from "@/assets/icons/baby-carriage.svg";
 import BarbellIcon from "@/assets/icons/barbell.svg";
 import ForkKnifeIcon from "@/assets/icons/fork-knife.svg";
 import CigaretteIcon from "@/assets/icons/cigarette.svg";
@@ -39,11 +33,6 @@ export const chips = [
         text: "he/him",
         tooltip: "Pronouns",
         icon: GenderMaleIcon,
-      },
-      {
-        text: "Straight",
-        tooltip: "Orientation",
-        icon: HeteroIcon,
       },
       {
         text: "ASD",
@@ -84,42 +73,11 @@ export const chips = [
     ],
   },
   {
-    name: "Values",
-    color: "bg-yellow-200 dark:bg-yellow-800 hover:bg-yellow-300 dark:hover:bg-yellow-700",
-    items: [
-      {
-        text: "Atheist/Agnostic",
-        tooltip: "Religion",
-        icon: HandsPrayingIcon,
-      },
-      {
-        text: "Monogamous",
-        tooltip: "Relationship style",
-        icon: MonogamyIcon,
-      },
-      {
-        text: "Long-term",
-        tooltip: "Relationship expectations",
-        icon: LockHeartIcon,
-      },
-      {
-        text: "Single & Looking",
-        tooltip: "Relationship status",
-        icon: MagnifyingGlassHeartIcon,
-      },
-      {
-        text: "None | Open to having",
-        tooltip: "Children",
-        icon: BabyCarriageIcon,
-      },
-    ],
-  },
-  {
     name: "Lifestyle",
     color: "bg-emerald-200 dark:bg-emerald-800 hover:bg-emerald-300 dark:hover:bg-emerald-700",
     items: [
       {
-        text: "5d/week",
+        text: "4d/week",
         tooltip: "Workout",
         icon: BarbellIcon,
       },

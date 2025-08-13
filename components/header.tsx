@@ -26,7 +26,7 @@ import { useEffect, useState } from "react";
 const pages = [
   { icon: HouseIcon, name: "Home", href: "/" },
   { icon: HeartIcon, name: "Guide Blog", href: "/blog" },
-  { icon: UserIcon, name: "Dating Profile", href: "/profile" },
+  { icon: UserIcon, name: "Meet Me", href: "/profile" },
   { icon: HandHeartIcon, name: "Contribute", href: "/contribute" },
 ];
 
